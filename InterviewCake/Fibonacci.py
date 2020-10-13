@@ -1,9 +1,26 @@
-def fib(n):
-    if n == 0:
-        return 0
-    if n <= 2:
-        return 1
-    return fib(n-1) + fib(n-2)
+def fib_recur(n):
+    if n <= 1:
+        return n
+    else:
+        return fib_recur(n-1) + fib_recur(n-2)
 
 
-print(fib(5))
+# for i in range(7):
+#     print(fib_recur(i))
+
+
+def fib(number_of_terms):
+
+    count = 0
+    first = 0
+    second = 1
+
+    while count < number_of_terms:
+        print(first)
+        temp = first + second
+        first = second
+        second = temp
+        count = count + 1
+
+
+fib(5)
