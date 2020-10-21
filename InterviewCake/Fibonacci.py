@@ -9,7 +9,7 @@ def fib_recur(n):
 #     print(fib_recur(i))
 
 
-def fib(number_of_terms):
+def fib(number_of_terms): 
 
     count = 0
     first = 0
