@@ -29,9 +29,28 @@ This game has been developed using Python 3. Enjoy playing!
 
 - How would I improve
   - I can create a couple more functions to handle print statements more aesthetically
+  - I would write automated tests by creating Unittest file and testing functions for all inputs mentioned below in 'Test Scenarios'
   - I would try to learn to do it in an object oriented way
 
 - Manual tests I ran
   - Ran player win scenarios with BlackJack, better score, dealer bust cases
   - Ran dealer win scenarios with BlackJack, better score, player bust cases
   - Handled incorrect input to prompt user to enter from required input
+
+- **Test scenarios**
+  - Wrong input: Prompt user to enter required key
+  - Initial cards: Displays 2 player cards and calculates total. Hides 1 dealer card, display 1 and hide total
+  - Total calculation is accurate
+  - BlackJack at initial deal: Player has K A
+  - Player stands initially:  Dealer hits scenario
+  - Player keeps hitting by entering H until entering S: Player has 2 3 (any cards with total < 21)
+    - Player busts: Player crosses 21
+    - BlackJack: Player gets 21
+    - Player stands under 21: Dealer hits scenarrio
+    - Player getting cards with Ace: Score recalculation if above 21
+  - Dealer hits: 
+    - BlackJack: Dealer gets 21
+    - Dealer keeps hitting until 17, crosses 21: Dealer bust
+    - Dealer keeps hitting until 17, under 21: Score comparision. Higher scorer wins
+    - Dealer keeps hitting until 17, under 21: Score comparision. Tie
+  - Display final cards if not blackjack/bust
