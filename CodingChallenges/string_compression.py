@@ -17,5 +17,4 @@ while len(word) >= k:
     if flag == 1:
         break
 
-
 print(word)

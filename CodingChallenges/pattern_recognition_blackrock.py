@@ -1,7 +1,7 @@
 import sys
 
 
-def getPatternMatches(blobs, pattern):
+def get_pattern_matches(blobs, pattern):
     counter = 0
     totalCount = 0
     output = ''
@@ -33,6 +33,6 @@ for line in sys.stdin:
     pattern = line.split(';')[0]
     blobs = line[len(pattern) + 1:]
 
-    result = getPatternMatches(blobs, pattern)
+    result = get_pattern_matches(blobs, pattern)
     print(result)
 

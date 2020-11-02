@@ -1,4 +1,8 @@
-def isPalindrome(text):
+"""
+https://www.interviewcake.com/question/python3/permutation-palindrome?course=fc1&section=hashing-and-hash-tables
+"""
+
+def is_palindrome(text):
 
     # print(text[::-1]) # Easy way to reverse string
 
