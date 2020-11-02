@@ -2,7 +2,7 @@ from typing import List
 
 
 class Solution:
-    def missingNumber(self, nums: List[int]) -> int:
+    def missing_number(self, nums: List[int]) -> int:
         if nums[0] == 1:
             return 0
         if len(nums) == 1:
@@ -14,4 +14,4 @@ class Solution:
 
 
 obj = Solution()
-print(obj.missingNumber([9,6,4,2,3,8,7,0,1]))
+print(obj.missing_number([9, 6, 4, 2, 3, 8, 7, 0, 1]))

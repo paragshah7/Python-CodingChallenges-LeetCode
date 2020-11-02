@@ -2,7 +2,18 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="40df93b2-bdf3-401d-b19d-6a1e6c6092fc" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/CodingChallenges/string_compression.py" beforeDir="false" afterPath="$PROJECT_DIR$/CodingChallenges/string_compression.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/LeetCode/FizzBuzz.py" beforeDir="false" afterPath="$PROJECT_DIR$/LeetCode/fizzbuzz.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/LeetCode/MissingNumber.py" beforeDir="false" afterPath="$PROJECT_DIR$/LeetCode/missing_number.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/LeetCode/ReverseString557.py" beforeDir="false" afterPath="$PROJECT_DIR$/LeetCode/reverse_string557.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/UdacityRefresher/BinarySearch.py" beforeDir="false" afterPath="$PROJECT_DIR$/LeetCode/binary_search.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/UdacityRefresher/Class_Practice.py" beforeDir="false" afterPath="$PROJECT_DIR$/PythonBasics/UdacityRefresher/Class_Practice.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/UdacityRefresher/PrimeNumber.py" beforeDir="false" afterPath="$PROJECT_DIR$/PythonBasics/UdacityRefresher/PrimeNumber.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/UdacityRefresher/dict_courses.py" beforeDir="false" afterPath="$PROJECT_DIR$/PythonBasics/UdacityRefresher/dict_courses.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/UdacityRefresher/gen_fact.py" beforeDir="false" afterPath="$PROJECT_DIR$/PythonBasics/UdacityRefresher/gen_fact.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/UdacityRefresher/generators.py" beforeDir="false" afterPath="$PROJECT_DIR$/PythonBasics/UdacityRefresher/generators.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/UdacityRefresher/semester.py" beforeDir="false" afterPath="$PROJECT_DIR$/PythonBasics/UdacityRefresher/semester.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/UdacityRefresher/sudoku.py" beforeDir="false" afterPath="$PROJECT_DIR$/PythonBasics/UdacityRefresher/sudoku.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/UdacityRefresher/word_subset.py" beforeDir="false" afterPath="$PROJECT_DIR$/PythonBasics/UdacityRefresher/word_subset.py" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -30,8 +41,9 @@
   </component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
-      <recent name="$PROJECT_DIR$/CodingChallenges" />
       <recent name="$PROJECT_DIR$/LeetCode" />
+      <recent name="$PROJECT_DIR$/PythonBasics" />
+      <recent name="$PROJECT_DIR$/CodingChallenges" />
       <recent name="$PROJECT_DIR$/InterviewCake" />
     </key>
   </component>

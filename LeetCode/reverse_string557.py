@@ -8,10 +8,10 @@ Output: "s'teL ekat edoCteeL tsetnoc"
 
 """
 
-class Solution:
-    def reverseWords(self, s: str) -> str:
-        return sss
-
-
-sol = Solution()
-print(sol.reverseWords('Hi'))
+# class Solution:
+#     def reverseWords(self, s: str) -> str:
+#         return sss
+#
+#
+# sol = Solution()
+# print(sol.reverseWords('Hi'))
