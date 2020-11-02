@@ -1,4 +1,4 @@
-def deleteProducts (ids, m):
+def delete_products(ids, m):
     countMap = {}
     size = 0 
     count = 0
@@ -12,7 +12,7 @@ def deleteProducts (ids, m):
     print(countMap)
 
     for key, value in countMap.items():
-      if(key <= m):
+      if key <= m:
         m -= key
         count += 1
       else:
@@ -21,4 +21,4 @@ def deleteProducts (ids, m):
     return size - count + 1
 
 
-print(deleteProducts([1,1,1,1], 2))
+print(delete_products([1,1,1,1], 2))

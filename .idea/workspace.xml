@@ -2,12 +2,11 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="40df93b2-bdf3-401d-b19d-6a1e6c6092fc" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/CodingChallenges/cash_register_blackrock.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/CodingChallenges/blackjack.py" beforeDir="false" afterPath="$PROJECT_DIR$/CodingChallenges/blackjack_freenome.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/InterviewCake/CafeOrderChecker.py" beforeDir="false" afterPath="$PROJECT_DIR$/InterviewCake/cafe_order_checker.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/InterviewCake/CashRegister_BlackRock.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/InterviewCake/Fibonacci.py" beforeDir="false" afterPath="$PROJECT_DIR$/LeetCode/fibonacci.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/InterviewCake/MergeSortedArrays.py" beforeDir="false" afterPath="$PROJECT_DIR$/InterviewCake/merge_sorted_arrays.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/InterviewCake/MinDis.py" beforeDir="false" afterPath="$PROJECT_DIR$/CodingChallenges/delete_products.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/InterviewCake/MovieLength.py" beforeDir="false" afterPath="$PROJECT_DIR$/InterviewCake/inflight_movie_length.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/InterviewCake/Palindrome.py" beforeDir="false" afterPath="$PROJECT_DIR$/LeetCode/palindrome.py" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -35,8 +34,9 @@
   </component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
-      <recent name="$PROJECT_DIR$/CodingChallenges" />
       <recent name="$PROJECT_DIR$/LeetCode" />
+      <recent name="$PROJECT_DIR$/CodingChallenges" />
+      <recent name="$PROJECT_DIR$/InterviewCake" />
     </key>
   </component>
   <component name="RunDashboard">
@@ -127,7 +127,7 @@
       <option name="IS_MODULE_SDK" value="true" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/InterviewCake/MergeSortedArrays.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/InterviewCake/merge_sorted_arrays.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
