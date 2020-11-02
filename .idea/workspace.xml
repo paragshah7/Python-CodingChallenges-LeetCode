@@ -2,10 +2,12 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="40df93b2-bdf3-401d-b19d-6a1e6c6092fc" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/CodingChallenges/cash_register_blackrock.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/CodingChallenges/blackjack_draft.py" beforeDir="false" afterPath="$PROJECT_DIR$/CodingChallenges/blackjack.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/InterviewCake/CafeOrderChecker.py" beforeDir="false" afterPath="$PROJECT_DIR$/InterviewCake/CafeOrderChecker.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/InterviewCake/MergeSortedArrays.py" beforeDir="false" afterPath="$PROJECT_DIR$/InterviewCake/MergeSortedArrays.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/CodingChallenges/blackjack.py" beforeDir="false" afterPath="$PROJECT_DIR$/CodingChallenges/blackjack_freenome.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/InterviewCake/CafeOrderChecker.py" beforeDir="false" afterPath="$PROJECT_DIR$/InterviewCake/cafe_order_checker.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/InterviewCake/CashRegister_BlackRock.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/InterviewCake/Fibonacci.py" beforeDir="false" afterPath="$PROJECT_DIR$/LeetCode/fibonacci.py" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -31,6 +33,12 @@
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="settings.editor.selected.configurable" value="com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable" />
   </component>
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/CodingChallenges" />
+      <recent name="$PROJECT_DIR$/LeetCode" />
+    </key>
+  </component>
   <component name="RunDashboard">
     <option name="ruleStates">
       <list>
@@ -43,7 +51,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Python.blackjack_draft">
+  <component name="RunManager" selected="Python.blackjack">
     <configuration name="BlackJack" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <module name="PythonPractice" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -77,7 +85,7 @@
       <option name="IS_MODULE_SDK" value="true" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/InterviewCake/CafeOrderChecker.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/InterviewCake/cafe_order_checker.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -98,7 +106,7 @@
       <option name="IS_MODULE_SDK" value="true" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/InterviewCake/Meandearing.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/CodingChallenges/meandearing_array.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -128,7 +136,7 @@
       <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
-    <configuration name="blackjack_draft" type="PythonConfigurationType" factoryName="Python" temporary="true">
+    <configuration name="blackjack" type="PythonConfigurationType" factoryName="Python">
       <module name="PythonPractice" />
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
@@ -140,7 +148,7 @@
       <option name="IS_MODULE_SDK" value="true" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/CodingChallenges/blackjack.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/CodingChallenges/blackjack_freenome.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -149,9 +157,15 @@
       <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
+    <list>
+      <item itemvalue="Python.blackjack" />
+      <item itemvalue="Python.BlackJack" />
+      <item itemvalue="Python.CafeOrderChecker" />
+      <item itemvalue="Python.Meandearing" />
+      <item itemvalue="Python.MergeSortedArrays" />
+    </list>
     <recent_temporary>
       <list>
-        <item itemvalue="Python.blackjack_draft" />
         <item itemvalue="Python.BlackJack" />
         <item itemvalue="Python.CafeOrderChecker" />
         <item itemvalue="Python.MergeSortedArrays" />

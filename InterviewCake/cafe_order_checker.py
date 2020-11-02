@@ -1,3 +1,7 @@
+"""
+https://www.interviewcake.com/question/python3/cafe-order-checker?course=fc1&section=array-and-string-manipulation
+"""
+
 take_out_orders = [17, 8, 24]
 dine_in_orders = [12, 19, 2]
 served_orders = [17, 8, 12, 19, 2, 24]
