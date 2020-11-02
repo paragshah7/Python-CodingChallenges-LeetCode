@@ -2,9 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="40df93b2-bdf3-401d-b19d-6a1e6c6092fc" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/InterviewCake/PatternRecognition.py" beforeDir="false" afterPath="$PROJECT_DIR$/CodingChallenges/pattern_recognition_blackrock.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/InterviewCake/PermutationPalindrome.py" beforeDir="false" afterPath="$PROJECT_DIR$/InterviewCake/PermutationPalindrome.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/CodingChallenges/string_compression.py" beforeDir="false" afterPath="$PROJECT_DIR$/CodingChallenges/string_compression.py" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
