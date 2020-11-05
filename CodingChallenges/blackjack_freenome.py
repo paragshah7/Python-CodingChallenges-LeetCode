@@ -3,7 +3,7 @@ __author__ = "Parag Shah"
 import random
 
 # Global variables for card deck
-cards = {'A': (1, 11), '2': 2, '3': 3, '4': 4, '5': 5, '6': 6, '7': 7, '8': 8, '9': 9, '10': 10, 'J': 10, 'Q': 10, 'K': 10}
+cards = {'A': 11, '2': 2, '3': 3, '4': 4, '5': 5, '6': 6, '7': 7, '8': 8, '9': 9, '10': 10, 'J': 10, 'Q': 10, 'K': 10}
 card_deck = [card for card in cards.keys()] * 4
 random.shuffle(card_deck)
 
@@ -46,14 +46,14 @@ def calculate_total(players):
     for value in players:
         if value == 'A':
             a_value += 1
-            initial_card_value.append(cards[value][1])
-        else:
-            initial_card_value.append(cards[value])
+        initial_card_value.append(cards[value])
     total = sum(initial_card_value)
 
     if a_value != 0 and total > 21:
-        total -= 10
-        a_value -= 1
+        for a in range(a_value):
+            if total > 21:
+                total -= 10
+                a_value -= 1
 
     return total
 
@@ -82,7 +82,8 @@ def scoring(dealer, player, player_status):
                 print('Dealer hits')
             print('Dealer has: ', end='')
             display_hand(dealer)
-            print('Dealer stands')
+            if calculate_total(dealer) < 22:
+                print('Dealer stands')
 
             # Final total comparison if player hasn't won or lost
             if calculate_total(dealer) > 21:
@@ -92,7 +93,7 @@ def scoring(dealer, player, player_status):
                 print('Dealer wins!')
                 print('BlackJack!')
             elif calculate_total(player) == calculate_total(dealer):
-                print('Its a tie')
+                print('\nIts a tie')
             elif calculate_total(player) > calculate_total(dealer):
                 print('\nPlayer Wins!')
                 print(*player, sep=' ', end='')
