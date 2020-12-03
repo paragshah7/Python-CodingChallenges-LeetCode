@@ -15,3 +15,6 @@ Output: "s'teL ekat edoCteeL tsetnoc"
 #
 # sol = Solution()
 # print(sol.reverseWords('Hi'))
+text = 'some string'
+print(text[::2])
+print(''.join(reversed(text)))
