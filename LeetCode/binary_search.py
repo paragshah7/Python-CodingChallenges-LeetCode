@@ -19,4 +19,4 @@ def binarySearch(array, s, l, find):
 
 
 a = [10, 20, 30, 40, 50, 60, 70]
-binarySearch(a, 0, len(a), 40)
+binarySearch(a, 0, len(a), 70)
