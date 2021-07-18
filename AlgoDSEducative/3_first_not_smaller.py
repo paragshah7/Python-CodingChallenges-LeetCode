@@ -7,7 +7,7 @@ from icecream import ic as print
 def first_not_smaller(arr, target) -> int:
     left = 0
     right = len(arr) - 1
-    if right == 0:
+    if target == arr[0]:
         return 0
 
     while left <= right:
