@@ -12,6 +12,7 @@ your function would return:
 
   [(0, 1), (3, 8), (9, 12)]
 """
+
 from icecream import ic as print
 
 def merge_ranges(meet_times):
