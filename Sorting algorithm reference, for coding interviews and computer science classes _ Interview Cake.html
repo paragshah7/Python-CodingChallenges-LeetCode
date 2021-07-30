@@ -1,0 +1,1648 @@
+<!DOCTYPE html>
+<!-- saved from url=(0059)https://www.interviewcake.com/sorting-algorithm-cheat-sheet -->
+<html lang="en" dir="ltr" class=" scrolling-body "><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8"><script type="text/javascript" src="./Sorting algorithm reference, for coding interviews and computer science classes _ Interview Cake_files/identify"></script><style type="text/css">@charset "UTF-8";[ng\:cloak],[ng-cloak],[data-ng-cloak],[x-ng-cloak],.ng-cloak,.x-ng-cloak,.ng-hide:not(.ng-hide-animate){display:none !important;}ng\:form{display:block;}</style>
+	<link rel="preload" href="https://www.interviewcake.com/static/fonts/glyphiconshalflings-regular.woff" as="font" type="font/woff" crossorigin="">
+
+	
+        <script type="text/javascript" src="./Sorting algorithm reference, for coding interviews and computer science classes _ Interview Cake_files/9e57878e2e"></script><script src="./Sorting algorithm reference, for coding interviews and computer science classes _ Interview Cake_files/nr-1210.min.js"></script><script type="text/javascript" async="" src="./Sorting algorithm reference, for coding interviews and computer science classes _ Interview Cake_files/linkid.js"></script><script type="text/javascript" async="" src="./Sorting algorithm reference, for coding interviews and computer science classes _ Interview Cake_files/mixpanel-2-latest.min.js"></script><script type="text/javascript" async="" src="./Sorting algorithm reference, for coding interviews and computer science classes _ Interview Cake_files/analytics.js"></script><script src="./Sorting algorithm reference, for coding interviews and computer science classes _ Interview Cake_files/1178582795523615" async=""></script><script type="text/javascript" async="" src="./Sorting algorithm reference, for coding interviews and computer science classes _ Interview Cake_files/fbevents.js"></script><script type="text/javascript" async="" src="./Sorting algorithm reference, for coding interviews and computer science classes _ Interview Cake_files/4774384.js"></script><script type="text/javascript" src="./Sorting algorithm reference, for coding interviews and computer science classes _ Interview Cake_files/commons.dddbd6a06577f22e5c7f.js.gz" async="" status="loaded"></script><script type="text/javascript" src="./Sorting algorithm reference, for coding interviews and computer science classes _ Interview Cake_files/mixpanel.dynamic.js.gz" async="" status="loaded"></script><script type="text/javascript" src="./Sorting algorithm reference, for coding interviews and computer science classes _ Interview Cake_files/google-analytics.dynamic.js.gz" async="" status="loaded"></script><script type="text/javascript" src="./Sorting algorithm reference, for coding interviews and computer science classes _ Interview Cake_files/facebook-pixel.dynamic.js.gz" async="" status="loaded"></script><script type="text/javascript" src="./Sorting algorithm reference, for coding interviews and computer science classes _ Interview Cake_files/drip.dynamic.js.gz" async="" status="loaded"></script><script type="text/javascript" src="./Sorting algorithm reference, for coding interviews and computer science classes _ Interview Cake_files/adwords.dynamic.js.gz" async="" status="error"></script><script src="./Sorting algorithm reference, for coding interviews and computer science classes _ Interview Cake_files/all.js" async="" crossorigin="anonymous"></script><script id="facebook-jssdk" src="./Sorting algorithm reference, for coding interviews and computer science classes _ Interview Cake_files/all(1).js"></script><script type="text/javascript" async="" src="./Sorting algorithm reference, for coding interviews and computer science classes _ Interview Cake_files/analytics.min.js"></script><script src="./Sorting algorithm reference, for coding interviews and computer science classes _ Interview Cake_files/output.2316c2cadf27.js" defer=""></script>
+    
+
+
+
+    <script type="text/javascript">
+        
+        window.IC = window.IC || {};
+        window.IC.currentUser = JSON.parse('{\u0022id\u0022:16815394,\u0022username\u0022:\u0022paragshah367\u0022,\u0022email\u0022:\u0022paragshah36757@gmail.com\u0022,\u0022date_joined\u0022:\u00222020\u002D06\u002D15T23:45:07.962595+00:00\u0022,\u0022first_name\u0022:\u0022Parag\u0022,\u0022last_name\u0022:\u0022Shah\u0022,\u0022full_name\u0022:\u0022Parag Shah\u0022,\u0022short_name\u0022:\u0022Parag\u0022,\u0022is_anonymous\u0022:false,\u0022is_on_last_question\u0022:false,\u0022percent_done\u0022:26,\u0022num_questions_done\u0022:12,\u0022num_questions_remaining\u0022:34,\u0022is_full_access\u0022:true,\u0022is_student\u0022:true,\u0022first_payment_date\u0022:\u00222020\u002D06\u002D15T23:45:49.056009Z\u0022,\u0022last_payment_date\u0022:\u00222020\u002D06\u002D15T23:45:49.056009Z\u0022,\u0022num_free_questions_left\u0022:0,\u0022terms_has_agreed_to_latest\u0022:false,\u0022preferred_content_language\u0022:\u0022python3\u0022,\u0022preferred_editor_language\u0022:\u0022python3\u0022,\u0022is_staff\u0022:false,\u0022auth_providers_human_readable_list\u0022:\u0022Google\u0022,\u0022num_auth_providers\u0022:1,\u0022auth_email\u0022:\u0022paragshah367@gmail.com\u0022}');
+        
+    </script>
+
+    
+        
+    
+
+    
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        
+        <meta http-equiv="X-UA-Compatible" content="IE=Edge"><script type="text/javascript">(window.NREUM||(NREUM={})).loader_config={licenseKey:"9e57878e2e",applicationID:"7328113"};window.NREUM||(NREUM={}),__nr_require=function(t,e,n){function r(n){if(!e[n]){var i=e[n]={exports:{}};t[n][0].call(i.exports,function(e){var i=t[n][1][e];return r(i||e)},i,i.exports)}return e[n].exports}if("function"==typeof __nr_require)return __nr_require;for(var i=0;i<n.length;i++)r(n[i]);return r}({1:[function(t,e,n){function r(){}function i(t,e,n){return function(){return o(t,[u.now()].concat(f(arguments)),e?null:this,n),e?void 0:this}}var o=t("handle"),a=t(8),f=t(9),c=t("ee").get("tracer"),u=t("loader"),s=NREUM;"undefined"==typeof window.newrelic&&(newrelic=s);var d=["setPageViewName","setCustomAttribute","setErrorHandler","finished","addToTrace","inlineHit","addRelease"],p="api-",l=p+"ixn-";a(d,function(t,e){s[e]=i(p+e,!0,"api")}),s.addPageAction=i(p+"addPageAction",!0),s.setCurrentRouteName=i(p+"routeName",!0),e.exports=newrelic,s.interaction=function(){return(new r).get()};var m=r.prototype={createTracer:function(t,e){var n={},r=this,i="function"==typeof e;return o(l+"tracer",[u.now(),t,n],r),function(){if(c.emit((i?"":"no-")+"fn-start",[u.now(),r,i],n),i)try{return e.apply(this,arguments)}catch(t){throw c.emit("fn-err",[arguments,this,t],n),t}finally{c.emit("fn-end",[u.now()],n)}}}};a("actionText,setName,setAttribute,save,ignore,onEnd,getContext,end,get".split(","),function(t,e){m[e]=i(l+e)}),newrelic.noticeError=function(t,e){"string"==typeof t&&(t=new Error(t)),o("err",[t,u.now(),!1,e])}},{}],2:[function(t,e,n){function r(t){if(NREUM.init){for(var e=NREUM.init,n=t.split("."),r=0;r<n.length-1;r++)if(e=e[n[r]],"object"!=typeof e)return;return e=e[n[n.length-1]]}}e.exports={getConfiguration:r}},{}],3:[function(t,e,n){function r(){return f.exists&&performance.now?Math.round(performance.now()):(o=Math.max((new Date).getTime(),o))-a}function i(){return o}var o=(new Date).getTime(),a=o,f=t(10);e.exports=r,e.exports.offset=a,e.exports.getLastTimestamp=i},{}],4:[function(t,e,n){function r(t){return!(!t||!t.protocol||"file:"===t.protocol)}e.exports=r},{}],5:[function(t,e,n){function r(t,e){var n=t.getEntries();n.forEach(function(t){"first-paint"===t.name?d("timing",["fp",Math.floor(t.startTime)]):"first-contentful-paint"===t.name&&d("timing",["fcp",Math.floor(t.startTime)])})}function i(t,e){var n=t.getEntries();n.length>0&&d("lcp",[n[n.length-1]])}function o(t){t.getEntries().forEach(function(t){t.hadRecentInput||d("cls",[t])})}function a(t){if(t instanceof m&&!g){var e=Math.round(t.timeStamp),n={type:t.type};e<=p.now()?n.fid=p.now()-e:e>p.offset&&e<=Date.now()?(e-=p.offset,n.fid=p.now()-e):e=p.now(),g=!0,d("timing",["fi",e,n])}}function f(t){"hidden"===t&&d("pageHide",[p.now()])}if(!("init"in NREUM&&"page_view_timing"in NREUM.init&&"enabled"in NREUM.init.page_view_timing&&NREUM.init.page_view_timing.enabled===!1)){var c,u,s,d=t("handle"),p=t("loader"),l=t(7),m=NREUM.o.EV;if("PerformanceObserver"in window&&"function"==typeof window.PerformanceObserver){c=new PerformanceObserver(r);try{c.observe({entryTypes:["paint"]})}catch(v){}u=new PerformanceObserver(i);try{u.observe({entryTypes:["largest-contentful-paint"]})}catch(v){}s=new PerformanceObserver(o);try{s.observe({type:"layout-shift",buffered:!0})}catch(v){}}if("addEventListener"in document){var g=!1,h=["click","keydown","mousedown","pointerdown","touchstart"];h.forEach(function(t){document.addEventListener(t,a,!1)})}l(f)}},{}],6:[function(t,e,n){function r(t,e){if(!i)return!1;if(t!==i)return!1;if(!e)return!0;if(!o)return!1;for(var n=o.split("."),r=e.split("."),a=0;a<r.length;a++)if(r[a]!==n[a])return!1;return!0}var i=null,o=null,a=/Version\/(\S+)\s+Safari/;if(navigator.userAgent){var f=navigator.userAgent,c=f.match(a);c&&f.indexOf("Chrome")===-1&&f.indexOf("Chromium")===-1&&(i="Safari",o=c[1])}e.exports={agent:i,version:o,match:r}},{}],7:[function(t,e,n){function r(t){function e(){t(a&&document[a]?document[a]:document[i]?"hidden":"visible")}"addEventListener"in document&&o&&document.addEventListener(o,e,!1)}e.exports=r;var i,o,a;"undefined"!=typeof document.hidden?(i="hidden",o="visibilitychange",a="visibilityState"):"undefined"!=typeof document.msHidden?(i="msHidden",o="msvisibilitychange"):"undefined"!=typeof document.webkitHidden&&(i="webkitHidden",o="webkitvisibilitychange",a="webkitVisibilityState")},{}],8:[function(t,e,n){function r(t,e){var n=[],r="",o=0;for(r in t)i.call(t,r)&&(n[o]=e(r,t[r]),o+=1);return n}var i=Object.prototype.hasOwnProperty;e.exports=r},{}],9:[function(t,e,n){function r(t,e,n){e||(e=0),"undefined"==typeof n&&(n=t?t.length:0);for(var r=-1,i=n-e||0,o=Array(i<0?0:i);++r<i;)o[r]=t[e+r];return o}e.exports=r},{}],10:[function(t,e,n){e.exports={exists:"undefined"!=typeof window.performance&&window.performance.timing&&"undefined"!=typeof window.performance.timing.navigationStart}},{}],ee:[function(t,e,n){function r(){}function i(t){function e(t){return t&&t instanceof r?t:t?u(t,c,a):a()}function n(n,r,i,o,a){if(a!==!1&&(a=!0),!l.aborted||o){t&&a&&t(n,r,i);for(var f=e(i),c=v(n),u=c.length,s=0;s<u;s++)c[s].apply(f,r);var p=d[w[n]];return p&&p.push([b,n,r,f]),f}}function o(t,e){y[t]=v(t).concat(e)}function m(t,e){var n=y[t];if(n)for(var r=0;r<n.length;r++)n[r]===e&&n.splice(r,1)}function v(t){return y[t]||[]}function g(t){return p[t]=p[t]||i(n)}function h(t,e){l.aborted||s(t,function(t,n){e=e||"feature",w[n]=e,e in d||(d[e]=[])})}var y={},w={},b={on:o,addEventListener:o,removeEventListener:m,emit:n,get:g,listeners:v,context:e,buffer:h,abort:f,aborted:!1};return b}function o(t){return u(t,c,a)}function a(){return new r}function f(){(d.api||d.feature)&&(l.aborted=!0,d=l.backlog={})}var c="nr@context",u=t("gos"),s=t(8),d={},p={},l=e.exports=i();e.exports.getOrSetContext=o,l.backlog=d},{}],gos:[function(t,e,n){function r(t,e,n){if(i.call(t,e))return t[e];var r=n();if(Object.defineProperty&&Object.keys)try{return Object.defineProperty(t,e,{value:r,writable:!0,enumerable:!1}),r}catch(o){}return t[e]=r,r}var i=Object.prototype.hasOwnProperty;e.exports=r},{}],handle:[function(t,e,n){function r(t,e,n,r){i.buffer([t],r),i.emit(t,e,n)}var i=t("ee").get("handle");e.exports=r,r.ee=i},{}],id:[function(t,e,n){function r(t){var e=typeof t;return!t||"object"!==e&&"function"!==e?-1:t===window?0:a(t,o,function(){return i++})}var i=1,o="nr@id",a=t("gos");e.exports=r},{}],loader:[function(t,e,n){function r(){if(!R++){var t=M.info=NREUM.info,e=v.getElementsByTagName("script")[0];if(setTimeout(u.abort,3e4),!(t&&t.licenseKey&&t.applicationID&&e))return u.abort();c(E,function(e,n){t[e]||(t[e]=n)});var n=a();f("mark",["onload",n+M.offset],null,"api"),f("timing",["load",n]);var r=v.createElement("script");0===t.agent.indexOf("http://")||0===t.agent.indexOf("https://")?r.src=t.agent:r.src=l+"://"+t.agent,e.parentNode.insertBefore(r,e)}}function i(){"complete"===v.readyState&&o()}function o(){f("mark",["domContent",a()+M.offset],null,"api")}var a=t(3),f=t("handle"),c=t(8),u=t("ee"),s=t(6),d=t(4),p=t(2),l=p.getConfiguration("ssl")===!1?"http":"https",m=window,v=m.document,g="addEventListener",h="attachEvent",y=m.XMLHttpRequest,w=y&&y.prototype,b=!d(m.location);NREUM.o={ST:setTimeout,SI:m.setImmediate,CT:clearTimeout,XHR:y,REQ:m.Request,EV:m.Event,PR:m.Promise,MO:m.MutationObserver};var x=""+location,E={beacon:"bam.nr-data.net",errorBeacon:"bam.nr-data.net",agent:"js-agent.newrelic.com/nr-1210.min.js"},O=y&&w&&w[g]&&!/CriOS/.test(navigator.userAgent),M=e.exports={offset:a.getLastTimestamp(),now:a,origin:x,features:{},xhrWrappable:O,userAgent:s,disabled:b};if(!b){t(1),t(5),v[g]?(v[g]("DOMContentLoaded",o,!1),m[g]("load",r,!1)):(v[h]("onreadystatechange",i),m[h]("onload",r)),f("mark",["firstbyte",a.getLastTimestamp()],null,"api");var R=0}},{}],"wrap-function":[function(t,e,n){function r(t,e){function n(e,n,r,c,u){function nrWrapper(){var o,a,s,p;try{a=this,o=d(arguments),s="function"==typeof r?r(o,a):r||{}}catch(l){i([l,"",[o,a,c],s],t)}f(n+"start",[o,a,c],s,u);try{return p=e.apply(a,o)}catch(m){throw f(n+"err",[o,a,m],s,u),m}finally{f(n+"end",[o,a,p],s,u)}}return a(e)?e:(n||(n=""),nrWrapper[p]=e,o(e,nrWrapper,t),nrWrapper)}function r(t,e,r,i,o){r||(r="");var f,c,u,s="-"===r.charAt(0);for(u=0;u<e.length;u++)c=e[u],f=t[c],a(f)||(t[c]=n(f,s?c+r:r,i,c,o))}function f(n,r,o,a){if(!m||e){var f=m;m=!0;try{t.emit(n,r,o,e,a)}catch(c){i([c,n,r,o],t)}m=f}}return t||(t=s),n.inPlace=r,n.flag=p,n}function i(t,e){e||(e=s);try{e.emit("internal-error",t)}catch(n){}}function o(t,e,n){if(Object.defineProperty&&Object.keys)try{var r=Object.keys(t);return r.forEach(function(n){Object.defineProperty(e,n,{get:function(){return t[n]},set:function(e){return t[n]=e,e}})}),e}catch(o){i([o],n)}for(var a in t)l.call(t,a)&&(e[a]=t[a]);return e}function a(t){return!(t&&t instanceof Function&&t.apply&&!t[p])}function f(t,e){var n=e(t);return n[p]=t,o(t,n,s),n}function c(t,e,n){var r=t[e];t[e]=f(r,n)}function u(){for(var t=arguments.length,e=new Array(t),n=0;n<t;++n)e[n]=arguments[n];return e}var s=t("ee"),d=t(9),p="nr@original",l=Object.prototype.hasOwnProperty,m=!1;e.exports=r,e.exports.wrapFunction=f,e.exports.wrapInPlace=c,e.exports.argsToArray=u},{}]},{},["loader"]);</script><script type="text/javascript">window.NREUM||(NREUM={});NREUM.info={"beacon":"bam.nr-data.net","errorBeacon":"bam.nr-data.net","licenseKey":"9e57878e2e","applicationID":"7328113","transactionName":"ZVwAbEQCDUQCAUwKDFwWJE1YABdeDAwXDhpBUBZdGA4CXg0DSBNNRFAHT0VZEFgRFlENBA==","queueTime":3,"applicationTime":92,"agent":""}</script>
+        <link rel="shortcut icon" type="image/x-icon" href="https://www.interviewcake.com/images/favicon.ico?bust=209">
+        <link rel="canonical" href="https://www.interviewcake.com/sorting-algorithm-cheat-sheet">
+        <meta name="description" content="
+Big O time costs and core properties of quicksort, merge sort, heapsort, insertion sort, selection sort, radix sort, and bucket sort
+">
+
+        <meta property="og:title" content="Sorting algorithm reference, for coding interviews and computer science classes | Interview Cake">
+        <meta property="og:description" content="
+Big O time costs and core properties of quicksort, merge sort, heapsort, insertion sort, selection sort, radix sort, and bucket sort
+">
+        <meta property="og:image" content="https://www.interviewcake.com/static/images/cake_white_on_blue_600_600_unrounded.png?bust=209">
+        <meta property="og:type" content="website">
+        <meta property="og:locale" content="en_US">
+        <meta property="og:site_name" content="Interview Cake: Programming Interview Questions and Tips">
+        <meta property="fb:app_id" content="149278655279066">
+        <meta property="fb:admins" content="514407734">
+        <meta property="og:url" content="https://www.interviewcake.com/sorting-algorithm-cheat-sheet">
+
+        <meta name="twitter:card" content="summary">
+        <meta name="twitter:site" content="@interviewcake">
+        <meta name="twitter:title" content="Sorting algorithm reference, for coding interviews and computer science classes | Interview Cake">
+        <meta name="twitter:description" content="
+Big O time costs and core properties of quicksort, merge sort, heapsort, insertion sort, selection sort, radix sort, and bucket sort
+">
+        <meta name="twitter:creator" content="@interviewcake">
+        <meta name="twitter:image:src" content="https://www.interviewcake.com/static/images/cake_white_on_blue_600_600_unrounded.png?bust=209">
+        <meta name="twitter:domain" content="interviewcake.com">
+        <meta name="format-detection" content="telephone=no">
+        <meta name="google-site-verification" content="r7D0sJ5yY_0tZHJ3uXk2pPriygDLCPtz7Ihqq5NTpf8">
+
+        <title>Sorting algorithm reference, for coding interviews and computer science classes | Interview Cake</title>
+    
+
+
+    
+
+    
+
+    
+
+    
+
+
+        <style type="text/css" media="all">.article .section-wrapper.heading,.article.home .section-wrapper.heading,.article .section-wrapper.heading.slim-bottom,.article.home .section-wrapper.heading.slim-bottom{padding:30px 0}.article .section-wrapper.heading.taller,.article.home .section-wrapper.heading.taller,.article .section-wrapper.heading.slim-bottom.taller,.article.home .section-wrapper.heading.slim-bottom.taller{padding:100px 0}@media (max-width:480px){.article .section-wrapper.heading.taller,.article.home .section-wrapper.heading.taller,.article .section-wrapper.heading.slim-bottom.taller,.article.home .section-wrapper.heading.slim-bottom.taller{padding-top:30px}}.article .section-wrapper.heading.slim-bottom,.article.home .section-wrapper.heading.slim-bottom,.article .section-wrapper.heading.slim-bottom.slim-bottom,.article.home .section-wrapper.heading.slim-bottom.slim-bottom{padding-bottom:25px}.article .section-wrapper.heading h1,.article.home .section-wrapper.heading h1,.article .section-wrapper.heading.slim-bottom h1,.article.home .section-wrapper.heading.slim-bottom h1{margin:0;padding:0 0 5px}@media (max-width:320px){.article .section-wrapper.heading h1,.article.home .section-wrapper.heading h1,.article .section-wrapper.heading.slim-bottom h1,.article.home .section-wrapper.heading.slim-bottom h1{padding-bottom:6px}}.article .section-wrapper.heading h2,.article.home .section-wrapper.heading h2,.article .section-wrapper.heading.slim-bottom h2,.article.home .section-wrapper.heading.slim-bottom h2{margin:0;padding:0;font-size:22px;line-height:30px}@media (max-width:320px){.article .section-wrapper.heading h2,.article.home .section-wrapper.heading h2,.article .section-wrapper.heading.slim-bottom h2,.article.home .section-wrapper.heading.slim-bottom h2{font-size:19px;line-height:27px}}.article .section-wrapper.heading p:first-of-type,.article.home .section-wrapper.heading p:first-of-type,.article .section-wrapper.heading.slim-bottom p:first-of-type,.article.home .section-wrapper.heading.slim-bottom p:first-of-type{margin:0;padding:10px 0 0}.article .section-wrapper.heading a.btn.get-started,.article.home .section-wrapper.heading a.btn.get-started,.article .section-wrapper.heading.slim-bottom a.btn.get-started,.article.home .section-wrapper.heading.slim-bottom a.btn.get-started{margin:30px 0 0}html{font-family:open sans,"Helvetica Neue",Helvetica,Arial,sans-serif;-webkit-text-size-adjust:100%;-ms-text-size-adjust:100%}h1,.glyphicon,.navbar-brand{visibility:hidden}div[code-block]{font-family:'Inconsolata','Droid Mono',Courier New;padding:10px 18px;border:0px solid #5bc0de;border-left-width:5px;font-size:14px;line-height:1.75;white-space:pre!important}body{margin:0}section{display:block}[hidden]{display:none}a{background-color:transparent}strong{font-weight:700}h1{margin:0.67em 0;font-size:2em}small{font-size:80%}img{border:0}button,input,select{margin:0;font:inherit;color:inherit}button{overflow:visible}button,select{text-transform:none}button,input[type=submit]{-webkit-appearance:button}button::-moz-focus-inner,input::-moz-focus-inner{padding:0;border:0}input{line-height:normal}*{-webkit-box-sizing:border-box;-moz-box-sizing:border-box;box-sizing:border-box}:after,:before{-webkit-box-sizing:border-box;-moz-box-sizing:border-box;box-sizing:border-box}html{font-size:10px}body{font-size:14px;line-height:1.42857143;color:#333;background-color:#fff}button,input,select{font-family:inherit;font-size:inherit;line-height:inherit}a{color:#337ab7;text-decoration:none}img{vertical-align:middle}.carousel-inner>.item>img{display:block;max-width:100%;height:auto}.sr-only{position:absolute;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;clip:rect(0,0,0,0);border:0}.h2,h1,h2,h3,h4,h5{font-family:inherit;font-weight:500;line-height:1.1;color:inherit}.h2,h1,h2,h3{margin-top:20px;margin-bottom:10px}h4,h5{margin-top:10px;margin-bottom:10px}h1{font-size:36px}.h2,h2{font-size:30px}h3{font-size:24px}h4{font-size:18px}h5{font-size:14px}p{margin:0 0 10px}small{font-size:85%}.text-center{text-align:center}ol,ul{margin-top:0;margin-bottom:10px}ul ul{margin-bottom:0}address{margin-bottom:20px;font-style:normal;line-height:1.42857143}.container-fluid{padding-right:15px;padding-left:15px;margin-right:auto;margin-left:auto}.row{margin-right:-15px;margin-left:-15px}.col-sm-6{position:relative;min-height:1px;padding-right:15px;padding-left:15px}@media (min-width:768px){.col-sm-6{float:left}.col-sm-6{width:50%}}.form-control::-moz-placeholder{color:#999;opacity:1}.form-control:-ms-input-placeholder{color:#999}.form-control::-webkit-input-placeholder{color:#999}.btn{display:inline-block;padding:6px 12px;margin-bottom:0;font-size:14px;font-weight:400;line-height:1.42857143;text-align:center;white-space:nowrap;vertical-align:middle;-ms-touch-action:manipulation;touch-action:manipulation;background-image:none;border:1px solid transparent;border-radius:4px}.btn-default{color:#333;background-color:#fff;border-color:#ccc}.btn-lg{padding:10px 16px;font-size:18px;line-height:1.3333333;border-radius:6px}.fade{opacity:0}.collapse{display:none;visibility:hidden}.caret{display:inline-block;width:0;height:0;margin-left:2px;vertical-align:middle;border-top:4px solid;border-right:4px solid transparent;border-left:4px solid transparent}.dropdown{position:relative}.dropdown-menu{position:absolute;top:100%;left:0;z-index:1000;display:none;float:left;min-width:160px;padding:5px 0;margin:2px 0 0;font-size:14px;text-align:left;list-style:none;background-color:#fff;-webkit-background-clip:padding-box;background-clip:padding-box;border:1px solid #ccc;border:1px solid rgba(0,0,0,0.15);border-radius:4px;-webkit-box-shadow:0 6px 12px rgba(0,0,0,0.175);box-shadow:0 6px 12px rgba(0,0,0,0.175)}.dropdown-menu .divider{height:1px;margin:9px 0;overflow:hidden;background-color:#e5e5e5}.dropdown-menu>li>a{display:block;padding:3px 20px;clear:both;font-weight:400;line-height:1.42857143;color:#333;white-space:nowrap}@media (min-width:768px){.navbar-right .dropdown-menu{right:0;left:auto}}.nav{padding-left:0;margin-bottom:0;list-style:none}.nav>li{position:relative;display:block}.nav>li>a{position:relative;display:block;padding:10px 15px}.navbar{position:relative;min-height:50px;margin-bottom:20px;border:1px solid transparent}@media (min-width:768px){.navbar{border-radius:4px}}@media (min-width:768px){.navbar-header{float:left}}.navbar-collapse{padding-right:15px;padding-left:15px;overflow-x:visible;-webkit-overflow-scrolling:touch;border-top:1px solid transparent;-webkit-box-shadow:inset 0 1px 0 rgba(255,255,255,0.1);box-shadow:inset 0 1px 0 rgba(255,255,255,0.1)}@media (min-width:768px){.navbar-collapse{width:auto;border-top:0;-webkit-box-shadow:none;box-shadow:none}.navbar-collapse.collapse{display:block!important;height:auto!important;padding-bottom:0;overflow:visible!important;visibility:visible!important}}.navbar-brand{float:left;height:50px;padding:15px 15px;font-size:18px;line-height:20px}.navbar-toggle{position:relative;float:right;padding:9px 10px;margin-top:8px;margin-right:15px;margin-bottom:8px;background-color:transparent;background-image:none;border:1px solid transparent;border-radius:4px}.navbar-toggle .icon-bar{display:block;width:22px;height:2px;border-radius:1px}.navbar-toggle .icon-bar + .icon-bar{margin-top:4px}@media (min-width:768px){.navbar-toggle{display:none}}.navbar-nav{margin:7.5px -15px}.navbar-nav>li>a{padding-top:10px;padding-bottom:10px;line-height:20px}@media (min-width:768px){.navbar-nav{float:left;margin:0}.navbar-nav>li{float:left}.navbar-nav>li>a{padding-top:15px;padding-bottom:15px}}.navbar-nav>li>.dropdown-menu{margin-top:0;border-top-left-radius:0;border-top-right-radius:0}.navbar-text{margin-top:15px;margin-bottom:15px}@media (min-width:768px){.navbar-text{float:left;margin-right:15px;margin-left:15px}}@media (min-width:768px){.navbar-left{float:left!important}.navbar-right{float:right!important;margin-right:-15px}}.navbar-inverse{background-color:#222;border-color:#080808}.navbar-inverse .navbar-brand{color:#9d9d9d}.navbar-inverse .navbar-text{color:#9d9d9d}.navbar-inverse .navbar-nav>li>a{color:#9d9d9d}.navbar-inverse .navbar-toggle{border-color:#333}.navbar-inverse .navbar-toggle .icon-bar{background-color:#fff}.navbar-inverse .navbar-collapse{border-color:#101010}.carousel{position:relative}.carousel-inner{position:relative;width:100%;overflow:hidden}.carousel-inner>.item{position:relative;display:none}.carousel-inner>.item>img{line-height:1}@media all and (transform-3d),(-webkit-transform-3d){.carousel-inner>.item{-webkit-backface-visibility:hidden;backface-visibility:hidden;-webkit-perspective:1000;perspective:1000}.carousel-inner>.item.active{left:0;-webkit-transform:translate3d(0,0,0);transform:translate3d(0,0,0)}}.carousel-inner>.active{display:block}.carousel-inner>.active{left:0}.carousel-indicators{position:absolute;bottom:10px;left:50%;z-index:15;width:60%;padding-left:0;margin-left:-30%;text-align:center;list-style:none}.carousel-indicators li{display:inline-block;width:10px;height:10px;margin:1px;text-indent:-999px;background-color:#000 \9;background-color:rgba(0,0,0,0);border:1px solid #fff;border-radius:10px}.carousel-indicators .active{width:12px;height:12px;margin:0;background-color:#fff}@media screen and (min-width:768px){.carousel-indicators{bottom:20px}}.clearfix:after,.clearfix:before,.container-fluid:after,.container-fluid:before,.nav:after,.nav:before,.navbar-collapse:after,.navbar-collapse:before,.navbar-header:after,.navbar-header:before,.navbar:after,.navbar:before,.row:after,.row:before{display:table;content:" "}.clearfix:after,.container-fluid:after,.nav:after,.navbar-collapse:after,.navbar-header:after,.navbar:after,.row:after{clear:both}.center-block{display:block;margin-right:auto;margin-left:auto}.hidden{display:none!important;visibility:hidden!important}@-ms-viewport{width:device-width}html,body{overflow:hidden}.panel-wrapper{white-space:nowrap}.panel-wrapper>div{white-space:normal}.left-panel{width:100%;height:100vh;float:left;overflow:auto;-webkit-overflow-scrolling:touch;position:relative;-webkit-box-shadow:0 15px 10px 5px #0f0f0f;-moz-box-shadow:0 15px 10px 5px #0f0f0f;box-shadow:0 15px 10px 5px #0f0f0f;z-index:5}.right-panel{width:50%;height:100vh;display:inline-block;overflow:hidden}.editor-container{height:100%}.editor-container .fa{color:#f9f9f9;position:absolute}.editor-container button{background:#fff;border:none;border-radius:2px;padding:4px 10px;color:#555;box-shadow:0 0 3px #555;position:absolute;outline:none}.editor-container button.show-editor{top:25%;right:0;z-index:5;border-top-right-radius:0;border-bottom-right-radius:0;padding-left:6px}.editor-container button.show-editor:before,.editor-container button.show-editor:after{position:relative;top:1px}@supports (-ms-ime-align:auto){.editor-container button.show-editor:before,.editor-container button.show-editor:after{color:#ff0!important}}.editor-container button.show-editor:before{content:'\002329';right:4px}@-moz-document url-prefix(){.show-editor{padding-left:9px!important}.show-editor:before,.show-editor:after{top:-1px!important}.show-editor:before{right:1px!important}.show-editor:after{left:1px!important}}@supports (-ms-ime-align:auto){.show-editor{padding-left:9px!important}.show-editor:before,.show-editor:after{top:-1px!important}.show-editor:before{right:1px!important}.show-editor:after{left:1px!important}}@media (max-width:820px){.left-panel{width:100%!important}.right-panel{display:none}}.ic-alert{font-size:17px;background-color:#ffffb8;padding:25px 10px 10px;-webkit-box-shadow:0 0 10px rgba(51,51,51,0.2);-moz-box-shadow:0 0 10px rgba(51,51,51,0.2);box-shadow:0 0 10px rgba(51,51,51,0.2)}.ic-alert.ic-alert-email-newsletter-signup{position:fixed;right:0;top:0;z-index:20}.ic-alert.ic-alert-email-newsletter-signup .ic-alert-content{max-width:500px}.ic-alert.ic-alert-email-newsletter-signup .the-form{margin-top:23px}.ic-alert.ic-alert-email-newsletter-signup .close-p{margin-top:10px}.ic-alert.ic-alert-email-newsletter-signup .reassurance{font-size:12px}.ic-alert .ic-alert-content{max-width:700px;margin:auto}.ic-alert .ic-alert-content p{font-size:17px}.ic-alert .ic-alert-content p:last-child{padding-bottom:0;margin-bottom:0}.login-btns{max-width:235px;margin:auto}.login-btns .btn{width:auto;display:block;height:44px;line-height:29px;margin:14px 5px;text-align:left}.login-btns i{width:23px;font-size:26px;margin:3px 11px 0;vertical-align:top}.login-btns .company{margin-left:12px}.login-btns .bar{color:rgba(183,183,183,0.4)}.login-reassurance{display:block;margin:0;padding:0;text-align:center}.align-to-sections{margin:auto;max-width:700px;padding-left:10px;padding-right:10px}img.mug{float:left;margin-right:20px;margin-bottom:20px;height:100px;width:100px;border-radius:50px;-moz-border-radius:50px;-webkit-border-radius:50px;-o-border-radius:50px}.testimonials .carousel{display:table;margin-bottom:0}.testimonials .carousel .mug{position:absolute;margin:auto;top:0;bottom:0}.testimonials .carousel .carousel-inner{overflow:visible}@media (max-width:400px){.testimonials .carousel .carousel-inner .mug{width:85px;height:85px}.testimonials .carousel .carousel-inner .testimonial .quote{padding-left:106px!important;font-size:14px!important}}.testimonials .carousel .carousel-inner .testimonial{display:table;height:100%}.testimonials .carousel .carousel-inner .testimonial .quote{font-style:italic;font-size:14.5px;line-height:24px;padding-left:119px;display:table-cell;vertical-align:middle;padding-bottom:38px}.testimonials .carousel .carousel-inner .testimonial .got-the-job{font-size:17px;display:table-row;height:38px}.testimonials .carousel .mug-indicators{margin:0;left:0;bottom:-15px;position:absolute;width:100%}.testimonials .carousel .mug-indicators li{border-color:transparent;margin:8px}@media (max-width:320px){.testimonials .carousel .mug-indicators li{margin:7px!important}}.testimonials .carousel .mug-indicators li.active{background:transparent;height:10px;width:10px;margin:8px 15px}.testimonials .carousel .mug-indicators li.active img{opacity:1;left:-12px;top:-12px;height:33px;width:33px;border-radius:33px;-moz-border-radius:33px;-webkit-border-radius:33px;-o-border-radius:33px;z-index:2;border:none;-webkit-box-shadow:0 0 4px #3d3d3d;-moz-box-shadow:0 0 4px #3d3d3d;box-shadow:0 0 4px #3d3d3d}.testimonials .carousel .mug-indicators li img{height:23px;width:23px;border-radius:23px;-moz-border-radius:23px;-webkit-border-radius:23px;-o-border-radius:23px;float:left;position:relative;left:-7px;top:-8px;opacity:0.3}.testimonials .carousel.fade{opacity:1}.testimonials .carousel.fade .item{display:block!important;position:absolute;left:0!important;top:0;width:100%;opacity:0;z-index:1}.testimonials .carousel.fade .item:first-child{top:auto;position:relative}.testimonials .carousel.fade .item.active{opacity:1;z-index:2}.full-width-testimonials .carousel{margin-bottom:-4px}.full-width-testimonials .carousel .item{height:160px}@media (max-width:564px){.full-width-testimonials .carousel .item{height:174px}}@media (max-width:470px){.full-width-testimonials .carousel .item{height:197px}}@media (max-width:416px){.full-width-testimonials .carousel .item{height:222px}}@media (max-width:320px){.full-width-testimonials .carousel .item{height:293px}}.full-width-testimonials .carousel .mug{height:97px;width:97px;border-radius:97px;-moz-border-radius:97px;-webkit-border-radius:97px;-o-border-radius:97px}.full-width-testimonials .carousel .got-the-job{font-size:16px!important;margin-bottom:12px}.home .section-wrapper.proof .section{padding-top:40px;padding-bottom:30px}.home .section-wrapper.proof .section .logos{text-align:center;margin:51px auto 0}.home .section-wrapper.proof .section .logos .disclaimer{margin-bottom:-20px;padding-top:10px}.home .section-wrapper.proof .section .logos .disclaimer p{color:grey;font-size:13px}.share-btns.share-btns-quiz-end{line-height:normal;text-align:center;padding-bottom:25px}.custom-share{display:inline-block;width:92px;height:34px;border-radius:17px;-moz-border-radius:17px;-webkit-border-radius:17px;-o-border-radius:17px;color:#fff;text-decoration:none;text-align:center;font-size:14px;word-spacing:5px;padding-top:7px;margin:0 2px;font-weight:100}.custom-share:link,.custom-share:visited{color:#fff;text-decoration:none}.custom-share.facebook-share{background:#4c67a1}.custom-share.twitter-share{background:#55acee}.custom-share.linkedin-share{background:#0077b5}.fb-like{overflow:hidden}.fb-social-proof-widget-wrapper{text-align:center;margin-top:20px;overflow:hidden}.fb-social-proof-widget-wrapper .fb-social-proof-widget{margin:auto}[ng-cloak]{display:none!important}body{background-color:#fff}h1,h2,h3,h4,h5,.h2{font-weight:700;color:#555;letter-spacing:-1px}#footer{background:-webkit-linear-gradient(#f7f7f7,#fff);background:-o-linear-gradient(#f7f7f7,#fff);background:-moz-linear-gradient(#f7f7f7,#fff);background:linear-gradient(#f7f7f7,#fff);text-align:center;font-size:11px;line-height:20px;margin-top:100px;margin-bottom:10px;clear:both;color:#707070;padding:10px}@media (max-width:320px){#footer{font-size:9px;line-height:14px}}#footer .links{text-align:left;max-width:700px;margin:auto}#footer .links ul li{font-size:13px}#footer .social-media{margin:0 0 10px}#footer .social-media a{display:inline-block;border-radius:13px;-moz-border-radius:13px;-webkit-border-radius:13px;-o-border-radius:13px;color:#fff;font-size:17px;width:26px;height:26px;line-height:26.78px;margin:0 3.5px;letter-spacing:-0.5px}#footer .social-media a.facebook{background:#4c67a1}#footer .social-media a.twitter{background:#55acee}#footer .social-media .fa-facebook{top:1px;position:relative}#footer .newsletter-link{font-size:16px;line-height:30px;display:inline-block;margin-bottom:10px}.article{font-size:15px;color:#555}.article p,.article li{line-height:24px}.article .section-wrapper.heading h1{font-size:52px;margin:0 0 15px -3px}@media (max-width:480px){.article .section-wrapper.heading h1{font-size:30px}}@media (max-width:320px){.article .section-wrapper.heading h1{font-size:32px}}.article .section-wrapper.heading h2{font-weight:400}.article .section-wrapper.heading .section>p:first-of-type{margin-top:40px}@media (max-width:767px){.article .section-wrapper.heading .section>p:first-of-type{margin:15px 0}}.article h2{margin:0 0 10px;font-size:29px;padding:6px 0 15px;line-height:35px}@media (max-width:480px){.article h2{font-size:18.75px;line-height:30px}}.article .section-wrapper{padding:50px 0}@media (max-width:320px){.article .section-wrapper{padding:25px 0}}.article .section-wrapper.heading{padding:100px 0}@media (max-width:767px){.article .section-wrapper.heading{padding:25px 0}}.article .section-wrapper.heading.header-extension{text-align:center;background-color:#5bc0de;color:#fff}.article .section-wrapper.heading.header-extension a{color:#fff;font-weight:700}.article .section-wrapper.heading.header-extension h1,.article .section-wrapper.heading.header-extension h2{color:#fff}.article .section-wrapper.slim{padding:0}.article .section-wrapper .section{margin:auto;max-width:700px;padding:10px}.article .section-wrapper.widest .section{max-width:none}.article .section-wrapper.wider .section{max-width:1050px}@media (max-width:767px){.article .section-wrapper.wider .section{margin:auto}}.article .section-wrapper a.get-started{margin:20px 0}.article.home .section-wrapper.heading{padding-bottom:20px;text-align:center;background-color:#5bc0de}.article.home .section-wrapper.heading p,.article.home .section-wrapper.heading strong,.article.home .section-wrapper.heading h1{text-align:center;color:#fff}.article.home .section-wrapper.heading p{font-size:19px;margin-bottom:15px;line-height:30px}@media (max-width:496px){.article.home .section-wrapper.heading h1{font-size:41px;line-height:48px}.article.home .section-wrapper.heading p{font-size:17px;line-height:24px}}@media (max-width:320px){.article.home .section-wrapper.heading h1{font-size:37px;line-height:44px}}.section-wrapper.heading.header-extension a.get-started{line-height:37px;margin:50px auto 60px;border:2px solid #fff}.inline-testimonial{font-size:16px;line-height:32px;padding:15px;display:inline-block;background-color:#fff;margin:15px auto;position:relative}.inline-testimonial .text{display:inline-block;max-width:640px;text-align:left}.inline-testimonial .author{margin:0 0 0 11px;color:rgba(112,112,112,0.62);font-style:italic;display:inline-block}.inline-testimonial .image-wrapper{text-align:center}.inline-testimonial img{border-radius:50%;height:100px;width:100px;border:4px solid #fff;margin:5px}.inline-testimonial .quotation-mark{color:#ccc;vertical-align:bottom;font-family:times new roman;line-height:0;margin:0 10px 10px 0;font-size:70px}.inline-testimonial.wider .text{max-width:650px}@media (max-width:850px){.inline-testimonial{background-color:transparent}.inline-testimonial img{position:relative!important;height:90px;width:90px;border:0}.inline-testimonial .text-with-image{display:inline}}.quotation-mark{color:#ccc;vertical-align:bottom;font-family:times new roman;line-height:0;margin:0 10px 10px 0;font-size:70px}.article .section-wrapper.heading,.article.home .section-wrapper.heading{padding:30px 0}.article .section-wrapper.heading h1,.article.home .section-wrapper.heading h1{margin:0;padding:0 0 5px}@media (max-width:320px){.article .section-wrapper.heading h1,.article.home .section-wrapper.heading h1{padding-bottom:6px}}.article .section-wrapper.heading h2,.article.home .section-wrapper.heading h2{margin:0;padding:0;font-size:22px;line-height:30px}@media (max-width:320px){.article .section-wrapper.heading h2,.article.home .section-wrapper.heading h2{font-size:19px;line-height:27px}}.article .section-wrapper.heading p:first-of-type,.article.home .section-wrapper.heading p:first-of-type{margin:0;padding:10px 0 0}.article .section-wrapper.heading a.btn.get-started,.article.home .section-wrapper.heading a.btn.get-started{margin:30px 0 0}.shaded{background-color:#f7f7f7}.modal .close{position:absolute;top:5px;right:5px}.modal h3{text-align:center;margin:5px 0}.full-access-badge{color:#ff0}.navbar{margin-bottom:0;background-color:#5bc0de;border-radius:0;-moz-border-radius:0;-webkit-border-radius:0;-o-border-radius:0;border:0;color:#fff}.navbar .nav.navbar-nav a,.navbar .nav.navbar-nav p{color:#fff;font-size:14px}.navbar .dropdown.tips .dropdown-menu li a{padding-top:7px;padding-bottom:7px}.navbar:not(.print-header) .navbar-brand{margin-right:20px;padding-left:25px;margin-left:10px}.navbar.print-header .navbar-brand img.logo{display:inline-block;margin:0;margin-top:-5px;padding:0}.navbar .navbar-brand{color:#fff;font-weight:700;letter-spacing:-1px;font-size:20px}.navbar .nav.navbar-nav>li>a{text-decoration:none;font-weight:400}.navbar .nav.navbar-nav>li>a.upgrade{font-size:1.1em;padding-top:-5px;font-weight:700;color:#fff}.navbar .nav.navbar-nav>li>a.upgrade:after{content:"";position:absolute;top:0;right:0;width:100%;border-top:3px solid #ffffad}.navbar .navbar-collapse{border-top:0}.navbar button.navbar-toggle{border-color:#fff}.navbar p.navbar-text{color:#fff}.btn.btn-branded{background-color:#5bc0de;color:#fff}.btn.btn-bold{font-weight:700}.btn.btn-default{background:0 0;color:#555}.btn.btn-lg{height:45px;font-weight:700;border-radius:22.5px;-moz-border-radius:22.5px;-webkit-border-radius:22.5px;-o-border-radius:22.5px}.btn.btn-lg.get-started{font-size:18px;height:40px;line-height:40px;border-radius:20px;-moz-border-radius:20px;-webkit-border-radius:20px;-o-border-radius:20px;vertical-align:middle;padding:0 20px}.btn.btn-rarr:after{content:" \27A1"}#select-language-content-width-hack{border:none;font-weight:300;font-size:11px;padding-right:13px;-webkit-appearance:none;-moz-appearance:none;appearance:none}div[code-block]{padding-bottom:0;margin-bottom:18px;display:block;width:auto;position:relative;background:#fbfbfb}.right-drawer{max-width:300px;top:0;right:0;padding:25px;-webkit-box-shadow:0 0 30px rgba(51,51,51,0.8);-moz-box-shadow:0 0 30px rgba(51,51,51,0.8);box-shadow:0 0 30px rgba(51,51,51,0.8);border-radius:0 0 0 20px;-moz-border-radius:0 0 0 20px;-webkit-border-radius:0 0 0 20px;-o-border-radius:0 0 0 20px}@media (max-width:300px){.right-drawer{border-radius:0 0 0 0;-moz-border-radius:0 0 0 0;-webkit-border-radius:0 0 0 0;-o-border-radius:0 0 0 0}}.quiz .card .btn-sets{margin-top:25px;text-align:center}.quiz .card .btn-sets .prompt{font-size:17px}.quiz .card .btn-sets .btn{height:45px;line-height:45px;margin:0 0 8px;padding:0 20px;border-radius:22.5px;-moz-border-radius:22.5px;-webkit-border-radius:22.5px;-o-border-radius:22.5px;background:0 0}.quiz .card .btn-sets .btn .text{font-size:15px}.quiz .card .question-end-outside-course-bottom-cta{text-align:center;margin:75px auto 150px}.quiz .card .sections{font-family:lora,Georgia,serif;font-size:15px;line-height:26px;color:#555;background-color:#f7f7f7;margin-top:30px}.quiz .card strong{font-weight:700}.quiz p{font-size:30px;color:#555}@-webkit-keyframes background-blue-breathe{0%,100%{background-color:#5bc0de}50%{background-color:rgba(91,192,222,0.8)}}@-moz-keyframes background-blue-breathe{0%,100%{background-color:#5bc0de}50%{background-color:rgba(91,192,222,0.8)}}@-ms-keyframes background-blue-breathe{0%,100%{background-color:#5bc0de}50%{background-color:rgba(91,192,222,0.8)}}@-o-keyframes background-blue-breathe{0%,100%{background-color:#5bc0de}50%{background-color:rgba(91,192,222,0.8)}}@keyframes background-blue-breathe{0%,100%{background-color:#5bc0de}50%{background-color:rgba(91,192,222,0.8)}}.btn.get-started{-moz-animation:background-blue-breathe 2s infinite alternate ease-in-out 4s both;-webkit-animation:background-blue-breathe 2s infinite alternate ease-in-out 4s both;-o-animation:background-blue-breathe 2s infinite alternate ease-in-out 4s both;-ms-animation:background-blue-breathe 2s infinite alternate ease-in-out 4s both;animation:background-blue-breathe 2s infinite alternate ease-in-out 4s both}.box-shadowed-light{background-color:rgba(200,200,200,0.2);-webkit-box-shadow:0 0 10px 4px rgba(200,200,200,0.2);-moz-box-shadow:0 0 10px 4px rgba(200,200,200,0.2);box-shadow:0 0 10px 4px rgba(200,200,200,0.2);padding:1px}#loading{display:none;position:fixed;top:50%;width:100%;margin:0;padding:0;text-align:center;font-size:30px;font-weight:700;color:#707070}@-webkit-keyframes fade-in{0%{opacity:0}100%{opacity:1}}@-moz-keyframes fade-in{0%{opacity:0}100%{opacity:1}}@-ms-keyframes fade-in{0%{opacity:0}100%{opacity:1}}@-o-keyframes fade-in{0%{opacity:0}100%{opacity:1}}@keyframes fade-in{0%{opacity:0}100%{opacity:1}}.below-nav{-moz-animation:fade-in 0.25s ease-in-out;-webkit-animation:fade-in 0.25s ease-in-out;-o-animation:fade-in 0.25s ease-in-out;-ms-animation:fade-in 0.25s ease-in-out;animation:fade-in 0.25s ease-in-out}address{margin-bottom:0}@media (max-width:1030px){.navbar-header{float:none}.navbar-left,.navbar-right{float:none!important}.navbar-toggle{display:block}.navbar-collapse{border-top:1px solid transparent;box-shadow:inset 0 1px 0 rgba(255,255,255,0.1)}.navbar-collapse.collapse{display:none!important}.navbar-nav{float:none!important;margin:7.5px 0}.navbar-nav>li{float:none}.navbar-nav>li>a{padding-top:10px;padding-bottom:10px}.navbar-nav>li>p.navbar-text{margin:0;padding:10px 15px}}.header-cta-box{max-width:500px;padding:20px;background-color:#fff;margin:auto;border:solid #ffffb8;border-width:10px 0;margin-top:35px}.header-cta-box h2,.header-cta-box p{text-align:left!important;color:#555!important}.header-cta-box h2{font-sie:20px!important;font-weight:bolder!important}.header-cta-box p{font-size:15px!important;line-height:24px!important;margin-bottom:10px!important}.print-header{display:none}@media (max-width:450px){.input-group,.email-magnet-one-liner .submit{display:block}}@media (max-width:320px){.input-group,.email-magnet-one-liner .submit{font-size:17px!important;padding-left:0!important;padding-right:0!important}}@media (max-width:450px){.submit{width:100%;border-radius:6px!important;margin-top:5px}}@media (max-width:450px){.input-group input{border-radius:6px!important}}#print-footer{display:none}.article .survey h3,.article .survey p{color:#fff!important}.homepage-company-logo{display:inline-block;overflow:hidden;text-indent:-9999px;text-align:left;width:120px;height:90px}.fa{display:inline-block;font:normal normal normal 14px/1 FontAwesome;font-size:inherit;text-rendering:auto;-webkit-font-smoothing:antialiased;-moz-osx-font-smoothing:grayscale;transform:translate(0,0)}</style>
+
+		
+
+    <link rel="apple-touch-icon" href="https://www.interviewcake.com/images/cake_white_on_blue_128_128_unrounded.png">
+
+    
+
+    <meta name="50fc73d52056532c18787976ceb78fddb87b78b2" content="ceb4cec06fc4a780c7b31b85c07cf75d1ca58d9d">
+	<meta name="theme-color" content="#5bc0de">
+<link type="text/css" href="./Sorting algorithm reference, for coding interviews and computer science classes _ Interview Cake_files/optanon.css" rel="stylesheet"><style>#optanon ul#optanon-menu li { background-color:  !important }#optanon ul#optanon-menu li.menu-item-selected { background-color:  !important }#optanon #optanon-popup-wrapper .optanon-white-button-middle { background-color: #5BC0DE !important }.optanon-alert-box-wrapper .optanon-alert-box-button-middle { background-color: #5BC0DE !important; border-color: #5BC0DE !important; }#optanon #optanon-popup-wrapper .optanon-white-button-middle button { color: #ffffff !important }.optanon-alert-box-wrapper .optanon-alert-box-button-middle button { color: #ffffff !important }#optanon #optanon-popup-bottom { background-color: #F2F2F2 !important }#optanon.modern #optanon-popup-top, #optanon.modern #optanon-popup-body-left-shading { background-color: #F2F2F2 !important }.optanon-alert-box-wrapper { background-color: !important }.optanon-alert-box-wrapper .optanon-alert-box-bg p { color: !important }</style><script type="text/javascript" src="./Sorting algorithm reference, for coding interviews and computer science classes _ Interview Cake_files/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script><style id="ace_editor.css">.ace_editor {position: relative;overflow: hidden;font: 12px/normal 'Monaco', 'Menlo', 'Ubuntu Mono', 'Consolas', 'source-code-pro', monospace;direction: ltr;text-align: left;-webkit-tap-highlight-color: rgba(0, 0, 0, 0);}.ace_scroller {position: absolute;overflow: hidden;top: 0;bottom: 0;background-color: inherit;-ms-user-select: none;-moz-user-select: none;-webkit-user-select: none;user-select: none;cursor: text;}.ace_content {position: absolute;-moz-box-sizing: border-box;-webkit-box-sizing: border-box;box-sizing: border-box;min-width: 100%;}.ace_dragging .ace_scroller:before{position: absolute;top: 0;left: 0;right: 0;bottom: 0;content: '';background: rgba(250, 250, 250, 0.01);z-index: 1000;}.ace_dragging.ace_dark .ace_scroller:before{background: rgba(0, 0, 0, 0.01);}.ace_selecting, .ace_selecting * {cursor: text !important;}.ace_gutter {position: absolute;overflow : hidden;width: auto;top: 0;bottom: 0;left: 0;cursor: default;z-index: 4;-ms-user-select: none;-moz-user-select: none;-webkit-user-select: none;user-select: none;}.ace_gutter-active-line {position: absolute;left: 0;right: 0;}.ace_scroller.ace_scroll-left {box-shadow: 17px 0 16px -16px rgba(0, 0, 0, 0.4) inset;}.ace_gutter-cell {padding-left: 19px;padding-right: 6px;background-repeat: no-repeat;}.ace_gutter-cell.ace_error {background-image: url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAMAAAAoLQ9TAAABOFBMVEX/////////QRswFAb/Ui4wFAYwFAYwFAaWGAfDRymzOSH/PxswFAb/SiUwFAYwFAbUPRvjQiDllog5HhHdRybsTi3/Tyv9Tir+Syj/UC3////XurebMBIwFAb/RSHbPx/gUzfdwL3kzMivKBAwFAbbvbnhPx66NhowFAYwFAaZJg8wFAaxKBDZurf/RB6mMxb/SCMwFAYwFAbxQB3+RB4wFAb/Qhy4Oh+4QifbNRcwFAYwFAYwFAb/QRzdNhgwFAYwFAbav7v/Uy7oaE68MBK5LxLewr/r2NXewLswFAaxJw4wFAbkPRy2PyYwFAaxKhLm1tMwFAazPiQwFAaUGAb/QBrfOx3bvrv/VC/maE4wFAbRPBq6MRO8Qynew8Dp2tjfwb0wFAbx6eju5+by6uns4uH9/f36+vr/GkHjAAAAYnRSTlMAGt+64rnWu/bo8eAA4InH3+DwoN7j4eLi4xP99Nfg4+b+/u9B/eDs1MD1mO7+4PHg2MXa347g7vDizMLN4eG+Pv7i5evs/v79yu7S3/DV7/498Yv24eH+4ufQ3Ozu/v7+y13sRqwAAADLSURBVHjaZc/XDsFgGIBhtDrshlitmk2IrbHFqL2pvXf/+78DPokj7+Fz9qpU/9UXJIlhmPaTaQ6QPaz0mm+5gwkgovcV6GZzd5JtCQwgsxoHOvJO15kleRLAnMgHFIESUEPmawB9ngmelTtipwwfASilxOLyiV5UVUyVAfbG0cCPHig+GBkzAENHS0AstVF6bacZIOzgLmxsHbt2OecNgJC83JERmePUYq8ARGkJx6XtFsdddBQgZE2nPR6CICZhawjA4Fb/chv+399kfR+MMMDGOQAAAABJRU5ErkJggg==");background-repeat: no-repeat;background-position: 2px center;}.ace_gutter-cell.ace_warning {background-image: url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAMAAAAoLQ9TAAAAmVBMVEX///8AAAD///8AAAAAAABPSzb/5sAAAAB/blH/73z/ulkAAAAAAAD85pkAAAAAAAACAgP/vGz/rkDerGbGrV7/pkQICAf////e0IsAAAD/oED/qTvhrnUAAAD/yHD/njcAAADuv2r/nz//oTj/p064oGf/zHAAAAA9Nir/tFIAAAD/tlTiuWf/tkIAAACynXEAAAAAAAAtIRW7zBpBAAAAM3RSTlMAABR1m7RXO8Ln31Z36zT+neXe5OzooRDfn+TZ4p3h2hTf4t3k3ucyrN1K5+Xaks52Sfs9CXgrAAAAjklEQVR42o3PbQ+CIBQFYEwboPhSYgoYunIqqLn6/z8uYdH8Vmdnu9vz4WwXgN/xTPRD2+sgOcZjsge/whXZgUaYYvT8QnuJaUrjrHUQreGczuEafQCO/SJTufTbroWsPgsllVhq3wJEk2jUSzX3CUEDJC84707djRc5MTAQxoLgupWRwW6UB5fS++NV8AbOZgnsC7BpEAAAAABJRU5ErkJggg==");background-position: 2px center;}.ace_gutter-cell.ace_info {background-image: url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAAAAAA6mKC9AAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAAJ0Uk5TAAB2k804AAAAPklEQVQY02NgIB68QuO3tiLznjAwpKTgNyDbMegwisCHZUETUZV0ZqOquBpXj2rtnpSJT1AEnnRmL2OgGgAAIKkRQap2htgAAAAASUVORK5CYII=");background-position: 2px center;}.ace_dark .ace_gutter-cell.ace_info {background-image: url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQBAMAAADt3eJSAAAAJFBMVEUAAAChoaGAgIAqKiq+vr6tra1ZWVmUlJSbm5s8PDxubm56enrdgzg3AAAAAXRSTlMAQObYZgAAAClJREFUeNpjYMAPdsMYHegyJZFQBlsUlMFVCWUYKkAZMxZAGdxlDMQBAG+TBP4B6RyJAAAAAElFTkSuQmCC");}.ace_scrollbar {position: absolute;right: 0;bottom: 0;z-index: 6;}.ace_scrollbar-inner {position: absolute;cursor: text;left: 0;top: 0;}.ace_scrollbar-v{overflow-x: hidden;overflow-y: scroll;top: 0;}.ace_scrollbar-h {overflow-x: scroll;overflow-y: hidden;left: 0;}.ace_print-margin {position: absolute;height: 100%;}.ace_text-input {position: absolute;z-index: 0;width: 0.5em;height: 1em;opacity: 0;background: transparent;-moz-appearance: none;appearance: none;border: none;resize: none;outline: none;overflow: hidden;font: inherit;padding: 0 1px;margin: 0 -1px;text-indent: -1em;-ms-user-select: text;-moz-user-select: text;-webkit-user-select: text;user-select: text;white-space: pre!important;}.ace_text-input.ace_composition {background: inherit;color: inherit;z-index: 1000;opacity: 1;text-indent: 0;}.ace_layer {z-index: 1;position: absolute;overflow: hidden;word-wrap: normal;white-space: pre;height: 100%;width: 100%;-moz-box-sizing: border-box;-webkit-box-sizing: border-box;box-sizing: border-box;pointer-events: none;}.ace_gutter-layer {position: relative;width: auto;text-align: right;pointer-events: auto;}.ace_text-layer {font: inherit !important;}.ace_cjk {display: inline-block;text-align: center;}.ace_cursor-layer {z-index: 4;}.ace_cursor {z-index: 4;position: absolute;-moz-box-sizing: border-box;-webkit-box-sizing: border-box;box-sizing: border-box;border-left: 2px solid;transform: translatez(0);}.ace_multiselect .ace_cursor {border-left-width: 1px;}.ace_slim-cursors .ace_cursor {border-left-width: 1px;}.ace_overwrite-cursors .ace_cursor {border-left-width: 0;border-bottom: 1px solid;}.ace_hidden-cursors .ace_cursor {opacity: 0.2;}.ace_smooth-blinking .ace_cursor {-webkit-transition: opacity 0.18s;transition: opacity 0.18s;}.ace_marker-layer .ace_step, .ace_marker-layer .ace_stack {position: absolute;z-index: 3;}.ace_marker-layer .ace_selection {position: absolute;z-index: 5;}.ace_marker-layer .ace_bracket {position: absolute;z-index: 6;}.ace_marker-layer .ace_active-line {position: absolute;z-index: 2;}.ace_marker-layer .ace_selected-word {position: absolute;z-index: 4;-moz-box-sizing: border-box;-webkit-box-sizing: border-box;box-sizing: border-box;}.ace_line .ace_fold {-moz-box-sizing: border-box;-webkit-box-sizing: border-box;box-sizing: border-box;display: inline-block;height: 11px;margin-top: -2px;vertical-align: middle;background-image:url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABEAAAAJCAYAAADU6McMAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAJpJREFUeNpi/P//PwOlgAXGYGRklAVSokD8GmjwY1wasKljQpYACtpCFeADcHVQfQyMQAwzwAZI3wJKvCLkfKBaMSClBlR7BOQikCFGQEErIH0VqkabiGCAqwUadAzZJRxQr/0gwiXIal8zQQPnNVTgJ1TdawL0T5gBIP1MUJNhBv2HKoQHHjqNrA4WO4zY0glyNKLT2KIfIMAAQsdgGiXvgnYAAAAASUVORK5CYII="),url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAA3CAYAAADNNiA5AAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAACJJREFUeNpi+P//fxgTAwPDBxDxD078RSX+YeEyDFMCIMAAI3INmXiwf2YAAAAASUVORK5CYII=");background-repeat: no-repeat, repeat-x;background-position: center center, top left;color: transparent;border: 1px solid black;border-radius: 2px;cursor: pointer;pointer-events: auto;}.ace_dark .ace_fold {}.ace_fold:hover{background-image:url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABEAAAAJCAYAAADU6McMAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAJpJREFUeNpi/P//PwOlgAXGYGRklAVSokD8GmjwY1wasKljQpYACtpCFeADcHVQfQyMQAwzwAZI3wJKvCLkfKBaMSClBlR7BOQikCFGQEErIH0VqkabiGCAqwUadAzZJRxQr/0gwiXIal8zQQPnNVTgJ1TdawL0T5gBIP1MUJNhBv2HKoQHHjqNrA4WO4zY0glyNKLT2KIfIMAAQsdgGiXvgnYAAAAASUVORK5CYII="),url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAA3CAYAAADNNiA5AAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAACBJREFUeNpi+P//fz4TAwPDZxDxD5X4i5fLMEwJgAADAEPVDbjNw87ZAAAAAElFTkSuQmCC");}.ace_tooltip {background-color: #FFF;background-image: -webkit-linear-gradient(top, transparent, rgba(0, 0, 0, 0.1));background-image: linear-gradient(to bottom, transparent, rgba(0, 0, 0, 0.1));border: 1px solid gray;border-radius: 1px;box-shadow: 0 1px 2px rgba(0, 0, 0, 0.3);color: black;max-width: 100%;padding: 3px 4px;position: fixed;z-index: 999999;-moz-box-sizing: border-box;-webkit-box-sizing: border-box;box-sizing: border-box;cursor: default;white-space: pre;word-wrap: break-word;line-height: normal;font-style: normal;font-weight: normal;letter-spacing: normal;pointer-events: none;}.ace_folding-enabled > .ace_gutter-cell {padding-right: 13px;}.ace_fold-widget {-moz-box-sizing: border-box;-webkit-box-sizing: border-box;box-sizing: border-box;margin: 0 -12px 0 1px;display: none;width: 11px;vertical-align: top;background-image: url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAUAAAAFCAYAAACNbyblAAAANElEQVR42mWKsQ0AMAzC8ixLlrzQjzmBiEjp0A6WwBCSPgKAXoLkqSot7nN3yMwR7pZ32NzpKkVoDBUxKAAAAABJRU5ErkJggg==");background-repeat: no-repeat;background-position: center;border-radius: 3px;border: 1px solid transparent;cursor: pointer;}.ace_folding-enabled .ace_fold-widget {display: inline-block;   }.ace_fold-widget.ace_end {background-image: url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAUAAAAFCAYAAACNbyblAAAANElEQVR42m3HwQkAMAhD0YzsRchFKI7sAikeWkrxwScEB0nh5e7KTPWimZki4tYfVbX+MNl4pyZXejUO1QAAAABJRU5ErkJggg==");}.ace_fold-widget.ace_closed {background-image: url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAMAAAAGCAYAAAAG5SQMAAAAOUlEQVR42jXKwQkAMAgDwKwqKD4EwQ26sSOkVWjgIIHAzPiCgaqiqnJHZnKICBERHN194O5b9vbLuAVRL+l0YWnZAAAAAElFTkSuQmCCXA==");}.ace_fold-widget:hover {border: 1px solid rgba(0, 0, 0, 0.3);background-color: rgba(255, 255, 255, 0.2);box-shadow: 0 1px 1px rgba(255, 255, 255, 0.7);}.ace_fold-widget:active {border: 1px solid rgba(0, 0, 0, 0.4);background-color: rgba(0, 0, 0, 0.05);box-shadow: 0 1px 1px rgba(255, 255, 255, 0.8);}.ace_dark .ace_fold-widget {background-image: url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAUAAAAFCAYAAACNbyblAAAAHklEQVQIW2P4//8/AzoGEQ7oGCaLLAhWiSwB146BAQCSTPYocqT0AAAAAElFTkSuQmCC");}.ace_dark .ace_fold-widget.ace_end {background-image: url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAUAAAAFCAYAAACNbyblAAAAH0lEQVQIW2P4//8/AxQ7wNjIAjDMgC4AxjCVKBirIAAF0kz2rlhxpAAAAABJRU5ErkJggg==");}.ace_dark .ace_fold-widget.ace_closed {background-image: url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAMAAAAFCAYAAACAcVaiAAAAHElEQVQIW2P4//+/AxAzgDADlOOAznHAKgPWAwARji8UIDTfQQAAAABJRU5ErkJggg==");}.ace_dark .ace_fold-widget:hover {box-shadow: 0 1px 1px rgba(255, 255, 255, 0.2);background-color: rgba(255, 255, 255, 0.1);}.ace_dark .ace_fold-widget:active {box-shadow: 0 1px 1px rgba(255, 255, 255, 0.2);}.ace_fold-widget.ace_invalid {background-color: #FFB4B4;border-color: #DE5555;}.ace_fade-fold-widgets .ace_fold-widget {-webkit-transition: opacity 0.4s ease 0.05s;transition: opacity 0.4s ease 0.05s;opacity: 0;}.ace_fade-fold-widgets:hover .ace_fold-widget {-webkit-transition: opacity 0.05s ease 0.05s;transition: opacity 0.05s ease 0.05s;opacity:1;}.ace_underline {text-decoration: underline;}.ace_bold {font-weight: bold;}.ace_nobold .ace_bold {font-weight: normal;}.ace_italic {font-style: italic;}.ace_error-marker {background-color: rgba(255, 0, 0,0.2);position: absolute;z-index: 9;}.ace_highlight-marker {background-color: rgba(255, 255, 0,0.2);position: absolute;z-index: 8;}.ace_br1 {border-top-left-radius    : 3px;}.ace_br2 {border-top-right-radius   : 3px;}.ace_br3 {border-top-left-radius    : 3px; border-top-right-radius:    3px;}.ace_br4 {border-bottom-right-radius: 3px;}.ace_br5 {border-top-left-radius    : 3px; border-bottom-right-radius: 3px;}.ace_br6 {border-top-right-radius   : 3px; border-bottom-right-radius: 3px;}.ace_br7 {border-top-left-radius    : 3px; border-top-right-radius:    3px; border-bottom-right-radius: 3px;}.ace_br8 {border-bottom-left-radius : 3px;}.ace_br9 {border-top-left-radius    : 3px; border-bottom-left-radius:  3px;}.ace_br10{border-top-right-radius   : 3px; border-bottom-left-radius:  3px;}.ace_br11{border-top-left-radius    : 3px; border-top-right-radius:    3px; border-bottom-left-radius:  3px;}.ace_br12{border-bottom-right-radius: 3px; border-bottom-left-radius:  3px;}.ace_br13{border-top-left-radius    : 3px; border-bottom-right-radius: 3px; border-bottom-left-radius:  3px;}.ace_br14{border-top-right-radius   : 3px; border-bottom-right-radius: 3px; border-bottom-left-radius:  3px;}.ace_br15{border-top-left-radius    : 3px; border-top-right-radius:    3px; border-bottom-right-radius: 3px; border-bottom-left-radius: 3px;}.ace_text-input-ios {position: absolute !important;top: -100000px !important;left: -100000px !important;}
+/*# sourceURL=ace/css/ace_editor.css */</style><style id="ace-tm">.ace-tm .ace_gutter {background: #f0f0f0;color: #333;}.ace-tm .ace_print-margin {width: 1px;background: #e8e8e8;}.ace-tm .ace_fold {background-color: #6B72E6;}.ace-tm {background-color: #FFFFFF;color: black;}.ace-tm .ace_cursor {color: black;}.ace-tm .ace_invisible {color: rgb(191, 191, 191);}.ace-tm .ace_storage,.ace-tm .ace_keyword {color: blue;}.ace-tm .ace_constant {color: rgb(197, 6, 11);}.ace-tm .ace_constant.ace_buildin {color: rgb(88, 72, 246);}.ace-tm .ace_constant.ace_language {color: rgb(88, 92, 246);}.ace-tm .ace_constant.ace_library {color: rgb(6, 150, 14);}.ace-tm .ace_invalid {background-color: rgba(255, 0, 0, 0.1);color: red;}.ace-tm .ace_support.ace_function {color: rgb(60, 76, 114);}.ace-tm .ace_support.ace_constant {color: rgb(6, 150, 14);}.ace-tm .ace_support.ace_type,.ace-tm .ace_support.ace_class {color: rgb(109, 121, 222);}.ace-tm .ace_keyword.ace_operator {color: rgb(104, 118, 135);}.ace-tm .ace_string {color: rgb(3, 106, 7);}.ace-tm .ace_comment {color: rgb(76, 136, 107);}.ace-tm .ace_comment.ace_doc {color: rgb(0, 102, 255);}.ace-tm .ace_comment.ace_doc.ace_tag {color: rgb(128, 159, 191);}.ace-tm .ace_constant.ace_numeric {color: rgb(0, 0, 205);}.ace-tm .ace_variable {color: rgb(49, 132, 149);}.ace-tm .ace_xml-pe {color: rgb(104, 104, 91);}.ace-tm .ace_entity.ace_name.ace_function {color: #0000A2;}.ace-tm .ace_heading {color: rgb(12, 7, 255);}.ace-tm .ace_list {color:rgb(185, 6, 144);}.ace-tm .ace_meta.ace_tag {color:rgb(0, 22, 142);}.ace-tm .ace_string.ace_regex {color: rgb(255, 0, 0)}.ace-tm .ace_marker-layer .ace_selection {background: rgb(181, 213, 255);}.ace-tm.ace_multiselect .ace_selection.ace_start {box-shadow: 0 0 3px 0px white;}.ace-tm .ace_marker-layer .ace_step {background: rgb(252, 255, 0);}.ace-tm .ace_marker-layer .ace_stack {background: rgb(164, 229, 101);}.ace-tm .ace_marker-layer .ace_bracket {margin: -1px 0 0 -1px;border: 1px solid rgb(192, 192, 192);}.ace-tm .ace_marker-layer .ace_active-line {background: rgba(0, 0, 0, 0.07);}.ace-tm .ace_gutter-active-line {background-color : #dcdcdc;}.ace-tm .ace_marker-layer .ace_selected-word {background: rgb(250, 250, 255);border: 1px solid rgb(200, 200, 250);}.ace-tm .ace_indent-guide {background: url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAACCAYAAACZgbYnAAAAE0lEQVQImWP4////f4bLly//BwAmVgd1/w11/gAAAABJRU5ErkJggg==") right repeat-y;}
+/*# sourceURL=ace/css/ace-tm */</style><style>    .error_widget_wrapper {        background: inherit;        color: inherit;        border:none    }    .error_widget {        border-top: solid 2px;        border-bottom: solid 2px;        margin: 5px 0;        padding: 10px 40px;        white-space: pre-wrap;    }    .error_widget.ace_error, .error_widget_arrow.ace_error{        border-color: #ff5a5a    }    .error_widget.ace_warning, .error_widget_arrow.ace_warning{        border-color: #F1D817    }    .error_widget.ace_info, .error_widget_arrow.ace_info{        border-color: #5a5a5a    }    .error_widget.ace_ok, .error_widget_arrow.ace_ok{        border-color: #5aaa5a    }    .error_widget_arrow {        position: absolute;        border: solid 5px;        border-top-color: transparent!important;        border-right-color: transparent!important;        border-left-color: transparent!important;        top: -5px;    }</style><style>.ace_snippet-marker {    -moz-box-sizing: border-box;    box-sizing: border-box;    background: rgba(194, 193, 208, 0.09);    border: 1px dotted rgba(211, 208, 235, 0.62);    position: absolute;}</style><style>.ace_editor.ace_autocomplete .ace_marker-layer .ace_active-line {    background-color: #CAD6FA;    z-index: 1;}.ace_editor.ace_autocomplete .ace_line-hover {    border: 1px solid #abbffe;    margin-top: -1px;    background: rgba(233,233,253,0.4);}.ace_editor.ace_autocomplete .ace_line-hover {    position: absolute;    z-index: 2;}.ace_editor.ace_autocomplete .ace_scroller {   background: none;   border: none;   box-shadow: none;}.ace_rightAlignedText {    color: gray;    display: inline-block;    position: absolute;    right: 4px;    text-align: right;    z-index: -1;}.ace_editor.ace_autocomplete .ace_completion-highlight{    color: #000;    text-shadow: 0 0 0.01em;}.ace_editor.ace_autocomplete {    width: 280px;    z-index: 200000;    background: #fbfbfb;    color: #444;    border: 1px lightgray solid;    position: fixed;    box-shadow: 2px 3px 5px rgba(0,0,0,.2);    line-height: 1.4;}</style><style type="text/css" data-fbcssmodules="css:fb.css.base css:fb.css.dialog css:fb.css.iframewidget css:fb.css.customer_chat_plugin_iframe">.fb_hidden{position:absolute;top:-10000px;z-index:10001}.fb_reposition{overflow:hidden;position:relative}.fb_invisible{display:none}.fb_reset{background:none;border:0;border-spacing:0;color:#000;cursor:auto;direction:ltr;font-family:"lucida grande", tahoma, verdana, arial, sans-serif;font-size:11px;font-style:normal;font-variant:normal;font-weight:normal;letter-spacing:normal;line-height:1;margin:0;overflow:visible;padding:0;text-align:left;text-decoration:none;text-indent:0;text-shadow:none;text-transform:none;visibility:visible;white-space:normal;word-spacing:normal}.fb_reset>div{overflow:hidden}@keyframes fb_transform{from{opacity:0;transform:scale(.95)}to{opacity:1;transform:scale(1)}}.fb_animate{animation:fb_transform .3s forwards}
+.fb_dialog{background:rgba(82, 82, 82, .7);position:absolute;top:-10000px;z-index:10001}.fb_dialog_advanced{border-radius:8px;padding:10px}.fb_dialog_content{background:#fff;color:#373737}.fb_dialog_close_icon{background:url(https://static.xx.fbcdn.net/rsrc.php/v3/yq/r/IE9JII6Z1Ys.png) no-repeat scroll 0 0 transparent;cursor:pointer;display:block;height:15px;position:absolute;right:18px;top:17px;width:15px}.fb_dialog_mobile .fb_dialog_close_icon{left:5px;right:auto;top:5px}.fb_dialog_padding{background-color:transparent;position:absolute;width:1px;z-index:-1}.fb_dialog_close_icon:hover{background:url(https://static.xx.fbcdn.net/rsrc.php/v3/yq/r/IE9JII6Z1Ys.png) no-repeat scroll 0 -15px transparent}.fb_dialog_close_icon:active{background:url(https://static.xx.fbcdn.net/rsrc.php/v3/yq/r/IE9JII6Z1Ys.png) no-repeat scroll 0 -30px transparent}.fb_dialog_iframe{line-height:0}.fb_dialog_content .dialog_title{background:#6d84b4;border:1px solid #365899;color:#fff;font-size:14px;font-weight:bold;margin:0}.fb_dialog_content .dialog_title>span{background:url(https://static.xx.fbcdn.net/rsrc.php/v3/yd/r/Cou7n-nqK52.gif) no-repeat 5px 50%;float:left;padding:5px 0 7px 26px}body.fb_hidden{height:100%;left:0;margin:0;overflow:visible;position:absolute;top:-10000px;transform:none;width:100%}.fb_dialog.fb_dialog_mobile.loading{background:url(https://static.xx.fbcdn.net/rsrc.php/v3/ya/r/3rhSv5V8j3o.gif) white no-repeat 50% 50%;min-height:100%;min-width:100%;overflow:hidden;position:absolute;top:0;z-index:10001}.fb_dialog.fb_dialog_mobile.loading.centered{background:none;height:auto;min-height:initial;min-width:initial;width:auto}.fb_dialog.fb_dialog_mobile.loading.centered #fb_dialog_loader_spinner{width:100%}.fb_dialog.fb_dialog_mobile.loading.centered .fb_dialog_content{background:none}.loading.centered #fb_dialog_loader_close{clear:both;color:#fff;display:block;font-size:18px;padding-top:20px}#fb-root #fb_dialog_ipad_overlay{background:rgba(0, 0, 0, .4);bottom:0;left:0;min-height:100%;position:absolute;right:0;top:0;width:100%;z-index:10000}#fb-root #fb_dialog_ipad_overlay.hidden{display:none}.fb_dialog.fb_dialog_mobile.loading iframe{visibility:hidden}.fb_dialog_mobile .fb_dialog_iframe{position:sticky;top:0}.fb_dialog_content .dialog_header{background:linear-gradient(from(#738aba), to(#2c4987));border-bottom:1px solid;border-color:#043b87;box-shadow:white 0 1px 1px -1px inset;color:#fff;font:bold 14px Helvetica, sans-serif;text-overflow:ellipsis;text-shadow:rgba(0, 30, 84, .296875) 0 -1px 0;vertical-align:middle;white-space:nowrap}.fb_dialog_content .dialog_header table{height:43px;width:100%}.fb_dialog_content .dialog_header td.header_left{font-size:12px;padding-left:5px;vertical-align:middle;width:60px}.fb_dialog_content .dialog_header td.header_right{font-size:12px;padding-right:5px;vertical-align:middle;width:60px}.fb_dialog_content .touchable_button{background:linear-gradient(from(#4267B2), to(#2a4887));background-clip:padding-box;border:1px solid #29487d;border-radius:3px;display:inline-block;line-height:18px;margin-top:3px;max-width:85px;padding:4px 12px;position:relative}.fb_dialog_content .dialog_header .touchable_button input{background:none;border:none;color:#fff;font:bold 12px Helvetica, sans-serif;margin:2px -12px;padding:2px 6px 3px 6px;text-shadow:rgba(0, 30, 84, .296875) 0 -1px 0}.fb_dialog_content .dialog_header .header_center{color:#fff;font-size:16px;font-weight:bold;line-height:18px;text-align:center;vertical-align:middle}.fb_dialog_content .dialog_content{background:url(https://static.xx.fbcdn.net/rsrc.php/v3/y9/r/jKEcVPZFk-2.gif) no-repeat 50% 50%;border:1px solid #4a4a4a;border-bottom:0;border-top:0;height:150px}.fb_dialog_content .dialog_footer{background:#f5f6f7;border:1px solid #4a4a4a;border-top-color:#ccc;height:40px}#fb_dialog_loader_close{float:left}.fb_dialog.fb_dialog_mobile .fb_dialog_close_icon{visibility:hidden}#fb_dialog_loader_spinner{animation:rotateSpinner 1.2s linear infinite;background-color:transparent;background-image:url(https://static.xx.fbcdn.net/rsrc.php/v3/yD/r/t-wz8gw1xG1.png);background-position:50% 50%;background-repeat:no-repeat;height:24px;width:24px}@keyframes rotateSpinner{0%{transform:rotate(0deg)}100%{transform:rotate(360deg)}}
+.fb_iframe_widget{display:inline-block;position:relative}.fb_iframe_widget span{display:inline-block;position:relative;text-align:justify}.fb_iframe_widget iframe{position:absolute}.fb_iframe_widget_fluid_desktop,.fb_iframe_widget_fluid_desktop span,.fb_iframe_widget_fluid_desktop iframe{max-width:100%}.fb_iframe_widget_fluid_desktop iframe{min-width:220px;position:relative}.fb_iframe_widget_lift{z-index:1}.fb_iframe_widget_fluid{display:inline}.fb_iframe_widget_fluid span{width:100%}
+.fb_mpn_mobile_landing_page_slide_out{animation-duration:200ms;animation-name:fb_mpn_landing_page_slide_out;transition-timing-function:ease-in}.fb_mpn_mobile_landing_page_slide_out_from_left{animation-duration:200ms;animation-name:fb_mpn_landing_page_slide_out_from_left;transition-timing-function:ease-in}.fb_mpn_mobile_landing_page_slide_up{animation-duration:500ms;animation-name:fb_mpn_landing_page_slide_up;transition-timing-function:ease-in}.fb_mpn_mobile_bounce_in{animation-duration:300ms;animation-name:fb_mpn_bounce_in;transition-timing-function:ease-in}.fb_mpn_mobile_bounce_out{animation-duration:300ms;animation-name:fb_mpn_bounce_out;transition-timing-function:ease-in}.fb_mpn_mobile_bounce_out_v2{animation-duration:300ms;animation-name:fb_mpn_fade_out;transition-timing-function:ease-in}.fb_customer_chat_bounce_in_v2{animation-duration:300ms;animation-name:fb_bounce_in_v2;transition-timing-function:ease-in}.fb_customer_chat_bounce_in_from_left{animation-duration:300ms;animation-name:fb_bounce_in_from_left;transition-timing-function:ease-in}.fb_customer_chat_bounce_out_v2{animation-duration:300ms;animation-name:fb_bounce_out_v2;transition-timing-function:ease-in}.fb_customer_chat_bounce_out_from_left{animation-duration:300ms;animation-name:fb_bounce_out_from_left;transition-timing-function:ease-in}.fb_customer_chat_bubble_animated_no_badge{box-shadow:0 3px 12px rgba(0, 0, 0, .15);transition:box-shadow 150ms linear}.fb_customer_chat_bubble_animated_no_badge:hover{box-shadow:0 5px 24px rgba(0, 0, 0, .3)}.fb_customer_chat_bubble_animated_with_badge{box-shadow:-5px 4px 14px rgba(0, 0, 0, .15);transition:box-shadow 150ms linear}.fb_customer_chat_bubble_animated_with_badge:hover{box-shadow:-5px 8px 24px rgba(0, 0, 0, .2)}.fb_invisible_flow{display:inherit;height:0;overflow-x:hidden;width:0}.fb_new_ui_mobile_overlay_active{overflow:hidden}@keyframes fb_mpn_landing_page_slide_in{0%{border-radius:50%;margin:0 24px;width:60px}40%{border-radius:18px}100%{margin:0 12px;width:100% - 24px}}@keyframes fb_mpn_landing_page_slide_in_from_left{0%{border-radius:50%;left:12px;margin:0 24px;width:60px}40%{border-radius:18px}100%{left:12px;margin:0 12px;width:100% - 24px}}@keyframes fb_mpn_landing_page_slide_out{0%{margin:0 12px;width:100% - 24px}60%{border-radius:18px}100%{border-radius:50%;margin:0 24px;width:60px}}@keyframes fb_mpn_landing_page_slide_out_from_left{0%{left:12px;width:100% - 24px}60%{border-radius:18px}100%{border-radius:50%;left:12px;width:60px}}@keyframes fb_mpn_landing_page_slide_up{0%{bottom:0;opacity:0}100%{bottom:24px;opacity:1}}@keyframes fb_mpn_bounce_in{0%{opacity:.5;top:100%}100%{opacity:1;top:0}}@keyframes fb_mpn_fade_out{0%{bottom:30px;opacity:1}100%{bottom:0;opacity:0}}@keyframes fb_mpn_bounce_out{0%{opacity:1;top:0}100%{opacity:.5;top:100%}}@keyframes fb_bounce_in_v2{0%{opacity:0;transform:scale(0, 0);transform-origin:bottom right}50%{transform:scale(1.03, 1.03);transform-origin:bottom right}100%{opacity:1;transform:scale(1, 1);transform-origin:bottom right}}@keyframes fb_bounce_in_from_left{0%{opacity:0;transform:scale(0, 0);transform-origin:bottom left}50%{transform:scale(1.03, 1.03);transform-origin:bottom left}100%{opacity:1;transform:scale(1, 1);transform-origin:bottom left}}@keyframes fb_bounce_out_v2{0%{opacity:1;transform:scale(1, 1);transform-origin:bottom right}100%{opacity:0;transform:scale(0, 0);transform-origin:bottom right}}@keyframes fb_bounce_out_from_left{0%{opacity:1;transform:scale(1, 1);transform-origin:bottom left}100%{opacity:0;transform:scale(0, 0);transform-origin:bottom left}}@keyframes fb_bounce_out_v2_mobile_chat_started{0%{opacity:1;top:0}100%{opacity:0;top:20px}}@keyframes fb_customer_chat_bubble_bounce_in_animation{0%{bottom:6pt;opacity:0;transform:scale(0, 0);transform-origin:center}70%{bottom:18pt;opacity:1;transform:scale(1.2, 1.2)}100%{transform:scale(1, 1)}}@keyframes slideInFromBottom{0%{opacity:.1;transform:translateY(100%)}100%{opacity:1;transform:translateY(0)}}@keyframes slideInFromBottomDelay{0%{opacity:0;transform:translateY(100%)}97%{opacity:0;transform:translateY(100%)}100%{opacity:1;transform:translateY(0)}}</style></head>
+
+<body ng-app="prepApp" ng-init="contentItemIsEmbedded = false" class="user-is-full-access                                      scrolling-body  ng-scope" style="" data-new-gr-c-s-check-loaded="14.1022.0" data-gr-ext-installed="">
+
+
+
+<div class="ic-alerts">
+    
+</div>
+
+<select id="select-language-content-width-hack" style="display: none">
+    <option value=""></option>
+</select>
+
+
+
+    
+    
+<div class="print-header navbar-print-header navbar navbar-inverse">
+    <div class="navbar-header">
+        <span class="navbar-brand">
+            <img src="./Sorting algorithm reference, for coding interviews and computer science classes _ Interview Cake_files/cake_white_20_21.png" class="logo">
+            Interview Cake
+        </span>
+    </div>
+</div>
+
+
+
+
+    <div class="navbar navbar-normal navbar-inverse ng-scope" role="navigation" ng-controller="HeaderCtrl" language="">
+        <div class="navbar-header">
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand" href="https://www.interviewcake.com/">
+                Interview Cake
+            </a>
+        </div>
+
+        <div class="collapse navbar-collapse">
+            <ul class="nav navbar-nav navbar-left">
+                
+                <li class="dropdown tips">
+                    <a href="https://www.interviewcake.com/sorting-algorithm-cheat-sheet" class="dropdown-toggle" data-toggle="dropdown" rel="nofollow">
+                        Interview Tips <span class="caret"></span>
+                    </a>
+                    <ul class="dropdown-menu" role="menu">
+                        <li>
+                            <a href="https://www.interviewcake.com/coding-interview-beginner-faq">
+                                First coding interview? Start here.
+                            </a>
+                        </li>
+
+                        <li>
+                            <a href="https://www.interviewcake.com/coding-interview-tips">
+                                General coding interview tips
+                            </a>
+                        </li>
+
+                        <li>
+                            <a href="https://www.interviewcake.com/tricks-for-getting-unstuck-programming-interview">
+                                How to get un-stuck
+                            </a>
+                        </li>
+
+                        <li>
+                            <a href="https://www.interviewcake.com/impostor-syndrome-in-programming-interviews">
+                                Beating impostor syndrome
+                            </a>
+                        </li>
+
+                        <li>
+                            <a href="https://www.interviewcake.com/24-hours-before-onsite-whiteboard-coding-interview">
+                                24 hours before your onsite
+                            </a>
+                        </li>
+
+                        <li>
+                            <a href="https://www.interviewcake.com/why-youre-hitting-dead-ends-in-whiteboard-interviews">
+                                Why you're hitting dead ends
+                            </a>
+                        </li>
+
+                        <li>
+                            <a href="https://www.interviewcake.com/getting-the-most-from-coding-interview-practice-sessions">
+                                Best ways to practice
+                            </a>
+                        </li>
+
+                        
+
+                        <li>
+                            <a href="https://www.interviewcake.com/coding-interview-timeline-exploding-offers-burnout-negotiation-leverage">
+                                Organizing your interview timeline
+                            </a>
+                        </li>
+
+                        <li>
+                            <a href="https://www.interviewcake.com/behavioral-questions-programming-interview-story-telling">
+                                Mastering behavioral questions
+                            </a>
+                        </li>
+
+                        <li>
+                            <a href="https://www.interviewcake.com/coding-interview-faq">
+                                Common issues
+                            </a>
+                        </li>
+
+                    </ul>
+                </li>
+                
+
+                <li class="dropdown">
+                    <a href="https://www.interviewcake.com/sorting-algorithm-cheat-sheet" class="dropdown-toggle" data-toggle="dropdown" rel="nofollow">
+                        Glossary <span class="caret"></span>
+                    </a>
+                    <ul class="dropdown-menu" role="menu">
+                        <li>
+    <a href="https://www.interviewcake.com/big-o-notation-time-and-space-complexity">Big O Notation: <span complexity="n" class="ng-isolate-scope"><span class="complexity"><span class="ic-math ng-isolate-scope" ng-class="{&#39;block&#39;: isBlock()}" ng-transclude="" math=""><span class="katex"><span class="katex-mathml"><math><semantics><mrow><mi>O</mi><mo>(</mo><mi>n</mi><mo>)</mo></mrow><annotation encoding="application/x-tex">O(n)</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height: 1em; vertical-align: -0.25em;"></span><span class="mord mathdefault" style="margin-right: 0.02778em;">O</span><span class="mopen">(</span><span class="mord mathdefault">n</span><span class="mclose">)</span></span></span></span></span></span></span>, <span complexity="n^2" class="ng-isolate-scope"><span class="complexity"><span class="ic-math ng-isolate-scope" ng-class="{&#39;block&#39;: isBlock()}" ng-transclude="" math=""><span class="katex"><span class="katex-mathml"><math><semantics><mrow><mi>O</mi><mo>(</mo><msup><mi>n</mi><mn>2</mn></msup><mo>)</mo></mrow><annotation encoding="application/x-tex">O(n^2)</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height: 1.06411em; vertical-align: -0.25em;"></span><span class="mord mathdefault" style="margin-right: 0.02778em;">O</span><span class="mopen">(</span><span class="mord"><span class="mord mathdefault">n</span><span class="msupsub"><span class="vlist-t"><span class="vlist-r"><span class="vlist" style="height: 0.814108em;"><span class="" style="top: -3.063em; margin-right: 0.05em;"><span class="pstrut" style="height: 2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight">2</span></span></span></span></span></span></span></span><span class="mclose">)</span></span></span></span></span></span></span>, etc</a>
+</li>
+<li>
+    <a href="https://www.interviewcake.com/article/logarithms">Logarithms</a>
+</li>
+<li>
+    <a href="https://www.interviewcake.com/concept/triangular-series">Triangular Series</a>
+</li>
+
+<li role="separator" class="divider"></li>
+
+<li>
+    <a href="https://www.interviewcake.com/concept/binary-search">Binary Search</a>
+</li>
+<li>
+    <a href="https://www.interviewcake.com/concept/bfs">Breadth-First Search</a>
+</li>
+<li>
+    <a href="https://www.interviewcake.com/concept/dfs">Depth-First Search</a>
+</li>
+
+
+
+<li role="separator" class="divider"></li>
+<li>
+    <a href="https://www.interviewcake.com/concept/brute-force">Brute Force Algorithms</a>
+</li>
+<li>
+    <a href="https://www.interviewcake.com/concept/greedy">Greedy Algorithms</a>
+</li>
+<li>
+    <a href="https://www.interviewcake.com/concept/bottom-up">Bottom-Up Algorithms</a>
+</li>
+<li>
+    <a href="https://www.interviewcake.com/concept/overlapping-subproblems">Overlapping Subproblems</a>
+</li>
+<li>
+    <a href="https://www.interviewcake.com/concept/memoization">Memoization</a>
+</li>
+
+<li role="separator" class="divider"></li>
+
+<li>
+    <a href="https://www.interviewcake.com/concept/short-circuit-evaluation">Short Circuit Evaluation</a>
+</li>
+<li>
+    <a href="https://www.interviewcake.com/concept/garbage-collection">Garbage Collection</a>
+</li>
+<li>
+    <a href="https://www.interviewcake.com/concept/js-closure">Closure</a>
+</li>
+<li>
+    <a href="https://www.interviewcake.com/concept/slice">Array Slicing</a>
+</li>
+<li>
+    <a href="https://www.interviewcake.com/concept/hashing">Hashing</a>
+</li>
+<li>
+    <a href="https://www.interviewcake.com/concept/mutable">Mutable vs Immutable</a>
+</li>
+<li>
+    <a href="https://www.interviewcake.com/concept/in-place">In-Place Operation</a>
+</li>
+
+<li role="separator" class="divider"></li>
+
+<li>
+    <a href="https://www.interviewcake.com/article/data-structures-computer-science">Data Structures Overview</a>
+</li>
+
+<li>
+    <a href="https://www.interviewcake.com/concept/array">Array</a>
+</li>
+<li>
+    <a href="https://www.interviewcake.com/concept/dynamic-array">Dynamic Array</a>
+</li>
+<li>
+    <a href="https://www.interviewcake.com/concept/hash-map">Hash Table</a>
+</li>
+<li>
+    <a href="https://www.interviewcake.com/concept/linked-list">Linked List</a>
+</li>
+<li>
+    <a href="https://www.interviewcake.com/concept/queue">Queue</a>
+</li>
+<li>
+    <a href="https://www.interviewcake.com/concept/stack">Stack</a>
+</li>
+<li>
+    <a href="https://www.interviewcake.com/concept/binary-tree">Binary Tree</a>
+</li>
+<li>
+    <a href="https://www.interviewcake.com/concept/graph">Graph</a>
+</li>
+
+<li role="separator" class="divider"></li>
+
+<li>
+    <a href="https://www.interviewcake.com/concept/binary-numbers">Binary Numbers</a>
+</li>
+<li>
+    <a href="https://www.interviewcake.com/concept/and">Bitwise AND</a>
+</li>
+<li>
+    <a href="https://www.interviewcake.com/concept/or">Bitwise OR</a>
+</li>
+<li>
+    <a href="https://www.interviewcake.com/concept/xor">Bitwise XOR</a>
+</li>
+<li>
+    <a href="https://www.interviewcake.com/concept/not">Bitwise NOT</a>
+</li>
+<li>
+    <a href="https://www.interviewcake.com/concept/bit-shift">Bit Shifting</a>
+</li>
+<li>
+    <a href="https://www.interviewcake.com/concept/integer-overflow">Integer Overflow</a>
+</li>
+
+                    </ul>
+                </li>
+
+				
+                <li>
+					
+                        <a href="https://www.interviewcake.com/table-of-contents">Full Course</a>
+                    
+                </li>
+				
+            </ul>
+
+            <ul class="nav navbar-nav navbar-right" ng-show="currentUserSet">
+
+                <li>
+
+					
+
+                    <a class="upgrade ng-hide" ng-hide="currentUser.is_full_access" href="https://www.interviewcake.com/upgrade">
+                        Get the full course
+                        <span class="glyphicon glyphicon-chevron-right full-access-badge"></span>
+                    </a>
+                </li>
+
+                
+
+                
+                    <li>
+                        <p class="navbar-text">
+                            
+                            'sup <a rel="nofollow" tracklink="" the-event="Settings Link Click" href="https://www.interviewcake.com/account" class="ng-isolate-scope">Parag</a>.
+                            
+                            <span ng-show="currentUser.is_full_access" class="glyphicon glyphicon-star full-access-badge"></span>
+                        </p>
+                    </li>
+                    <li ng-hide="currentUser.is_anonymous">
+                        <a rel="nofollow" ng-click="logoutClick($event)" tracklink="" the-event="Logout Link Click" the-properties="{&quot;which&quot; : &quot;header top right&quot;}" href="https://www.interviewcake.com/sorting-algorithm-cheat-sheet" class="ng-isolate-scope">Log out</a>
+                    </li>
+                    <li ng-show="currentUser.is_anonymous" class="ng-hide">
+                        <a href="https://www.interviewcake.com/sorting-algorithm-cheat-sheet" rel="nofollow" ng-click="loginClick(&#39;header top right&#39;)">Log in to save progress</a>
+                    </li>
+                
+            </ul>
+        </div>
+    </div>
+
+
+
+    
+
+    <div class="below-nav">
+
+        
+
+        
+        
+
+<div class="article sorting dsa-type-landing ng-scope" ng-controller="PrepSeshApp">
+
+
+<div class="section-wrapper heading taller wider text-center">
+<div class="section">
+
+
+<h1>
+	Sorting Algorithm Cheat Sheet
+</h1>
+
+<h2>
+	For coding interviews or computer science classes
+</h2>
+
+<p>
+A quick reference of the <a href="https://www.interviewcake.com/big-o-notation-time-and-space-complexity">big O</a> costs and core properties of each sorting algorithm.
+</p>
+
+
+</div>
+</div>
+
+
+
+
+<section class="article-content">
+
+
+<div class="section-wrapper slim">
+<div class="section">
+
+<div class="cheat-sheet-table sorting-algorithms-table ng-scope" ng-controller="CheatSheetTable">
+
+<div class="table-responsive">
+<table class="table">
+<thead>
+<tr>
+<th scope="col">
+    <a href="https://www.interviewcake.com/sorting-algorithm-cheat-sheet" ng-click="showOrHideAll()">
+        <span class="glyphicon glyphicon-chevron-up" ng-show="showingAll" aria-hidden="true" style=""></span>
+        <span class="glyphicon glyphicon-chevron-down ng-hide" ng-show="!showingAll" aria-hidden="true" style=""></span>
+        <span ng-bind="showingAll? &#39;Collapse all&#39; : &#39;Expand all&#39;" class="ng-binding">Collapse all</span>
+    </a>
+</th>
+
+<th scope="col">worst</th>
+
+<th scope="col">best</th>
+
+<th scope="col">average</th>
+
+<th scope="col">space</th>
+
+</tr>
+</thead>
+
+
+
+<tbody ng-controller="CheatSheetTableRow" class="row-selection-sort ng-scope">
+<tr ng-class="{&#39;expanded&#39;: show}" ng-click="show=!show" class="header-row expanded">
+<td>
+    <span class="expand-collapse-icons">
+        <span class="glyphicon glyphicon-chevron-up" ng-show="show" aria-hidden="true" style=""></span>
+        <span class="glyphicon glyphicon-chevron-down ng-hide" ng-show="!show" aria-hidden="true" style=""></span>
+    </span>
+    <strong>Selection Sort</strong>
+</td>
+
+
+<td>
+    
+        <div class="complexity-heading-inline">
+        worst
+        </div>
+        <span class="complexity-wrapper                      val-n2                                                                  ng-isolate-scope" complexity="n^2"><span class="complexity"><span class="ic-math ng-isolate-scope" ng-class="{&#39;block&#39;: isBlock()}" ng-transclude="" math=""><span class="katex"><span class="katex-mathml"><math><semantics><mrow><mi>O</mi><mo>(</mo><msup><mi>n</mi><mn>2</mn></msup><mo>)</mo></mrow><annotation encoding="application/x-tex">O(n^2)</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height: 1.06411em; vertical-align: -0.25em;"></span><span class="mord mathdefault" style="margin-right: 0.02778em;">O</span><span class="mopen">(</span><span class="mord"><span class="mord mathdefault">n</span><span class="msupsub"><span class="vlist-t"><span class="vlist-r"><span class="vlist" style="height: 0.814108em;"><span class="" style="top: -3.063em; margin-right: 0.05em;"><span class="pstrut" style="height: 2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight">2</span></span></span></span></span></span></span></span><span class="mclose">)</span></span></span></span></span></span></span>
+    
+</td>
+
+<td>
+    
+        <div class="complexity-heading-inline">
+        best
+        </div>
+        <span class="complexity-wrapper                      val-n2                                                                  ng-isolate-scope" complexity="n^2"><span class="complexity"><span class="ic-math ng-isolate-scope" ng-class="{&#39;block&#39;: isBlock()}" ng-transclude="" math=""><span class="katex"><span class="katex-mathml"><math><semantics><mrow><mi>O</mi><mo>(</mo><msup><mi>n</mi><mn>2</mn></msup><mo>)</mo></mrow><annotation encoding="application/x-tex">O(n^2)</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height: 1.06411em; vertical-align: -0.25em;"></span><span class="mord mathdefault" style="margin-right: 0.02778em;">O</span><span class="mopen">(</span><span class="mord"><span class="mord mathdefault">n</span><span class="msupsub"><span class="vlist-t"><span class="vlist-r"><span class="vlist" style="height: 0.814108em;"><span class="" style="top: -3.063em; margin-right: 0.05em;"><span class="pstrut" style="height: 2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight">2</span></span></span></span></span></span></span></span><span class="mclose">)</span></span></span></span></span></span></span>
+    
+</td>
+
+<td>
+    
+        <div class="complexity-heading-inline">
+        average
+        </div>
+        <span class="complexity-wrapper                      val-n2                                                                  ng-isolate-scope" complexity="n^2"><span class="complexity"><span class="ic-math ng-isolate-scope" ng-class="{&#39;block&#39;: isBlock()}" ng-transclude="" math=""><span class="katex"><span class="katex-mathml"><math><semantics><mrow><mi>O</mi><mo>(</mo><msup><mi>n</mi><mn>2</mn></msup><mo>)</mo></mrow><annotation encoding="application/x-tex">O(n^2)</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height: 1.06411em; vertical-align: -0.25em;"></span><span class="mord mathdefault" style="margin-right: 0.02778em;">O</span><span class="mopen">(</span><span class="mord"><span class="mord mathdefault">n</span><span class="msupsub"><span class="vlist-t"><span class="vlist-r"><span class="vlist" style="height: 0.814108em;"><span class="" style="top: -3.063em; margin-right: 0.05em;"><span class="pstrut" style="height: 2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight">2</span></span></span></span></span></span></span></span><span class="mclose">)</span></span></span></span></span></span></span>
+    
+</td>
+
+<td>
+    
+        <div class="complexity-heading-inline">
+        space
+        </div>
+        <span class="complexity-wrapper                      val-1                                                                  ng-isolate-scope" complexity="1"><span class="complexity"><span class="ic-math ng-isolate-scope" ng-class="{&#39;block&#39;: isBlock()}" ng-transclude="" math=""><span class="katex"><span class="katex-mathml"><math><semantics><mrow><mi>O</mi><mo>(</mo><mn>1</mn><mo>)</mo></mrow><annotation encoding="application/x-tex">O(1)</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height: 1em; vertical-align: -0.25em;"></span><span class="mord mathdefault" style="margin-right: 0.02778em;">O</span><span class="mopen">(</span><span class="mord">1</span><span class="mclose">)</span></span></span></span></span></span></span>
+    
+</td>
+
+
+</tr>
+<tr class="desc">
+<td colspan="5">
+<div class="contents slide" ng-show="show" style="display: block;">
+
+
+    <div class="diagram ">
+    <img src="./Sorting algorithm reference, for coding interviews and computer science classes _ Interview Cake_files/selection_sort__preview.svg" height="120" width="300" alt="The first two items in [1, 2, 7, 8, 4, 3, 6] are sorted. 3 is the smallest item in the unsorted portion ([7, 8, 4, 3, 6]). Swapping 3 with 7, we have [1, 2, 3, 7, 4, 7, 6] and the first three items are sorted.">
+
+
+    
+
+
+	
+
+</div>
+
+
+    <div class="desc-copy">
+        <p>
+       Selection sort works by repeatedly "selecting" the next-smallest element from the unsorted array and moving it to the front.
+        </p>
+        <p>
+    <a class="btn btn-sm btn-rarr btn-branded" href="https://www.interviewcake.com/concept/selection-sort">Full selection sort reference </a>
+        </p>
+    </div>
+
+    <div class="clearfix"></div>
+
+    
+
+
+</div>
+</td>
+</tr>
+</tbody>
+
+
+
+<tbody ng-controller="CheatSheetTableRow" class="row-insertion-sort ng-scope">
+<tr ng-class="{&#39;expanded&#39;: show}" ng-click="show=!show" class="header-row expanded">
+<td>
+    <span class="expand-collapse-icons">
+        <span class="glyphicon glyphicon-chevron-up" ng-show="show" aria-hidden="true" style=""></span>
+        <span class="glyphicon glyphicon-chevron-down ng-hide" ng-show="!show" aria-hidden="true" style=""></span>
+    </span>
+    <strong>Insertion Sort</strong>
+</td>
+
+
+<td>
+    
+        <div class="complexity-heading-inline">
+        worst
+        </div>
+        <span class="complexity-wrapper                      val-n2                                                                  ng-isolate-scope" complexity="n^2"><span class="complexity"><span class="ic-math ng-isolate-scope" ng-class="{&#39;block&#39;: isBlock()}" ng-transclude="" math=""><span class="katex"><span class="katex-mathml"><math><semantics><mrow><mi>O</mi><mo>(</mo><msup><mi>n</mi><mn>2</mn></msup><mo>)</mo></mrow><annotation encoding="application/x-tex">O(n^2)</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height: 1.06411em; vertical-align: -0.25em;"></span><span class="mord mathdefault" style="margin-right: 0.02778em;">O</span><span class="mopen">(</span><span class="mord"><span class="mord mathdefault">n</span><span class="msupsub"><span class="vlist-t"><span class="vlist-r"><span class="vlist" style="height: 0.814108em;"><span class="" style="top: -3.063em; margin-right: 0.05em;"><span class="pstrut" style="height: 2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight">2</span></span></span></span></span></span></span></span><span class="mclose">)</span></span></span></span></span></span></span>
+    
+</td>
+
+<td>
+    
+        <div class="complexity-heading-inline">
+        best
+        </div>
+        <span class="complexity-wrapper                      val-n                                                                  ng-isolate-scope" complexity="n"><span class="complexity"><span class="ic-math ng-isolate-scope" ng-class="{&#39;block&#39;: isBlock()}" ng-transclude="" math=""><span class="katex"><span class="katex-mathml"><math><semantics><mrow><mi>O</mi><mo>(</mo><mi>n</mi><mo>)</mo></mrow><annotation encoding="application/x-tex">O(n)</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height: 1em; vertical-align: -0.25em;"></span><span class="mord mathdefault" style="margin-right: 0.02778em;">O</span><span class="mopen">(</span><span class="mord mathdefault">n</span><span class="mclose">)</span></span></span></span></span></span></span>
+    
+</td>
+
+<td>
+    
+        <div class="complexity-heading-inline">
+        average
+        </div>
+        <span class="complexity-wrapper                      val-n2                                                                  ng-isolate-scope" complexity="n^2"><span class="complexity"><span class="ic-math ng-isolate-scope" ng-class="{&#39;block&#39;: isBlock()}" ng-transclude="" math=""><span class="katex"><span class="katex-mathml"><math><semantics><mrow><mi>O</mi><mo>(</mo><msup><mi>n</mi><mn>2</mn></msup><mo>)</mo></mrow><annotation encoding="application/x-tex">O(n^2)</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height: 1.06411em; vertical-align: -0.25em;"></span><span class="mord mathdefault" style="margin-right: 0.02778em;">O</span><span class="mopen">(</span><span class="mord"><span class="mord mathdefault">n</span><span class="msupsub"><span class="vlist-t"><span class="vlist-r"><span class="vlist" style="height: 0.814108em;"><span class="" style="top: -3.063em; margin-right: 0.05em;"><span class="pstrut" style="height: 2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight">2</span></span></span></span></span></span></span></span><span class="mclose">)</span></span></span></span></span></span></span>
+    
+</td>
+
+<td>
+    
+        <div class="complexity-heading-inline">
+        space
+        </div>
+        <span class="complexity-wrapper                      val-1                                                                  ng-isolate-scope" complexity="1"><span class="complexity"><span class="ic-math ng-isolate-scope" ng-class="{&#39;block&#39;: isBlock()}" ng-transclude="" math=""><span class="katex"><span class="katex-mathml"><math><semantics><mrow><mi>O</mi><mo>(</mo><mn>1</mn><mo>)</mo></mrow><annotation encoding="application/x-tex">O(1)</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height: 1em; vertical-align: -0.25em;"></span><span class="mord mathdefault" style="margin-right: 0.02778em;">O</span><span class="mopen">(</span><span class="mord">1</span><span class="mclose">)</span></span></span></span></span></span></span>
+    
+</td>
+
+
+</tr>
+<tr class="desc">
+<td colspan="5">
+<div class="contents slide" ng-show="show" style="display: block;">
+
+
+    <div class="diagram ">
+    <img src="./Sorting algorithm reference, for coding interviews and computer science classes _ Interview Cake_files/insertion_sort__preview.svg" height="120" width="300" alt="The list [2, 4, 7, 8, 1, 3, 6] is partially sorted. (1) is compared with its left neighbor (8) and switches places to create [2, 4, 7, 1, 8, 3, 6]. Then (1) is compared with (7).">
+
+
+    
+
+
+	
+
+</div>
+
+
+    <div class="desc-copy">
+        <p>
+       Insertion sort works by inserting elements from an unsorted array into a sorted subsection of the array, one item at a time.
+        </p>
+        <p>
+    <a class="btn btn-sm btn-rarr btn-branded" href="https://www.interviewcake.com/concept/insertion-sort">Full insertion sort reference </a>
+        </p>
+    </div>
+
+    <div class="clearfix"></div>
+
+    
+
+
+</div>
+</td>
+</tr>
+</tbody>
+
+
+
+<tbody ng-controller="CheatSheetTableRow" class="row-merge-sort ng-scope">
+<tr ng-class="{&#39;expanded&#39;: show}" ng-click="show=!show" class="header-row expanded">
+<td>
+    <span class="expand-collapse-icons">
+        <span class="glyphicon glyphicon-chevron-up" ng-show="show" aria-hidden="true" style=""></span>
+        <span class="glyphicon glyphicon-chevron-down ng-hide" ng-show="!show" aria-hidden="true" style=""></span>
+    </span>
+    <strong>Merge Sort</strong>
+</td>
+
+
+<td>
+    
+        <div class="complexity-heading-inline">
+        worst
+        </div>
+        <span class="complexity-wrapper                      val-nlgn                                                                  ng-isolate-scope" complexity="nlgn"><span class="complexity"><span class="ic-math ng-isolate-scope" ng-class="{&#39;block&#39;: isBlock()}" ng-transclude="" math=""><span class="katex"><span class="katex-mathml"><math><semantics><mrow><mi>O</mi><mo>(</mo><mi>n</mi><mi>lg</mi><mo>⁡</mo><mi>n</mi><mo>)</mo></mrow><annotation encoding="application/x-tex">O(n\lg{n})</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height: 1em; vertical-align: -0.25em;"></span><span class="mord mathdefault" style="margin-right: 0.02778em;">O</span><span class="mopen">(</span><span class="mord mathdefault">n</span><span class="mspace" style="margin-right: 0.166667em;"></span><span class="mop">l<span style="margin-right: 0.01389em;">g</span></span><span class="mspace" style="margin-right: 0.166667em;"></span><span class="mord"><span class="mord mathdefault">n</span></span><span class="mclose">)</span></span></span></span></span></span></span>
+    
+</td>
+
+<td>
+    
+        <div class="complexity-heading-inline">
+        best
+        </div>
+        <span class="complexity-wrapper                      val-nlgn                                                                  ng-isolate-scope" complexity="nlgn"><span class="complexity"><span class="ic-math ng-isolate-scope" ng-class="{&#39;block&#39;: isBlock()}" ng-transclude="" math=""><span class="katex"><span class="katex-mathml"><math><semantics><mrow><mi>O</mi><mo>(</mo><mi>n</mi><mi>lg</mi><mo>⁡</mo><mi>n</mi><mo>)</mo></mrow><annotation encoding="application/x-tex">O(n\lg{n})</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height: 1em; vertical-align: -0.25em;"></span><span class="mord mathdefault" style="margin-right: 0.02778em;">O</span><span class="mopen">(</span><span class="mord mathdefault">n</span><span class="mspace" style="margin-right: 0.166667em;"></span><span class="mop">l<span style="margin-right: 0.01389em;">g</span></span><span class="mspace" style="margin-right: 0.166667em;"></span><span class="mord"><span class="mord mathdefault">n</span></span><span class="mclose">)</span></span></span></span></span></span></span>
+    
+</td>
+
+<td>
+    
+        <div class="complexity-heading-inline">
+        average
+        </div>
+        <span class="complexity-wrapper                      val-nlgn                                                                  ng-isolate-scope" complexity="nlgn"><span class="complexity"><span class="ic-math ng-isolate-scope" ng-class="{&#39;block&#39;: isBlock()}" ng-transclude="" math=""><span class="katex"><span class="katex-mathml"><math><semantics><mrow><mi>O</mi><mo>(</mo><mi>n</mi><mi>lg</mi><mo>⁡</mo><mi>n</mi><mo>)</mo></mrow><annotation encoding="application/x-tex">O(n\lg{n})</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height: 1em; vertical-align: -0.25em;"></span><span class="mord mathdefault" style="margin-right: 0.02778em;">O</span><span class="mopen">(</span><span class="mord mathdefault">n</span><span class="mspace" style="margin-right: 0.166667em;"></span><span class="mop">l<span style="margin-right: 0.01389em;">g</span></span><span class="mspace" style="margin-right: 0.166667em;"></span><span class="mord"><span class="mord mathdefault">n</span></span><span class="mclose">)</span></span></span></span></span></span></span>
+    
+</td>
+
+<td>
+    
+        <div class="complexity-heading-inline">
+        space
+        </div>
+        <span class="complexity-wrapper                      val-n                                                                  ng-isolate-scope" complexity="n"><span class="complexity"><span class="ic-math ng-isolate-scope" ng-class="{&#39;block&#39;: isBlock()}" ng-transclude="" math=""><span class="katex"><span class="katex-mathml"><math><semantics><mrow><mi>O</mi><mo>(</mo><mi>n</mi><mo>)</mo></mrow><annotation encoding="application/x-tex">O(n)</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height: 1em; vertical-align: -0.25em;"></span><span class="mord mathdefault" style="margin-right: 0.02778em;">O</span><span class="mopen">(</span><span class="mord mathdefault">n</span><span class="mclose">)</span></span></span></span></span></span></span>
+    
+</td>
+
+
+</tr>
+<tr class="desc">
+<td colspan="5">
+<div class="contents slide" ng-show="show" style="display: block;">
+
+
+    <div class="diagram ">
+    <img src="./Sorting algorithm reference, for coding interviews and computer science classes _ Interview Cake_files/merge_sort__preview.svg" height="120" width="300" alt="Two small sorted lists ([2, 4, 7, 8] and [1, 3, 6, 9]) are merged into a large sorted list ([1, 2, 3, 4, 6, 7, 8, 9]).">
+
+
+    
+
+
+	
+
+</div>
+
+
+    <div class="desc-copy">
+        <p>
+       Merge sort works by splitting the input in half, recursively sorting each half, and then merging the sorted halves back together.
+        </p>
+        <p>
+    <a class="btn btn-sm btn-rarr btn-branded" href="https://www.interviewcake.com/concept/merge-sort">Full merge sort reference </a>
+        </p>
+    </div>
+
+    <div class="clearfix"></div>
+
+    
+
+
+</div>
+</td>
+</tr>
+</tbody>
+
+
+
+<tbody ng-controller="CheatSheetTableRow" class="row-quicksort ng-scope">
+<tr ng-class="{&#39;expanded&#39;: show}" ng-click="show=!show" class="header-row expanded">
+<td>
+    <span class="expand-collapse-icons">
+        <span class="glyphicon glyphicon-chevron-up" ng-show="show" aria-hidden="true" style=""></span>
+        <span class="glyphicon glyphicon-chevron-down ng-hide" ng-show="!show" aria-hidden="true" style=""></span>
+    </span>
+    <strong>Quicksort</strong>
+</td>
+
+
+<td>
+    
+        <div class="complexity-heading-inline">
+        worst
+        </div>
+        <span class="complexity-wrapper                      val-n2                                                                  ng-isolate-scope" complexity="n^2"><span class="complexity"><span class="ic-math ng-isolate-scope" ng-class="{&#39;block&#39;: isBlock()}" ng-transclude="" math=""><span class="katex"><span class="katex-mathml"><math><semantics><mrow><mi>O</mi><mo>(</mo><msup><mi>n</mi><mn>2</mn></msup><mo>)</mo></mrow><annotation encoding="application/x-tex">O(n^2)</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height: 1.06411em; vertical-align: -0.25em;"></span><span class="mord mathdefault" style="margin-right: 0.02778em;">O</span><span class="mopen">(</span><span class="mord"><span class="mord mathdefault">n</span><span class="msupsub"><span class="vlist-t"><span class="vlist-r"><span class="vlist" style="height: 0.814108em;"><span class="" style="top: -3.063em; margin-right: 0.05em;"><span class="pstrut" style="height: 2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight">2</span></span></span></span></span></span></span></span><span class="mclose">)</span></span></span></span></span></span></span>
+    
+</td>
+
+<td>
+    
+        <div class="complexity-heading-inline">
+        best
+        </div>
+        <span class="complexity-wrapper                      val-nlgn                                                                  ng-isolate-scope" complexity="nlgn"><span class="complexity"><span class="ic-math ng-isolate-scope" ng-class="{&#39;block&#39;: isBlock()}" ng-transclude="" math=""><span class="katex"><span class="katex-mathml"><math><semantics><mrow><mi>O</mi><mo>(</mo><mi>n</mi><mi>lg</mi><mo>⁡</mo><mi>n</mi><mo>)</mo></mrow><annotation encoding="application/x-tex">O(n\lg{n})</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height: 1em; vertical-align: -0.25em;"></span><span class="mord mathdefault" style="margin-right: 0.02778em;">O</span><span class="mopen">(</span><span class="mord mathdefault">n</span><span class="mspace" style="margin-right: 0.166667em;"></span><span class="mop">l<span style="margin-right: 0.01389em;">g</span></span><span class="mspace" style="margin-right: 0.166667em;"></span><span class="mord"><span class="mord mathdefault">n</span></span><span class="mclose">)</span></span></span></span></span></span></span>
+    
+</td>
+
+<td>
+    
+        <div class="complexity-heading-inline">
+        average
+        </div>
+        <span class="complexity-wrapper                      val-nlgn                                                                  ng-isolate-scope" complexity="nlgn"><span class="complexity"><span class="ic-math ng-isolate-scope" ng-class="{&#39;block&#39;: isBlock()}" ng-transclude="" math=""><span class="katex"><span class="katex-mathml"><math><semantics><mrow><mi>O</mi><mo>(</mo><mi>n</mi><mi>lg</mi><mo>⁡</mo><mi>n</mi><mo>)</mo></mrow><annotation encoding="application/x-tex">O(n\lg{n})</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height: 1em; vertical-align: -0.25em;"></span><span class="mord mathdefault" style="margin-right: 0.02778em;">O</span><span class="mopen">(</span><span class="mord mathdefault">n</span><span class="mspace" style="margin-right: 0.166667em;"></span><span class="mop">l<span style="margin-right: 0.01389em;">g</span></span><span class="mspace" style="margin-right: 0.166667em;"></span><span class="mord"><span class="mord mathdefault">n</span></span><span class="mclose">)</span></span></span></span></span></span></span>
+    
+</td>
+
+<td>
+    
+        <div class="complexity-heading-inline">
+        space
+        </div>
+        <span class="complexity-wrapper                      val-lgn                                                                  ng-isolate-scope" complexity="lgn"><span class="complexity"><span class="ic-math ng-isolate-scope" ng-class="{&#39;block&#39;: isBlock()}" ng-transclude="" math=""><span class="katex"><span class="katex-mathml"><math><semantics><mrow><mi>O</mi><mo>(</mo><mi>lg</mi><mo>⁡</mo><mi>n</mi><mo>)</mo></mrow><annotation encoding="application/x-tex">O(\lg{n})</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height: 1em; vertical-align: -0.25em;"></span><span class="mord mathdefault" style="margin-right: 0.02778em;">O</span><span class="mopen">(</span><span class="mop">l<span style="margin-right: 0.01389em;">g</span></span><span class="mspace" style="margin-right: 0.166667em;"></span><span class="mord"><span class="mord mathdefault">n</span></span><span class="mclose">)</span></span></span></span></span></span></span>
+    
+</td>
+
+
+</tr>
+<tr class="desc">
+<td colspan="5">
+<div class="contents slide" ng-show="show" style="display: block;">
+
+
+    <div class="diagram ">
+    <img src="./Sorting algorithm reference, for coding interviews and computer science classes _ Interview Cake_files/quick_sort__preview.svg" height="120" width="300" alt="An unsorted list [2, 7, 3, 9, 1, 6, 8, 4] is rearranged around a pivot element, 4. The resulting list is [2, 1, 3, 4, 7, 6, 8, 9]. [2, 1, 3] are less than the pivot and appear to the left; [7, 6, 8, 9] are greater than the pivot and appear to the right.">
+
+
+    
+
+
+	
+
+</div>
+
+
+    <div class="desc-copy">
+        <p>
+       Quicksort works by recursively dividing the input into two smaller arrays around a pivot item: one half has items smaller than the pivot, the other has larger items.
+        </p>
+        <p>
+    <a class="btn btn-sm btn-rarr btn-branded" href="https://www.interviewcake.com/concept/quicksort">Full quicksort reference </a>
+        </p>
+    </div>
+
+    <div class="clearfix"></div>
+
+    
+
+
+</div>
+</td>
+</tr>
+</tbody>
+
+
+
+<tbody ng-controller="CheatSheetTableRow" class="row-heapsort ng-scope">
+<tr ng-class="{&#39;expanded&#39;: show}" ng-click="show=!show" class="header-row expanded">
+<td>
+    <span class="expand-collapse-icons">
+        <span class="glyphicon glyphicon-chevron-up" ng-show="show" aria-hidden="true" style=""></span>
+        <span class="glyphicon glyphicon-chevron-down ng-hide" ng-show="!show" aria-hidden="true" style=""></span>
+    </span>
+    <strong>Heapsort</strong>
+</td>
+
+
+<td>
+    
+        <div class="complexity-heading-inline">
+        worst
+        </div>
+        <span class="complexity-wrapper                      val-nlgn                                                                  ng-isolate-scope" complexity="nlgn"><span class="complexity"><span class="ic-math ng-isolate-scope" ng-class="{&#39;block&#39;: isBlock()}" ng-transclude="" math=""><span class="katex"><span class="katex-mathml"><math><semantics><mrow><mi>O</mi><mo>(</mo><mi>n</mi><mi>lg</mi><mo>⁡</mo><mi>n</mi><mo>)</mo></mrow><annotation encoding="application/x-tex">O(n\lg{n})</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height: 1em; vertical-align: -0.25em;"></span><span class="mord mathdefault" style="margin-right: 0.02778em;">O</span><span class="mopen">(</span><span class="mord mathdefault">n</span><span class="mspace" style="margin-right: 0.166667em;"></span><span class="mop">l<span style="margin-right: 0.01389em;">g</span></span><span class="mspace" style="margin-right: 0.166667em;"></span><span class="mord"><span class="mord mathdefault">n</span></span><span class="mclose">)</span></span></span></span></span></span></span>
+    
+</td>
+
+<td>
+    
+        <div class="complexity-heading-inline">
+        best
+        </div>
+        <span class="complexity-wrapper                      val-n                                                                  ng-isolate-scope" complexity="n"><span class="complexity"><span class="ic-math ng-isolate-scope" ng-class="{&#39;block&#39;: isBlock()}" ng-transclude="" math=""><span class="katex"><span class="katex-mathml"><math><semantics><mrow><mi>O</mi><mo>(</mo><mi>n</mi><mo>)</mo></mrow><annotation encoding="application/x-tex">O(n)</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height: 1em; vertical-align: -0.25em;"></span><span class="mord mathdefault" style="margin-right: 0.02778em;">O</span><span class="mopen">(</span><span class="mord mathdefault">n</span><span class="mclose">)</span></span></span></span></span></span></span>
+    
+</td>
+
+<td>
+    
+        <div class="complexity-heading-inline">
+        average
+        </div>
+        <span class="complexity-wrapper                      val-nlgn                                                                  ng-isolate-scope" complexity="nlgn"><span class="complexity"><span class="ic-math ng-isolate-scope" ng-class="{&#39;block&#39;: isBlock()}" ng-transclude="" math=""><span class="katex"><span class="katex-mathml"><math><semantics><mrow><mi>O</mi><mo>(</mo><mi>n</mi><mi>lg</mi><mo>⁡</mo><mi>n</mi><mo>)</mo></mrow><annotation encoding="application/x-tex">O(n\lg{n})</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height: 1em; vertical-align: -0.25em;"></span><span class="mord mathdefault" style="margin-right: 0.02778em;">O</span><span class="mopen">(</span><span class="mord mathdefault">n</span><span class="mspace" style="margin-right: 0.166667em;"></span><span class="mop">l<span style="margin-right: 0.01389em;">g</span></span><span class="mspace" style="margin-right: 0.166667em;"></span><span class="mord"><span class="mord mathdefault">n</span></span><span class="mclose">)</span></span></span></span></span></span></span>
+    
+</td>
+
+<td>
+    
+        <div class="complexity-heading-inline">
+        space
+        </div>
+        <span class="complexity-wrapper                      val-1                                                                  ng-isolate-scope" complexity="1"><span class="complexity"><span class="ic-math ng-isolate-scope" ng-class="{&#39;block&#39;: isBlock()}" ng-transclude="" math=""><span class="katex"><span class="katex-mathml"><math><semantics><mrow><mi>O</mi><mo>(</mo><mn>1</mn><mo>)</mo></mrow><annotation encoding="application/x-tex">O(1)</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height: 1em; vertical-align: -0.25em;"></span><span class="mord mathdefault" style="margin-right: 0.02778em;">O</span><span class="mopen">(</span><span class="mord">1</span><span class="mclose">)</span></span></span></span></span></span></span>
+    
+</td>
+
+
+</tr>
+<tr class="desc">
+<td colspan="5">
+<div class="contents slide" ng-show="show" style="display: block;">
+
+
+    <div class="diagram ">
+    <img src="./Sorting algorithm reference, for coding interviews and computer science classes _ Interview Cake_files/heap_sort__preview.svg" height="120" width="300" alt="An unsorted input [2, 4, 7, 8, 1, 3, 6] is transformed into a binary heap (8; 2, 7; 4, 1, 3, 6) which is used to create the sorted output [1, 2, 3, 4, 6, 7, 8].">
+
+
+    
+
+
+	
+
+</div>
+
+
+    <div class="desc-copy">
+        <p>
+       Heapsort is similar to selection sort—we're repeatedly choosing the largest item and moving it to the end of our array. But we use a heap to get the largest item more quickly.
+        </p>
+        <p>
+    <a class="btn btn-sm btn-rarr btn-branded" href="https://www.interviewcake.com/concept/heapsort">Full heapsort reference </a>
+        </p>
+    </div>
+
+    <div class="clearfix"></div>
+
+    
+
+
+</div>
+</td>
+</tr>
+</tbody>
+
+
+
+<tbody ng-controller="CheatSheetTableRow" class="row-counting-sort ng-scope">
+<tr ng-class="{&#39;expanded&#39;: show}" ng-click="show=!show" class="header-row expanded">
+<td>
+    <span class="expand-collapse-icons">
+        <span class="glyphicon glyphicon-chevron-up" ng-show="show" aria-hidden="true" style=""></span>
+        <span class="glyphicon glyphicon-chevron-down ng-hide" ng-show="!show" aria-hidden="true" style=""></span>
+    </span>
+    <strong>Counting Sort</strong>
+</td>
+
+
+<td>
+    
+        <div class="complexity-heading-inline">
+        worst
+        </div>
+        <span class="complexity-wrapper                      val-n                                                                  ng-isolate-scope" complexity="n"><span class="complexity"><span class="ic-math ng-isolate-scope" ng-class="{&#39;block&#39;: isBlock()}" ng-transclude="" math=""><span class="katex"><span class="katex-mathml"><math><semantics><mrow><mi>O</mi><mo>(</mo><mi>n</mi><mo>)</mo></mrow><annotation encoding="application/x-tex">O(n)</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height: 1em; vertical-align: -0.25em;"></span><span class="mord mathdefault" style="margin-right: 0.02778em;">O</span><span class="mopen">(</span><span class="mord mathdefault">n</span><span class="mclose">)</span></span></span></span></span></span></span>
+    
+</td>
+
+<td>
+    
+        <div class="complexity-heading-inline">
+        best
+        </div>
+        <span class="complexity-wrapper                      val-n                                                                  ng-isolate-scope" complexity="n"><span class="complexity"><span class="ic-math ng-isolate-scope" ng-class="{&#39;block&#39;: isBlock()}" ng-transclude="" math=""><span class="katex"><span class="katex-mathml"><math><semantics><mrow><mi>O</mi><mo>(</mo><mi>n</mi><mo>)</mo></mrow><annotation encoding="application/x-tex">O(n)</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height: 1em; vertical-align: -0.25em;"></span><span class="mord mathdefault" style="margin-right: 0.02778em;">O</span><span class="mopen">(</span><span class="mord mathdefault">n</span><span class="mclose">)</span></span></span></span></span></span></span>
+    
+</td>
+
+<td>
+    
+        <div class="complexity-heading-inline">
+        average
+        </div>
+        <span class="complexity-wrapper                      val-n                                                                  ng-isolate-scope" complexity="n"><span class="complexity"><span class="ic-math ng-isolate-scope" ng-class="{&#39;block&#39;: isBlock()}" ng-transclude="" math=""><span class="katex"><span class="katex-mathml"><math><semantics><mrow><mi>O</mi><mo>(</mo><mi>n</mi><mo>)</mo></mrow><annotation encoding="application/x-tex">O(n)</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height: 1em; vertical-align: -0.25em;"></span><span class="mord mathdefault" style="margin-right: 0.02778em;">O</span><span class="mopen">(</span><span class="mord mathdefault">n</span><span class="mclose">)</span></span></span></span></span></span></span>
+    
+</td>
+
+<td>
+    
+        <div class="complexity-heading-inline">
+        space
+        </div>
+        <span class="complexity-wrapper                      val-n                                                                  ng-isolate-scope" complexity="n"><span class="complexity"><span class="ic-math ng-isolate-scope" ng-class="{&#39;block&#39;: isBlock()}" ng-transclude="" math=""><span class="katex"><span class="katex-mathml"><math><semantics><mrow><mi>O</mi><mo>(</mo><mi>n</mi><mo>)</mo></mrow><annotation encoding="application/x-tex">O(n)</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height: 1em; vertical-align: -0.25em;"></span><span class="mord mathdefault" style="margin-right: 0.02778em;">O</span><span class="mopen">(</span><span class="mord mathdefault">n</span><span class="mclose">)</span></span></span></span></span></span></span>
+    
+</td>
+
+
+</tr>
+<tr class="desc">
+<td colspan="5">
+<div class="contents slide" ng-show="show" style="display: block;">
+
+
+    <div class="diagram ">
+    <img src="./Sorting algorithm reference, for coding interviews and computer science classes _ Interview Cake_files/counting_sort__preview.svg" height="120" width="300" alt="The input [1, 3, 7, 8, 1, 1, 3] has three (1)&#39;s, two (3)&#39;s, and a (7) and (8). Encoding that in a list of counts, we have [0, 3, 2, 0, 0, 0, 1, 1, 0, 0].">
+
+
+    
+
+
+	
+
+</div>
+
+
+    <div class="desc-copy">
+        <p>
+       Counting sort works by iterating through the input, counting the number of times each item occurs, and using those counts to compute each item's index in the final, sorted array.
+        </p>
+        <p>
+    <a class="btn btn-sm btn-rarr btn-branded" href="https://www.interviewcake.com/concept/counting-sort">Full counting sort reference </a>
+        </p>
+    </div>
+
+    <div class="clearfix"></div>
+
+    
+
+
+</div>
+</td>
+</tr>
+</tbody>
+
+
+
+<tbody ng-controller="CheatSheetTableRow" class="row-radix-sort ng-scope">
+<tr ng-class="{&#39;expanded&#39;: show}" ng-click="show=!show" class="header-row expanded">
+<td>
+    <span class="expand-collapse-icons">
+        <span class="glyphicon glyphicon-chevron-up" ng-show="show" aria-hidden="true" style=""></span>
+        <span class="glyphicon glyphicon-chevron-down ng-hide" ng-show="!show" aria-hidden="true" style=""></span>
+    </span>
+    <strong>Radix Sort</strong>
+</td>
+
+
+<td>
+    
+        <div class="complexity-heading-inline">
+        worst
+        </div>
+        <span class="complexity-wrapper                      val-n                                                                  ng-isolate-scope" complexity="n"><span class="complexity"><span class="ic-math ng-isolate-scope" ng-class="{&#39;block&#39;: isBlock()}" ng-transclude="" math=""><span class="katex"><span class="katex-mathml"><math><semantics><mrow><mi>O</mi><mo>(</mo><mi>n</mi><mo>)</mo></mrow><annotation encoding="application/x-tex">O(n)</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height: 1em; vertical-align: -0.25em;"></span><span class="mord mathdefault" style="margin-right: 0.02778em;">O</span><span class="mopen">(</span><span class="mord mathdefault">n</span><span class="mclose">)</span></span></span></span></span></span></span>
+    
+</td>
+
+<td>
+    
+        <div class="complexity-heading-inline">
+        best
+        </div>
+        <span class="complexity-wrapper                      val-n                                                                  ng-isolate-scope" complexity="n"><span class="complexity"><span class="ic-math ng-isolate-scope" ng-class="{&#39;block&#39;: isBlock()}" ng-transclude="" math=""><span class="katex"><span class="katex-mathml"><math><semantics><mrow><mi>O</mi><mo>(</mo><mi>n</mi><mo>)</mo></mrow><annotation encoding="application/x-tex">O(n)</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height: 1em; vertical-align: -0.25em;"></span><span class="mord mathdefault" style="margin-right: 0.02778em;">O</span><span class="mopen">(</span><span class="mord mathdefault">n</span><span class="mclose">)</span></span></span></span></span></span></span>
+    
+</td>
+
+<td>
+    
+        <div class="complexity-heading-inline">
+        average
+        </div>
+        <span class="complexity-wrapper                      val-n                                                                  ng-isolate-scope" complexity="n"><span class="complexity"><span class="ic-math ng-isolate-scope" ng-class="{&#39;block&#39;: isBlock()}" ng-transclude="" math=""><span class="katex"><span class="katex-mathml"><math><semantics><mrow><mi>O</mi><mo>(</mo><mi>n</mi><mo>)</mo></mrow><annotation encoding="application/x-tex">O(n)</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height: 1em; vertical-align: -0.25em;"></span><span class="mord mathdefault" style="margin-right: 0.02778em;">O</span><span class="mopen">(</span><span class="mord mathdefault">n</span><span class="mclose">)</span></span></span></span></span></span></span>
+    
+</td>
+
+<td>
+    
+        <div class="complexity-heading-inline">
+        space
+        </div>
+        <span class="complexity-wrapper                      val-n                                                                  ng-isolate-scope" complexity="n"><span class="complexity"><span class="ic-math ng-isolate-scope" ng-class="{&#39;block&#39;: isBlock()}" ng-transclude="" math=""><span class="katex"><span class="katex-mathml"><math><semantics><mrow><mi>O</mi><mo>(</mo><mi>n</mi><mo>)</mo></mrow><annotation encoding="application/x-tex">O(n)</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height: 1em; vertical-align: -0.25em;"></span><span class="mord mathdefault" style="margin-right: 0.02778em;">O</span><span class="mopen">(</span><span class="mord mathdefault">n</span><span class="mclose">)</span></span></span></span></span></span></span>
+    
+</td>
+
+
+</tr>
+<tr class="desc">
+<td colspan="5">
+<div class="contents slide" ng-show="show" style="display: block;">
+
+
+    <div class="diagram ">
+    <img src="./Sorting algorithm reference, for coding interviews and computer science classes _ Interview Cake_files/radix_sort__preview.svg" height="120" width="300" alt="Sorting [23, 31, 81, 27, 56, 37, 51] on the ones place, we have [31, 51, 81, 23, 56, 27, 37].">
+
+
+    
+
+
+	
+
+</div>
+
+
+    <div class="desc-copy">
+        <p>
+       Radix sort works by sorting the input numbers one digit at a time.
+        </p>
+        <p>
+    <a class="btn btn-sm btn-rarr btn-branded" href="https://www.interviewcake.com/concept/radix-sort">Full radix sort reference </a>
+        </p>
+    </div>
+
+    <div class="clearfix"></div>
+
+    
+
+
+</div>
+</td>
+</tr>
+</tbody>
+
+
+</table>
+</div>
+</div>
+
+
+
+<div class="article-share-bottom text-center" style="margin-top: 10px; margin-bottom:100px;">
+    
+
+
+
+
+    
+        <a class="custom-share facebook-share ng-isolate-scope" href="https://www.facebook.com/sharer/sharer.php?u=https%3A//www.interviewcake.com/sorting-algorithm-cheat-sheet" target="_blank" tracklink="" the-event="FB share click" the-properties="{&quot;which&quot; : &quot;sorting bottom&quot;}"><i class="fa fa-facebook"> </i> Share</a>
+    
+    
+        <a class="custom-share twitter-share ng-isolate-scope" href="https://twitter.com/intent/tweet?text=Sorting%20algorithms%20cheat%20sheet&amp;via=interviewcake&amp;related=interviewcake&amp;url=https%3A//www.interviewcake.com/sorting-algorithm-cheat-sheet" target="_blank" tracklink="" the-event="Twitter share click" the-properties="{&quot;which&quot; : &quot;sorting bottom&quot;}"><i class="fa fa-twitter"> </i> Tweet</a>
+    
+    
+        <a class="custom-share linkedin-share ng-isolate-scope" href="https://www.linkedin.com/shareArticle?mini=true&amp;url=https%3A//www.interviewcake.com/sorting-algorithm-cheat-sheet&amp;title=&amp;summary=Sorting%20algorithms%20cheat%20sheet&amp;source=Interview%20Cake" target="_blank" tracklink="" the-event="LinkedIn share click" the-properties="{&quot;which&quot; : &quot;sorting bottom&quot;}"><i class="fa fa-linkedin"> </i> Share</a>
+    
+
+
+</div>
+
+</div>
+</div>
+
+
+
+<div class="section-wrapper shaded">
+<div class="section">
+
+<h2>
+    Which Sorting Algorithm Should I Use?
+</h2>
+
+<p>
+    It depends. Each algorithm comes with its own set of pros and cons.
+</p>
+
+<ul>
+    <li>
+        <strong>Quicksort</strong> is a good default choice. It tends
+        to be fast in practice, and with some small tweaks its
+        dreaded <span complexity="n^2" class="ng-isolate-scope"><span class="complexity"><span class="ic-math ng-isolate-scope" ng-class="{&#39;block&#39;: isBlock()}" ng-transclude="" math=""><span class="katex"><span class="katex-mathml"><math><semantics><mrow><mi>O</mi><mo>(</mo><msup><mi>n</mi><mn>2</mn></msup><mo>)</mo></mrow><annotation encoding="application/x-tex">O(n^2)</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height: 1.06411em; vertical-align: -0.25em;"></span><span class="mord mathdefault" style="margin-right: 0.02778em;">O</span><span class="mopen">(</span><span class="mord"><span class="mord mathdefault">n</span><span class="msupsub"><span class="vlist-t"><span class="vlist-r"><span class="vlist" style="height: 0.814108em;"><span class="" style="top: -3.063em; margin-right: 0.05em;"><span class="pstrut" style="height: 2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight">2</span></span></span></span></span></span></span></span><span class="mclose">)</span></span></span></span></span></span></span> worst-case time complexity
+        becomes very unlikely. A tried and true favorite.
+    </li>
+    <li>
+        <strong>Heapsort</strong> is a good choice if you can't tolerate
+        a worst-case time complexity of <span complexity="n^2" class="ng-isolate-scope"><span class="complexity"><span class="ic-math ng-isolate-scope" ng-class="{&#39;block&#39;: isBlock()}" ng-transclude="" math=""><span class="katex"><span class="katex-mathml"><math><semantics><mrow><mi>O</mi><mo>(</mo><msup><mi>n</mi><mn>2</mn></msup><mo>)</mo></mrow><annotation encoding="application/x-tex">O(n^2)</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height: 1.06411em; vertical-align: -0.25em;"></span><span class="mord mathdefault" style="margin-right: 0.02778em;">O</span><span class="mopen">(</span><span class="mord"><span class="mord mathdefault">n</span><span class="msupsub"><span class="vlist-t"><span class="vlist-r"><span class="vlist" style="height: 0.814108em;"><span class="" style="top: -3.063em; margin-right: 0.05em;"><span class="pstrut" style="height: 2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight">2</span></span></span></span></span></span></span></span><span class="mclose">)</span></span></span></span></span></span></span> or
+        need low space costs. The Linux kernel
+	<a href="https://github.com/torvalds/linux/blob/master/lib/sort.c#L194">
+	    uses heapsort instead of quicksort
+        </a> for both of those reasons.
+    </li>
+    <li>
+        <strong>Merge sort</strong> is a good choice if you want
+        <a href="https://www.interviewcake.com/concept/stable-sort">
+            a stable sorting algorithm</a>. Also, merge sort can
+        easily be extended to handle data sets that can't fit in RAM,
+        where the bottleneck cost is reading and writing the input on
+        disk, not comparing and swapping individual items.
+    </li>
+    <li>
+        <strong>Radix sort</strong> <em>looks</em> fast, with its
+        <span complexity="n" class="ng-isolate-scope"><span class="complexity"><span class="ic-math ng-isolate-scope" ng-class="{&#39;block&#39;: isBlock()}" ng-transclude="" math=""><span class="katex"><span class="katex-mathml"><math><semantics><mrow><mi>O</mi><mo>(</mo><mi>n</mi><mo>)</mo></mrow><annotation encoding="application/x-tex">O(n)</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height: 1em; vertical-align: -0.25em;"></span><span class="mord mathdefault" style="margin-right: 0.02778em;">O</span><span class="mopen">(</span><span class="mord mathdefault">n</span><span class="mclose">)</span></span></span></span></span></span></span> worst-case time complexity.  But,
+        if you're using it to sort binary numbers, then there's a
+        hidden constant factor that's usually 32 or 64 (depending on
+        how many bits your numbers are). That's often <em>way</em>
+        bigger than <span complexity="\lg(n)" class="ng-isolate-scope"><span class="complexity"><span class="ic-math ng-isolate-scope" ng-class="{&#39;block&#39;: isBlock()}" ng-transclude="" math=""><span class="katex"><span class="katex-mathml"><math><semantics><mrow><mi>O</mi><mo>(</mo><mi>lg</mi><mo>⁡</mo><mo>(</mo><mi>n</mi><mo>)</mo><mo>)</mo></mrow><annotation encoding="application/x-tex">O(\lg(n))</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height: 1em; vertical-align: -0.25em;"></span><span class="mord mathdefault" style="margin-right: 0.02778em;">O</span><span class="mopen">(</span><span class="mop">l<span style="margin-right: 0.01389em;">g</span></span><span class="mopen">(</span><span class="mord mathdefault">n</span><span class="mclose">)</span><span class="mclose">)</span></span></span></span></span></span></span>, meaning radix
+        sort tends to be slow in practice.
+    </li>
+    <li>
+        <strong>Counting sort</strong> is a good choice in scenarios
+        where there are small number of distinct values to be sorted.
+        This is pretty rare in practice, and counting sort doesn't get
+        much use.
+    </li>
+</ul>
+
+<p>
+    <strong>
+        Each sorting algorithm has tradeoffs. You can't have it all.
+    </strong>
+</p>
+
+<p>
+    So you have to know <em>what's important</em> in the problem
+    you're working on. How large is your input? How many distinct
+    values are in your input? How much space overhead is acceptable?
+    Can you afford
+    <span complexity="n^2" class="ng-isolate-scope"><span class="complexity"><span class="ic-math ng-isolate-scope" ng-class="{&#39;block&#39;: isBlock()}" ng-transclude="" math=""><span class="katex"><span class="katex-mathml"><math><semantics><mrow><mi>O</mi><mo>(</mo><msup><mi>n</mi><mn>2</mn></msup><mo>)</mo></mrow><annotation encoding="application/x-tex">O(n^2)</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height: 1.06411em; vertical-align: -0.25em;"></span><span class="mord mathdefault" style="margin-right: 0.02778em;">O</span><span class="mopen">(</span><span class="mord"><span class="mord mathdefault">n</span><span class="msupsub"><span class="vlist-t"><span class="vlist-r"><span class="vlist" style="height: 0.814108em;"><span class="" style="top: -3.063em; margin-right: 0.05em;"><span class="pstrut" style="height: 2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight">2</span></span></span></span></span></span></span></span><span class="mclose">)</span></span></span></span></span></span></span> worst-case runtime?
+</p>
+
+<p>
+    Once you know what's important, you can pick the sorting algorithm
+    that does it best. Being able to compare different algorithms and
+    weigh their pros and cons is the mark of a strong computer
+    programmer and a definite plus when interviewing.
+</p>
+
+</div>
+</div>
+
+<div class="section-wrapper cta-bottom-section-wrapper">
+<div class="section">
+
+
+<h2 class="text-center">
+Get the 7-day crash course!
+</h2>
+<p class="text-center">
+  In this free email course, I'll teach you the right <em>way of thinking</em> for breaking down tricky algorithmic coding questions.
+</p>
+<div>
+<p class="text-center">
+No CS degree necessary.
+</p>
+<div ng-controller="EmailNewsletterSignupCtrl" id="email_magnet_sorting-bottom-cta-crash-course" class="email-magnet ng-scope" campaign="intro_course">
+    <form class="the-form center-block ng-pristine ng-valid-email ng-invalid ng-invalid-required" ng-hide="success" ng-submit="signupPress()">
+        
+        <div ng-show="failureMessage" ng-bind="failureMessage" class="error ng-binding ng-hide">false</div>
+        <div class="input-group input-group-lg email-magnet-one-liner">
+                <input type="email" ng-model="email" placeholder="me@gmail.com" class="form-control ng-pristine ng-untouched ng-valid-email ng-invalid ng-invalid-required" ng-disabled="disabled" required="">
+                <span class="input-group-btn">
+                    <input type="submit" class="submit btn btn-branded btn-bold" style="" ng-value="disabled ? &#39;Working...&#39; : &#39;Send me day 1 now!&#39;" ng-disabled="disabled" value="Send me day 1 now!">
+                </span>
+        </div>
+        
+        
+        <p class="reassurance text-center">
+            No spam, ever.
+        </p>
+        
+    </form>
+
+    <div ng-show="success" class="success ng-hide">
+        
+            <p class="custom-success text-center">
+                <strong>
+                    You're in!
+                </strong>
+            </p>
+        
+    </div>
+</div>
+
+</div>
+
+</div>
+</div>
+
+
+
+</section></div>
+
+
+        
+        
+        
+
+        
+
+            <div id="print-footer">
+                <p>
+                    Want more coding interview help?
+                </p>
+
+                <p>
+                    Check out <span class="url">interviewcake.com</span> for more advice, guides, and practice questions.
+                </p>
+            </div>
+
+            <div id="footer">
+
+                
+
+                
+
+                
+
+				<div itemscope="" itemtype="http://schema.org/Corporation">
+					<meta itemprop="description" content="Programming interview practice and tips for software engineers looking for jobs.">
+					<meta itemprop="image" content="https://www.interviewcake.com/static//images/cake_white_on_blue_600.png">
+					<meta itemprop="logo" content="https://www.interviewcake.com/static//images/cake_white_on_blue_600.png">
+					<meta itemprop="url" content="https://www.interviewcake.com">
+
+					Copyright © 2021
+					<span itemprop="name">Cake Labs, Inc.</span> All rights reserved.
+
+					<address itemprop="address" itemscope="" itemtype="http://schema.org/PostalAddress">
+						<span itemprop="streetAddress">228 Park Ave S #82632</span>,
+						<span itemprop="addressLocality">New York</span>,
+						<span itemprop="addressRegion">NY</span>
+						<span itemprop="addressCountry">US</span>
+						<span itemprop="postalCode">10003</span>
+						<span itemprop="telephone">(862) 294-2956</span>
+					</address>
+
+					<address itemprop="location" itemscope="" itemtype="http://schema.org/PostalAddress">
+						<meta itemprop="addressCountry" content="US">
+						<meta itemprop="addressLocality" content="New York">
+						<meta itemprop="addressRegion" content="NY">
+						<meta itemprop="streetAddress" content="228 Park Ave S #82632">
+						<meta itemprop="postalCode" content="10003">
+						<meta itemprop="telephone" content="(862) 294-2956">
+					</address>
+
+					<div itemprop="location" itemscope="" itemtype="http://schema.org/Place">
+						<div itemprop="geo" itemscope="" itemtype="http://schema.org/GeoCoordinates">
+							<meta itemprop="latitude" content="40.73765">
+							<meta itemprop="longitude" content="-73.98845">
+						</div>
+					</div>
+				</div>
+
+                <div>
+                    <a href="https://www.interviewcake.com/about">About</a>
+                    |
+                    <a rel="nofollow" href="https://www.interviewcake.com/privacy-policy">Privacy</a>
+                    |
+                    <a rel="nofollow" href="https://www.interviewcake.com/terms-and-conditions">Terms</a>
+                </div>
+
+				
+
+            </div>
+
+        
+
+    </div>
+
+
+
+
+
+
+
+	
+	
+		<link href="./Sorting algorithm reference, for coding interviews and computer science classes _ Interview Cake_files/css" rel="stylesheet" type="text/css">
+		<style type="text/css" media="all">
+			h1{visibility:visible}
+		</style>
+
+
+		
+			<link rel="stylesheet" href="./Sorting algorithm reference, for coding interviews and computer science classes _ Interview Cake_files/output.817da752510b.css" type="text/css" media="all">
+			
+		
+
+
+		<link href="./Sorting algorithm reference, for coding interviews and computer science classes _ Interview Cake_files/style.css" rel="stylesheet" type="text/css">
+		
+			<link href="./Sorting algorithm reference, for coding interviews and computer science classes _ Interview Cake_files/font-awesome.min.css" rel="stylesheet">
+			<link href="./Sorting algorithm reference, for coding interviews and computer science classes _ Interview Cake_files/katex.min.css" rel="stylesheet" integrity="sha384-dbVIfZGuN1Yq7/1Ocstc1lUEm+AT+/rCkibIcC/OmWo5f0EA48Vf8CytHzGrSwbQ" crossorigin="anonymous">
+		
+    
+	
+
+
+	
+	
+	
+
+	
+		<script src="./Sorting algorithm reference, for coding interviews and computer science classes _ Interview Cake_files/4c3fba06-5677-4e54-86d0-db9601f055e8.js" type="text/javascript" charset="UTF-8"></script>
+	
+	<script type="text/javascript">
+	function OptanonWrapper() { }
+	</script>
+
+    
+		<script type="text/javascript"> !function(){var analytics=window.analytics=window.analytics||[];if(!analytics.initialize)if(analytics.invoked)window.console&&console.error&&console.error("Segment snippet included twice.");else{analytics.invoked=!0;analytics.methods=["trackSubmit","trackClick","trackLink","trackForm","pageview","identify","reset","group","track","ready","alias","debug","page","once","off","on"];analytics.factory=function(t){return function(){var e=Array.prototype.slice.call(arguments);e.unshift(t);analytics.push(e);return analytics}};for(var t=0;t<analytics.methods.length;t++){var e=analytics.methods[t];analytics[e]=analytics.factory(e)}analytics.load=function(t,e){var n=document.createElement("script");n.type="text/javascript";n.async=!0;n.src="https://cdn.segment.com/analytics.js/v1/"+t+"/analytics.min.js";var a=document.getElementsByTagName("script")[0];a.parentNode.insertBefore(n,a);analytics._loadOptions=e};analytics.SNIPPET_VERSION="4.1.0";
+		
+			
+		  analytics.load("rowk0wc1g6");
+		
+		  analytics.page(); }}();
+		</script>
+    
+
+
+    
+    
+
+    <script type="text/javascript">
+        (function(){
+  var FLAGS = {
+    'learnings': true,'only_3_free_questions': true,'course_survey': false,'allow_anonymous_purchase': true,'data_structures_deployed': false,'tell_me_more': true,'tips_dropdown': true,'toc': true,'logo_testimonials': true,'student_pricing': true,'home_video': true,'home_slack_cta': false
+    },
+    SWITCHES = {
+    
+    },
+    SAMPLES = {
+    
+    };
+  window.waffle = {
+    "flag_is_active": function waffle_flag(flag_name) {
+      
+      return !!FLAGS[flag_name];
+    },
+    "switch_is_active": function waffle_switch(switch_name) {
+      
+      return !!SWITCHES[switch_name];
+    },
+    "sample_is_active": function waffle_sample(sample_name) {
+      
+      return !!SAMPLES[sample_name];
+    },
+    "FLAGS": FLAGS,
+    "SWITCHES": SWITCHES,
+    "SAMPLES": SAMPLES
+  };
+})();
+
+    </script>
+
+    
+
+
+    
+
+    
+
+
+    
+
+    <script type="text/javascript">
+        window.CACHEBUST_QUERY_STR = '?bust=209';
+        // TODO: move above into the below
+        window.JS_CONSTANTS = {"next_step_type_enum": {"course_section_item": "_NEXT_STEP_TYPE_COURSE_SECTION_ITEM_", "login": "_NEXT_STEP_TYPE_LOGIN_", "purchase": "_NEXT_STEP_TYPE_PURCHASE_", "done": "_NEXT_STEP_TYPE_DONE_"}, "DEFAULT_C18N_LANGUAGE": {"short_name": "python", "display_name": "Python 2.7", "case_convention": "snake", "closest_languages": ["python3", "ruby", "java", "cpp", "javascript", "php", "csharp", "objectivec", "c", "swift"], "prism": "python", "ace": "python", "editor_template": "def my_function(arg):\n\n    # Write the body of your function here\n    \n\n    return 'running with %s' % arg\n\n# Run your function through some test cases here\n# Remember: debugging is half the battle!\nprint my_function('test input')\n", "display_name_without_beta": "Python 2.7"}, "C18N_LANGUAGES": [{"short_name": "python", "display_name": "Python 2.7", "case_convention": "snake", "closest_languages": ["python3", "ruby", "java", "cpp", "javascript", "php", "csharp", "objectivec", "c", "swift"], "prism": "python", "ace": "python", "editor_template": "def my_function(arg):\n\n    # Write the body of your function here\n    \n\n    return 'running with %s' % arg\n\n# Run your function through some test cases here\n# Remember: debugging is half the battle!\nprint my_function('test input')\n", "display_name_without_beta": "Python 2.7"}, {"short_name": "python3", "display_name": "Python 3.6", "case_convention": "snake", "closest_languages": ["python", "ruby", "java", "cpp", "javascript", "php", "csharp", "objectivec", "c", "swift"], "prism": "python", "ace": "python", "editor_template": "def my_function(arg):\n\n    # Write the body of your function here\n    \n\n    return 'running with %s' % (arg)\n\n# Run your function through some test cases here\n# Remember: debugging is half the battle!\nprint(my_function('test input'))\n", "display_name_without_beta": "Python 3.6"}, {"short_name": "ruby", "display_name": "Ruby", "case_convention": "snake", "closest_languages": ["python", "python3", "java", "cpp", "javascript", "php", "csharp", "objectivec", "c", "swift"], "prism": "ruby", "ace": "ruby", "editor_template": "def my_function(arg)\n  # write the body of your function here\n  \n\n  return \"running with #{arg}\"\nend\n\n# run your function through some test cases here\n# remember: debugging is half the battle!\nputs my_function('test input')\n", "display_name_without_beta": "Ruby"}, {"short_name": "java", "display_name": "Java", "case_convention": "camel", "closest_languages": ["csharp", "javascript", "cpp", "c", "swift", "objectivec", "php", "ruby", "python", "python3"], "prism": "java", "ace": "java", "editor_template": "public class Solution {\n\n    public static String myFunction(String arg) {\n\n        // write the body of your function here\n        \n\n        return \"running with \" + arg;\n    }\n\n    public static void main(String[] args) {\n\n        // run your function through some test cases here\n        // remember: debugging is half the battle!\n        String testInput = \"test input\";\n        System.out.println(myFunction(testInput));\n    }\n}", "display_name_without_beta": "Java"}, {"short_name": "javascript", "display_name": "JavaScript", "case_convention": "camel", "closest_languages": ["java", "csharp", "swift", "php", "cpp", "c", "objectivec", "ruby", "python", "python3"], "prism": "javascript", "ace": "javascript", "editor_template": "function myFunction(arg) {\n\n  // write the body of your function here\n  \n\n  return 'running with ' + arg;\n}\n\n// run your function through some test cases here\n// remember: debugging is half the battle!\nconsole.log(myFunction('test input'));\n", "display_name_without_beta": "JavaScript"}, {"short_name": "c", "display_name": "C", "case_convention": "camel", "closest_languages": ["cpp", "csharp", "java", "objectivec", "python", "python3", "php", "javascript", "ruby", "swift"], "prism": "c", "ace": "c_cpp", "editor_template": "#include <stdio.h>\n#include <stdlib.h>\n#include <string.h>\n\nint myFunction(char *arg)\n{\n    // write the body of your function here\n    \n\n    printf(\"running with %s\\n\", arg);\n    return 0;\n}\n\nint main()\n{\n    // run your function through some test cases here\n    // remember: debugging is half the battle!\n    myFunction(\"test input\");\n    return 0;\n}", "display_name_without_beta": "C"}, {"short_name": "cpp", "display_name": "C++", "case_convention": "camel", "closest_languages": ["c", "csharp", "java", "objectivec", "python", "python3", "php", "javascript", "ruby", "swift"], "prism": "cpp", "ace": "c_cpp", "editor_template": "#include <iostream>\nusing namespace std;\n\nstring myFunction (const string& arg)\n{\n    // write the body of your function here\n    \n\n    return \"running with \" + arg;\n}\n\nint main ()\n{\n    // run your function through some test cases here\n    // remember: debugging is half the battle!\n    cout << myFunction (\"test input\");\n    return 0;\n}", "display_name_without_beta": "C++"}, {"short_name": "csharp", "display_name": "C#", "case_convention": "camel", "closest_languages": ["java", "javascript", "cpp", "c", "php", "swift", "objectivec", "ruby", "python", "python3"], "prism": "csharp", "ace": "csharp", "editor_template": "using System;\n\nnamespace Solution\n{\n    class Solution\n    {\n        public static string MyFunction(string arg)\n        {\n            // Write the body of your function here\n            \n\n            return $\"Running with {arg}\";\n        }\n\n        public static void Main(string[] args)\n        {\n            // Run your function through some test cases here.\n            // Remember: debugging is half the battle!\n            string testInput = \"test input\";\n            Console.WriteLine(MyFunction(testInput));\n        }\n    }\n}\n", "display_name_without_beta": "C#"}, {"short_name": "php", "display_name": "PHP", "case_convention": "camel", "closest_languages": ["javascript", "java", "csharp", "c", "cpp", "objectivec", "swift", "ruby", "python", "python3"], "prism": "php", "ace": "php", "editor_template": "function myFunction($arg) {\n\n    // write the body of your function here\n    \n\n    return \"running with \" . $arg;\n}\n\n// run your function through some test cases here\n// remember: debugging is half the battle!\necho myFunction(\"test input\");\n", "display_name_without_beta": "PHP"}, {"short_name": "swift", "display_name": "Swift", "case_convention": "camel", "closest_languages": ["java", "javascript", "csharp", "cpp", "php", "objectivec", "python", "python3", "c", "ruby"], "prism": "swift", "ace": "swift", "editor_template": "func myFunction(_ arg: String) -> String {\n\n    // write the body of your function here\n    \n\n    return \"running with \\(arg)\"\n}\n\n// run your function through some test cases here\n// remember: debugging is half the battle!\nlet testInput = \"test input\"\nprint(myFunction(testInput))\n", "display_name_without_beta": "Swift"}, {"short_name": "objectivec", "display_name": "Objective-C", "case_convention": "camel", "closest_languages": ["c", "cpp", "java", "javascript", "csharp", "swift", "python", "python3", "ruby", "php"], "prism": "objectivec", "ace": "objectivec", "editor_template": "// Code run in our editor is compiled with GNUStep\n\n#import <Foundation/Foundation.h>\n#import <stdio.h>\n\n@interface Solution : NSObject\n- (NSString *)myMethod:(NSString *)arg;\n@end\n\n@implementation Solution\n\n- (NSString *)myMethod:(NSString *)arg {\n    // write the body of your function here\n    \n\n    return [@\"running with \" stringByAppendingString:arg];\n}\n\n@end\n\nint main(int argc, const char * argv[]) {\n    @autoreleasepool {\n        // run your function through some test cases here\n        // remember: debugging is half the battle!\n        Solution * solution = [Solution new];\n        NSString * result = [solution myMethod:@\"test input\"];\n        printf(\"%s\", [result UTF8String]);\n    }\n}", "display_name_without_beta": "Objective-C"}], "PRISM_LANGUAGES": [{"short_name": "nolanguage", "display_name": "Plain text", "prism": "none", "ace": "plain_text", "dropdown_bottom": true, "display_name_without_beta": "Plain text"}, {"short_name": "html", "display_name": "HTML", "prism": "markup", "display_name_without_beta": "HTML"}, {"short_name": "sql", "display_name": "SQL", "prism": "sql", "display_name_without_beta": "SQL"}, {"short_name": "python", "display_name": "Python 2.7", "case_convention": "snake", "closest_languages": ["python3", "ruby", "java", "cpp", "javascript", "php", "csharp", "objectivec", "c", "swift"], "prism": "python", "ace": "python", "editor_template": "def my_function(arg):\n\n    # Write the body of your function here\n    \n\n    return 'running with %s' % arg\n\n# Run your function through some test cases here\n# Remember: debugging is half the battle!\nprint my_function('test input')\n", "display_name_without_beta": "Python 2.7"}, {"short_name": "python3", "display_name": "Python 3.6", "case_convention": "snake", "closest_languages": ["python", "ruby", "java", "cpp", "javascript", "php", "csharp", "objectivec", "c", "swift"], "prism": "python", "ace": "python", "editor_template": "def my_function(arg):\n\n    # Write the body of your function here\n    \n\n    return 'running with %s' % (arg)\n\n# Run your function through some test cases here\n# Remember: debugging is half the battle!\nprint(my_function('test input'))\n", "display_name_without_beta": "Python 3.6"}, {"short_name": "ruby", "display_name": "Ruby", "case_convention": "snake", "closest_languages": ["python", "python3", "java", "cpp", "javascript", "php", "csharp", "objectivec", "c", "swift"], "prism": "ruby", "ace": "ruby", "editor_template": "def my_function(arg)\n  # write the body of your function here\n  \n\n  return \"running with #{arg}\"\nend\n\n# run your function through some test cases here\n# remember: debugging is half the battle!\nputs my_function('test input')\n", "display_name_without_beta": "Ruby"}, {"short_name": "java", "display_name": "Java", "case_convention": "camel", "closest_languages": ["csharp", "javascript", "cpp", "c", "swift", "objectivec", "php", "ruby", "python", "python3"], "prism": "java", "ace": "java", "editor_template": "public class Solution {\n\n    public static String myFunction(String arg) {\n\n        // write the body of your function here\n        \n\n        return \"running with \" + arg;\n    }\n\n    public static void main(String[] args) {\n\n        // run your function through some test cases here\n        // remember: debugging is half the battle!\n        String testInput = \"test input\";\n        System.out.println(myFunction(testInput));\n    }\n}", "display_name_without_beta": "Java"}, {"short_name": "javascript", "display_name": "JavaScript", "case_convention": "camel", "closest_languages": ["java", "csharp", "swift", "php", "cpp", "c", "objectivec", "ruby", "python", "python3"], "prism": "javascript", "ace": "javascript", "editor_template": "function myFunction(arg) {\n\n  // write the body of your function here\n  \n\n  return 'running with ' + arg;\n}\n\n// run your function through some test cases here\n// remember: debugging is half the battle!\nconsole.log(myFunction('test input'));\n", "display_name_without_beta": "JavaScript"}, {"short_name": "c", "display_name": "C", "case_convention": "camel", "closest_languages": ["cpp", "csharp", "java", "objectivec", "python", "python3", "php", "javascript", "ruby", "swift"], "prism": "c", "ace": "c_cpp", "editor_template": "#include <stdio.h>\n#include <stdlib.h>\n#include <string.h>\n\nint myFunction(char *arg)\n{\n    // write the body of your function here\n    \n\n    printf(\"running with %s\\n\", arg);\n    return 0;\n}\n\nint main()\n{\n    // run your function through some test cases here\n    // remember: debugging is half the battle!\n    myFunction(\"test input\");\n    return 0;\n}", "display_name_without_beta": "C"}, {"short_name": "cpp", "display_name": "C++", "case_convention": "camel", "closest_languages": ["c", "csharp", "java", "objectivec", "python", "python3", "php", "javascript", "ruby", "swift"], "prism": "cpp", "ace": "c_cpp", "editor_template": "#include <iostream>\nusing namespace std;\n\nstring myFunction (const string& arg)\n{\n    // write the body of your function here\n    \n\n    return \"running with \" + arg;\n}\n\nint main ()\n{\n    // run your function through some test cases here\n    // remember: debugging is half the battle!\n    cout << myFunction (\"test input\");\n    return 0;\n}", "display_name_without_beta": "C++"}, {"short_name": "csharp", "display_name": "C#", "case_convention": "camel", "closest_languages": ["java", "javascript", "cpp", "c", "php", "swift", "objectivec", "ruby", "python", "python3"], "prism": "csharp", "ace": "csharp", "editor_template": "using System;\n\nnamespace Solution\n{\n    class Solution\n    {\n        public static string MyFunction(string arg)\n        {\n            // Write the body of your function here\n            \n\n            return $\"Running with {arg}\";\n        }\n\n        public static void Main(string[] args)\n        {\n            // Run your function through some test cases here.\n            // Remember: debugging is half the battle!\n            string testInput = \"test input\";\n            Console.WriteLine(MyFunction(testInput));\n        }\n    }\n}\n", "display_name_without_beta": "C#"}, {"short_name": "php", "display_name": "PHP", "case_convention": "camel", "closest_languages": ["javascript", "java", "csharp", "c", "cpp", "objectivec", "swift", "ruby", "python", "python3"], "prism": "php", "ace": "php", "editor_template": "function myFunction($arg) {\n\n    // write the body of your function here\n    \n\n    return \"running with \" . $arg;\n}\n\n// run your function through some test cases here\n// remember: debugging is half the battle!\necho myFunction(\"test input\");\n", "display_name_without_beta": "PHP"}, {"short_name": "swift", "display_name": "Swift", "case_convention": "camel", "closest_languages": ["java", "javascript", "csharp", "cpp", "php", "objectivec", "python", "python3", "c", "ruby"], "prism": "swift", "ace": "swift", "editor_template": "func myFunction(_ arg: String) -> String {\n\n    // write the body of your function here\n    \n\n    return \"running with \\(arg)\"\n}\n\n// run your function through some test cases here\n// remember: debugging is half the battle!\nlet testInput = \"test input\"\nprint(myFunction(testInput))\n", "display_name_without_beta": "Swift"}, {"short_name": "objectivec", "display_name": "Objective-C", "case_convention": "camel", "closest_languages": ["c", "cpp", "java", "javascript", "csharp", "swift", "python", "python3", "ruby", "php"], "prism": "objectivec", "ace": "objectivec", "editor_template": "// Code run in our editor is compiled with GNUStep\n\n#import <Foundation/Foundation.h>\n#import <stdio.h>\n\n@interface Solution : NSObject\n- (NSString *)myMethod:(NSString *)arg;\n@end\n\n@implementation Solution\n\n- (NSString *)myMethod:(NSString *)arg {\n    // write the body of your function here\n    \n\n    return [@\"running with \" stringByAppendingString:arg];\n}\n\n@end\n\nint main(int argc, const char * argv[]) {\n    @autoreleasepool {\n        // run your function through some test cases here\n        // remember: debugging is half the battle!\n        Solution * solution = [Solution new];\n        NSString * result = [solution myMethod:@\"test input\"];\n        printf(\"%s\", [result UTF8String]);\n    }\n}", "display_name_without_beta": "Objective-C"}], "ACE_LANGUAGES": [{"short_name": "haskell", "display_name": "Haskell", "ace": "haskell", "editor_template": "myFunction :: String -> String\n-- write the body of your function here\n\n\nmyFunction arg = \"running with \" ++ arg\n\nmain = do\n\n  -- run your function through some test cases here\n  -- remember: debugging is half the battle!\n  let result = myFunction \"test input\"\n  putStrLn result\n", "display_name_without_beta": "Haskell"}, {"short_name": "go", "display_name": "Go", "ace": "golang", "editor_template": "package main\n\nimport \"fmt\"\n\nfunc myFunction(arg string) string {\n\n    // Write the body of your function here\n    \n\n    return \"running with \" + arg\n}\n\nfunc main() {\n\n    // Run your function through some test cases here.\n    // Remember: debuggin is half the battle!\n    fmt.Println(myFunction(\"test input\"))\n}\n", "display_name_without_beta": "Go"}, {"short_name": "kotlin", "display_name": "Kotlin", "ace": "kotlin", "editor_template": "fun myFunction(text: String): String {\n    // Write the body of your function here\n    return \"Running with \" + text\n}\nfun main(args: Array<String>) {\n    // Run your function through some test cases here.\n    // Remember: debugging is half the battle!\n    println(myFunction(\"test input\"))\n}\n", "display_name_without_beta": "Kotlin"}, {"short_name": "nolanguage", "display_name": "Plain text", "prism": "none", "ace": "plain_text", "dropdown_bottom": true, "display_name_without_beta": "Plain text"}, {"short_name": "python", "display_name": "Python 2.7", "case_convention": "snake", "closest_languages": ["python3", "ruby", "java", "cpp", "javascript", "php", "csharp", "objectivec", "c", "swift"], "prism": "python", "ace": "python", "editor_template": "def my_function(arg):\n\n    # Write the body of your function here\n    \n\n    return 'running with %s' % arg\n\n# Run your function through some test cases here\n# Remember: debugging is half the battle!\nprint my_function('test input')\n", "display_name_without_beta": "Python 2.7"}, {"short_name": "python3", "display_name": "Python 3.6", "case_convention": "snake", "closest_languages": ["python", "ruby", "java", "cpp", "javascript", "php", "csharp", "objectivec", "c", "swift"], "prism": "python", "ace": "python", "editor_template": "def my_function(arg):\n\n    # Write the body of your function here\n    \n\n    return 'running with %s' % (arg)\n\n# Run your function through some test cases here\n# Remember: debugging is half the battle!\nprint(my_function('test input'))\n", "display_name_without_beta": "Python 3.6"}, {"short_name": "ruby", "display_name": "Ruby", "case_convention": "snake", "closest_languages": ["python", "python3", "java", "cpp", "javascript", "php", "csharp", "objectivec", "c", "swift"], "prism": "ruby", "ace": "ruby", "editor_template": "def my_function(arg)\n  # write the body of your function here\n  \n\n  return \"running with #{arg}\"\nend\n\n# run your function through some test cases here\n# remember: debugging is half the battle!\nputs my_function('test input')\n", "display_name_without_beta": "Ruby"}, {"short_name": "java", "display_name": "Java", "case_convention": "camel", "closest_languages": ["csharp", "javascript", "cpp", "c", "swift", "objectivec", "php", "ruby", "python", "python3"], "prism": "java", "ace": "java", "editor_template": "public class Solution {\n\n    public static String myFunction(String arg) {\n\n        // write the body of your function here\n        \n\n        return \"running with \" + arg;\n    }\n\n    public static void main(String[] args) {\n\n        // run your function through some test cases here\n        // remember: debugging is half the battle!\n        String testInput = \"test input\";\n        System.out.println(myFunction(testInput));\n    }\n}", "display_name_without_beta": "Java"}, {"short_name": "javascript", "display_name": "JavaScript", "case_convention": "camel", "closest_languages": ["java", "csharp", "swift", "php", "cpp", "c", "objectivec", "ruby", "python", "python3"], "prism": "javascript", "ace": "javascript", "editor_template": "function myFunction(arg) {\n\n  // write the body of your function here\n  \n\n  return 'running with ' + arg;\n}\n\n// run your function through some test cases here\n// remember: debugging is half the battle!\nconsole.log(myFunction('test input'));\n", "display_name_without_beta": "JavaScript"}, {"short_name": "c", "display_name": "C", "case_convention": "camel", "closest_languages": ["cpp", "csharp", "java", "objectivec", "python", "python3", "php", "javascript", "ruby", "swift"], "prism": "c", "ace": "c_cpp", "editor_template": "#include <stdio.h>\n#include <stdlib.h>\n#include <string.h>\n\nint myFunction(char *arg)\n{\n    // write the body of your function here\n    \n\n    printf(\"running with %s\\n\", arg);\n    return 0;\n}\n\nint main()\n{\n    // run your function through some test cases here\n    // remember: debugging is half the battle!\n    myFunction(\"test input\");\n    return 0;\n}", "display_name_without_beta": "C"}, {"short_name": "cpp", "display_name": "C++", "case_convention": "camel", "closest_languages": ["c", "csharp", "java", "objectivec", "python", "python3", "php", "javascript", "ruby", "swift"], "prism": "cpp", "ace": "c_cpp", "editor_template": "#include <iostream>\nusing namespace std;\n\nstring myFunction (const string& arg)\n{\n    // write the body of your function here\n    \n\n    return \"running with \" + arg;\n}\n\nint main ()\n{\n    // run your function through some test cases here\n    // remember: debugging is half the battle!\n    cout << myFunction (\"test input\");\n    return 0;\n}", "display_name_without_beta": "C++"}, {"short_name": "csharp", "display_name": "C#", "case_convention": "camel", "closest_languages": ["java", "javascript", "cpp", "c", "php", "swift", "objectivec", "ruby", "python", "python3"], "prism": "csharp", "ace": "csharp", "editor_template": "using System;\n\nnamespace Solution\n{\n    class Solution\n    {\n        public static string MyFunction(string arg)\n        {\n            // Write the body of your function here\n            \n\n            return $\"Running with {arg}\";\n        }\n\n        public static void Main(string[] args)\n        {\n            // Run your function through some test cases here.\n            // Remember: debugging is half the battle!\n            string testInput = \"test input\";\n            Console.WriteLine(MyFunction(testInput));\n        }\n    }\n}\n", "display_name_without_beta": "C#"}, {"short_name": "php", "display_name": "PHP", "case_convention": "camel", "closest_languages": ["javascript", "java", "csharp", "c", "cpp", "objectivec", "swift", "ruby", "python", "python3"], "prism": "php", "ace": "php", "editor_template": "function myFunction($arg) {\n\n    // write the body of your function here\n    \n\n    return \"running with \" . $arg;\n}\n\n// run your function through some test cases here\n// remember: debugging is half the battle!\necho myFunction(\"test input\");\n", "display_name_without_beta": "PHP"}, {"short_name": "swift", "display_name": "Swift", "case_convention": "camel", "closest_languages": ["java", "javascript", "csharp", "cpp", "php", "objectivec", "python", "python3", "c", "ruby"], "prism": "swift", "ace": "swift", "editor_template": "func myFunction(_ arg: String) -> String {\n\n    // write the body of your function here\n    \n\n    return \"running with \\(arg)\"\n}\n\n// run your function through some test cases here\n// remember: debugging is half the battle!\nlet testInput = \"test input\"\nprint(myFunction(testInput))\n", "display_name_without_beta": "Swift"}, {"short_name": "objectivec", "display_name": "Objective-C", "case_convention": "camel", "closest_languages": ["c", "cpp", "java", "javascript", "csharp", "swift", "python", "python3", "ruby", "php"], "prism": "objectivec", "ace": "objectivec", "editor_template": "// Code run in our editor is compiled with GNUStep\n\n#import <Foundation/Foundation.h>\n#import <stdio.h>\n\n@interface Solution : NSObject\n- (NSString *)myMethod:(NSString *)arg;\n@end\n\n@implementation Solution\n\n- (NSString *)myMethod:(NSString *)arg {\n    // write the body of your function here\n    \n\n    return [@\"running with \" stringByAppendingString:arg];\n}\n\n@end\n\nint main(int argc, const char * argv[]) {\n    @autoreleasepool {\n        // run your function through some test cases here\n        // remember: debugging is half the battle!\n        Solution * solution = [Solution new];\n        NSString * result = [solution myMethod:@\"test input\"];\n        printf(\"%s\", [result UTF8String]);\n    }\n}", "display_name_without_beta": "Objective-C"}], "CACHEBUST_QUERY_STR": "?bust=209", "INTEGRATIONS_SETTING_ONLY_INTEGRATIONS_THAT_SUPPORT_FRONT_END_ONLY": {"Facebook Pixel": true, "Twitter Ads": true, "All": false}, "COURSE_SURVEY": [{"q_id": "time", "question": "How much time do you have to prepare for your interview?", "answers": ["As long as it takes", "Less than a month", "Less than a week", "It's basically tomorrow!"]}, {"q_id": "background", "question": "How'd you learn to code?", "answers": ["University", "Bootcamp", "Self-taught"]}, {"q_id": "worry", "question": "What's your biggest worry for interviews?", "answers": ["I'm not good enough at some of the advanced topics", "I don't even know the basics", "I don't have enough time to prepare", "I won't get as high an offer as I can earn"]}]};
+
+        
+        window.JS_VARS = {};
+        
+
+        
+    </script>
+
+    
+
+    
+        <script type="text/javascript" src="./Sorting algorithm reference, for coding interviews and computer science classes _ Interview Cake_files/saved_resource"></script>
+        <script type="text/javascript">
+            Stripe.setPublishableKey('pk_live_4wtgGTkgBtk4YIB9JDjYdOD0');
+        </script>
+    
+
+    
+
+    
+        <div id="fb-root" class=" fb_reset"><div style="position: absolute; top: -10000px; width: 0px; height: 0px;"><div></div></div></div>
+        <script>(function(d, s, id) {
+            var js, fjs = d.getElementsByTagName(s)[0];
+            if (d.getElementById(id)) return;
+            js = d.createElement(s); js.id = id;
+            js.src = "//connect.facebook.net/en_US/all.js#xfbml=1&appId=149278655279066";
+            fjs.parentNode.insertBefore(js, fjs);
+        }(document, 'script', 'facebook-jssdk'));</script>
+        <script id="twitter-wjs" src="./Sorting algorithm reference, for coding interviews and computer science classes _ Interview Cake_files/widgets.js"></script>
+    
+
+    
+    
+        
+            <script type="text/ng-template" id="/partials/animation.html"><div class="animation-wrapper">
+    <div class="animation" id="Stage-[--[getCompId()]--]" ng-class="getCompId()">
+    </div>
+</div>
+</script>
+        
+    
+        
+            <script type="text/ng-template" id="/partials/animation_iframe.html"><div class="animation-iframe-wrapper">
+    <iframe class="animation-iframe" ng-class="'animation-iframe-'+getCompId()"></iframe>
+</div>
+</script>
+        
+    
+        
+            <script type="text/ng-template" id="/partials/code-inline.html"><span class="ic-code-inline" ng-transclude></span></script>
+        
+    
+        
+            <script type="text/ng-template" id="/partials/code-block.html"><pre class="language-[--[language]--]">
+  <code class="language-[--[language]--]" ng-transclude></code>
+</pre>
+<span class="warning-message" ng-show="warningMessage" ng-bind="warningMessage"></span>
+<div class="select-language-content" ng-hide="staticLanguage" ng-cloak>
+<select ng-model="contentLanguage"
+        ng-options="language.display_name for language in contentLanguages | orderBy: 'display_name'"
+        ng-change="updateLanguage(contentLanguage)">
+</select>
+</div>
+<span class="only-content-language" ng-show="staticLanguage" ng-bind="onlyLanguage"></span>
+</script>
+        
+    
+        
+            <script type="text/ng-template" id="/partials/complexity.html"><span class="complexity"><span math>O([--[getComplexityMarkup()]--])</span></span>
+</script>
+        
+    
+        
+            <script type="text/ng-template" id="/partials/concept.html"><span class="concept-wrapper" ng-init="showConcept=false">
+
+    <span ng-click="showConcept=!showConcept" class="concept">
+        <span class="concept-name" ng-transclude></span>
+        <span class="show-concept-icon">&#8628;</span>
+    </span>
+
+    <div ng-show="showConcept" class="slide concept-body embedded" ng-include="conceptPartialUrl">
+        Loading...
+    </div>
+
+</span>
+</script>
+        
+    
+        
+            <script type="text/ng-template" id="/partials/function.html"><span class="ic-function"><span class="name" ng-transclude></span><span ng-hide="noParens">()</span></span>
+</script>
+        
+    
+        
+            <script type="text/ng-template" id="/partials/heading.html"><h3 class="heading slide" ng-show="shouldShow()" ng-cloak ng-bind="::getHeadingText()"></h3>
+</script>
+        
+    
+        
+            <script type="text/ng-template" id="/partials/inline-footnote.html"><span class="footnote-wrapper" ng-init="show = false">
+    <span class="show-footnote-icon" ng-click="show = !show">&#8628;</span>
+    <p class="footnote" ng-transclude ng-show="show">Loading...</p>
+</span>
+</script>
+        
+    
+        
+            <script type="text/ng-template" id="/partials/loading.html"><div class="Loading">
+    Loading...
+</div>
+</script>
+        
+    
+        
+            <script type="text/ng-template" id="/partials/math.html"><span class="ic-math" ng-class="{'block': isBlock()}" ng-transclude></span>
+</script>
+        
+    
+        
+            <script type="text/ng-template" id="/partials/note.html"><div class="note slide" ng-show="shouldShow()">
+    <div class="note-content" ng-transclude>
+    </div>
+</div>
+</script>
+        
+    
+        
+            <script type="text/ng-template" id="/partials/section.html"><div class="section-wrapper" ng-class="getSectionClass()" ng-init="ready=false" ng-show="shouldShow()">
+    <span heading="[--[section]--]" hide-heading="[--[hideHeading]--]"></span>
+
+    <div class="section" ng-class="getSectionClass()" ng-transclude>
+    </div>
+</div>
+</script>
+        
+    
+        
+            <script type="text/ng-template" id="/partials/variable.html"><span class="ic-variable" ng-transclude></span>
+</script>
+        
+    
+        
+            <script type="text/ng-template" id="/partials/words.html"><span class="ic-words" ng-transclude></span>
+</script>
+        
+    
+        
+            <script type="text/ng-template" id="/partials/sidebar-sticker.html"><div class="sidebar-sticker-container-container">
+    <div class="sidebar-sticker-container" ng-hide="hide">
+        <div class="sidebar-sticker" ng-style="{visibility: visibility}" sticky offset="100" hide-when-partially-offscreen ng-cloak blocks-news-drawer-when-visible id="left-side-sticker">
+            <div class="sidebar-sticker-content">
+	            <div ng-transclude>
+	            </div>
+	        </div>
+	        <span class='close-button' ng-click="hide=true">&#215;</span>
+        </div>
+    </div>
+</div></script>
+        
+    
+
+    <!-- load current-user json with initial http request -->
+    <div class="hidden" data-preload-resource="/api/v1/current-user/" data-thejson="{&quot;id&quot;:16815394,&quot;username&quot;:&quot;paragshah367&quot;,&quot;email&quot;:&quot;paragshah36757@gmail.com&quot;,&quot;date_joined&quot;:&quot;2020-06-15T23:45:07.962595+00:00&quot;,&quot;first_name&quot;:&quot;Parag&quot;,&quot;last_name&quot;:&quot;Shah&quot;,&quot;full_name&quot;:&quot;Parag Shah&quot;,&quot;short_name&quot;:&quot;Parag&quot;,&quot;is_anonymous&quot;:false,&quot;is_on_last_question&quot;:false,&quot;percent_done&quot;:26,&quot;num_questions_done&quot;:12,&quot;num_questions_remaining&quot;:34,&quot;is_full_access&quot;:true,&quot;is_student&quot;:true,&quot;first_payment_date&quot;:&quot;2020-06-15T23:45:49.056009Z&quot;,&quot;last_payment_date&quot;:&quot;2020-06-15T23:45:49.056009Z&quot;,&quot;num_free_questions_left&quot;:0,&quot;terms_has_agreed_to_latest&quot;:false,&quot;preferred_content_language&quot;:&quot;python3&quot;,&quot;preferred_editor_language&quot;:&quot;python3&quot;,&quot;is_staff&quot;:false,&quot;auth_providers_human_readable_list&quot;:&quot;Google&quot;,&quot;num_auth_providers&quot;:1,&quot;auth_email&quot;:&quot;paragshah367@gmail.com&quot;}">
+        {"id":16815394,"username":"paragshah367","email":"paragshah36757@gmail.com","date_joined":"2020-06-15T23:45:07.962595+00:00","first_name":"Parag","last_name":"Shah","full_name":"Parag Shah","short_name":"Parag","is_anonymous":false,"is_on_last_question":false,"percent_done":26,"num_questions_done":12,"num_questions_remaining":34,"is_full_access":true,"is_student":true,"first_payment_date":"2020-06-15T23:45:49.056009Z","last_payment_date":"2020-06-15T23:45:49.056009Z","num_free_questions_left":0,"terms_has_agreed_to_latest":false,"preferred_content_language":"python3","preferred_editor_language":"python3","is_staff":false,"auth_providers_human_readable_list":"Google","num_auth_providers":1,"auth_email":"paragshah367@gmail.com"}
+    </div>
+
+    
+
+	<script src="./Sorting algorithm reference, for coding interviews and computer science classes _ Interview Cake_files/lozad.min.js"></script>
+	<script type="text/javascript">
+        window.IC.lozadObserver = lozad();
+        window.IC.lozadObserver.observe();
+	</script>
+
+    
+        
+    
+
+    
+    <div ng-controller="LoginModalCtrl" class="modal fade login-modal ng-scope" id="loginModal" tabindex="-1" role="dialog" aria-labelledby="Log In" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-body">
+                    <button type="button" ng-show="closeable" class="close" data-dismiss="modal" aria-hidden="true">×</button>
+                    <div class="container-fluid">
+                    <div class="row">
+                        <div class="col-sm-6 login-buttons-wrapper">
+                            <h3 ng-bind="note" class="ng-binding">Log in/sign up</h3>
+                            <p class="subheading">With just a couple clicks.</p>
+                            <div class="login-btns">
+    
+    <a ng-href="/auth/login/github/?next=%2Fnext" class="btn btn-soc-github btn-login-btn" rel="nofollow" href="https://www.interviewcake.com/auth/login/github/?next=%2Fnext"><i class="fa fa-github"></i> <span class="bar">|</span> <span class="company">GitHub Auth</span></a>
+    
+    
+    <a ng-href="/auth/login/google-oauth2/?next=%2Fnext" class="btn btn-soc-google-plus btn-login-btn" rel="nofollow" href="https://www.interviewcake.com/auth/login/google-oauth2/?next=%2Fnext"><i class="fa my-fa-google-plus"></i> <span class="bar">|</span> <span class="company">Google Auth</span></a>
+    
+    
+    <a ng-href="/auth/login/facebook/?next=%2Fnext" class="btn btn-soc-facebook btn-login-btn" rel="nofollow" href="https://www.interviewcake.com/auth/login/facebook/?next=%2Fnext"><i class="fa my-fa-facebook"></i> <span class="bar">|</span> <span class="company">Facebook Auth</span></a>
+    
+</div>
+<p class="login-reassurance">
+    <small>
+        We'll never post on your wall or message your friends.
+    </small>
+</p>
+
+<div class="what-about-password">
+    <p>
+        <small><a data-toggle="collapse" href="https://www.interviewcake.com/sorting-algorithm-cheat-sheet#passwordInfo">Where do I enter my password?</a></small>
+    </p>
+
+    <div class="collapse" id="passwordInfo">
+        <div class="explanation">
+            <p>
+                Actually, <strong>we don't support password-based login.</strong> Never have. Just the OAuth methods above. Why?
+            </p>
+            <ol>
+            <li>
+                It's easy and quick. No "reset password" flow. No password to forget.
+            </li>
+            <li>
+                It lets us avoid storing passwords that hackers could access and use to try to log into our users' email or bank accounts.
+            </li>
+            <li>
+                It makes it harder for one person to share a paid Interview Cake account with multiple people.
+            </li>
+        </ol></div>
+    </div>
+</div>
+
+                        </div>
+                        <div class="col-sm-6 testimonial-wrapper">
+                            <div class="inline-testimonial wider">
+    
+    <div class="image-wrapper">
+        <img class="lozad image-top" alt="Victor, happy user" data-src="/static//images/testimonials/victor.jpg">
+    </div>
+    
+    <span class="text text-with-image">
+        <span class="quotation-mark">“</span>I started at Google as of this week! Interview Cake was the primary studying tool I used before the onsite interview and it prepared me well for what they asked.
+        <span class="author">
+            — 
+            
+                Victor
+            
+        </span>
+    </span>
+</div>
+
+                        </div>
+                    </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    
+
+    <input type="hidden" name="csrfmiddlewaretoken" value="OmRC9TPyN6XvCeUzsLb6irUdI0bCw2dy4EeM7aDAPWGBGRXfciK9Z7JnTuT0IMfl">
+    <div id="loading">
+    . . .
+    </div>
+
+<iframe name="stripeXDM_default521788_provider" id="stripeXDM_default521788_provider" aria-hidden="true" src="./Sorting algorithm reference, for coding interviews and computer science classes _ Interview Cake_files/channel.html" frameborder="0" style="position: absolute; top: -2000px; left: 0px;"></iframe><iframe scrolling="no" frameborder="0" allowtransparency="true" src="./Sorting algorithm reference, for coding interviews and computer science classes _ Interview Cake_files/widget_iframe.06c6ee58c3810956b7509218508c7b56.html" title="Twitter settings iframe" style="display: none;"></iframe><iframe id="rufous-sandbox" scrolling="no" frameborder="0" allowtransparency="true" allowfullscreen="true" style="position: absolute; visibility: hidden; display: none; width: 0px; height: 0px; padding: 0px; border: none;" title="Twitter analytics iframe" src="./Sorting algorithm reference, for coding interviews and computer science classes _ Interview Cake_files/saved_resource.html"></iframe><iframe src="./Sorting algorithm reference, for coding interviews and computer science classes _ Interview Cake_files/outer.html" frameborder="0" allowtransparency="true" scrolling="no" tabindex="-1" aria-hidden="true" style="width: 1px !important; height: 1px !important; position: fixed !important; visibility: hidden !important; pointer-events: none !important;"></iframe></body><grammarly-desktop-integration data-grammarly-shadow-root="true"></grammarly-desktop-integration></html>
