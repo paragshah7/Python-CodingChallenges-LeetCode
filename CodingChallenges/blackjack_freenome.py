@@ -35,7 +35,7 @@ def display_hand(players):
 
 def deal_card(players):
     """ Deal single card """
-    players.append(card_deck.pop())
+    players.insert(card_deck.pop())
     return players
 
 

@@ -2,7 +2,7 @@
 Implement queue
 """
 
-class Queue():
+class Queue:
     def __init__(self):
         self.values = []
 
@@ -11,13 +11,14 @@ class Queue():
 
     def enqueue(self, value):
         self.values.append(value)
-        print(value, 'enqueued')
+        # print(value, 'enqueued')
 
     # O(n)
     def dequeue(self):
         if not self.is_empty():
             popped_elem = self.values.pop(0)
-            print(popped_elem, 'popped')
+            # print(popped_elem, 'popped')
+            return popped_elem
 
     def print_queue(self):
         if not self.is_empty():
@@ -32,11 +33,11 @@ class Queue():
             print('queue empty')
 
 
-q = Queue()
-q.enqueue(1)
-q.enqueue(2)
-q.enqueue(3)
-q.print_queue()
-q.peek()
-q.dequeue()
-q.print_queue()
+# q = Queue()
+# q.enqueue(1)
+# q.enqueue(2)
+# q.enqueue(3)
+# q.print_queue()
+# q.peek()
+# q.dequeue()
+# q.print_queue()

@@ -1,3 +1,6 @@
+import blackjack_freenome
+
+
 def getNumber(binary):
     num = binary.val
     print(num)

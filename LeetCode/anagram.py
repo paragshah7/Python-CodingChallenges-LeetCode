@@ -1,4 +1,4 @@
-def makingAnagrams(s1, s2):
+def making_anagrams(s1, s2):
     # for i in s1:
     #     if i in s2:
     #         s1 = s1.replace(i,"",1)
@@ -15,5 +15,5 @@ def makingAnagrams(s1, s2):
     return len(k) + len(l)
 
 
-print(makingAnagrams('rather', 'harder'))
-print(makingAnagrams('apple', 'pear'))
+print(making_anagrams('rather', 'harder'))
+print(making_anagrams('apple', 'pear'))

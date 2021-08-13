@@ -2,7 +2,7 @@
 Implement stack
 """
 
-class Stack():
+class Stack:
     def __init__(self):
         self.values = []
 
@@ -17,6 +17,7 @@ class Stack():
         if not self.is_empty():
             popped_elem = self.values.pop()
             print(popped_elem, 'popped')
+            return popped_elem
         else:
             print("stack empty")
 
@@ -31,14 +32,14 @@ class Stack():
             print("stack empty")
 
 
-s = Stack()
-s.pop()
-s.push(1)
-s.push(2)
-s.pop()
-s.push(3)
-s.push(4)
-s.push(5)
-s.pop()
-s.print_stack()
-s.peek()
+# s = Stack()
+# s.pop()
+# s.push(1)
+# s.push(2)
+# s.pop()
+# s.push(3)
+# s.push(4)
+# s.push(5)
+# s.pop()
+# s.print_stack()
+# s.peek()
