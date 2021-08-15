@@ -11,6 +11,7 @@ class Node:
 
 
 class LinkedList:
+    """ root in bst, head in linked list """
     def __init__(self):
         self.head = None
 
@@ -63,13 +64,13 @@ class LinkedList:
         return False
 
 
-ll = LinkedList()
-ll.insert(1)
-ll.insert(2)
-print(ll.search(2))
-ll.delete()
-ll.insert(3)
-ll.insert(4)
-ll.insert(5)
-ll.print_linked_list()
-print(ll.search(6))
+# ll = LinkedList()
+# ll.insert(1)
+# ll.insert(2)
+# print(ll.search(2))
+# ll.delete()
+# ll.insert(3)
+# ll.insert(4)
+# ll.insert(5)
+# ll.print_linked_list()
+# print(ll.search(6))

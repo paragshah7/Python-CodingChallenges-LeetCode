@@ -12,6 +12,7 @@ class Node:
         self.right = None
 
 class BST:
+    """ root in bst, head in linked list """
     def __init__(self):
         self.root = None
 

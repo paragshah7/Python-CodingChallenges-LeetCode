@@ -6,16 +6,15 @@ https://www.interviewcake.com/question/python3/reverse-string-in-place?course=fc
 # While loop solution
 def reverse(list_of_chars):
 
-    left_index  = 0
-    right_index = len(list_of_chars) - 1
+    l = 0
+    r = len(list_of_chars) - 1
 
-    while left_index < right_index:
+    while l < r:
         # Swap characters
-        list_of_chars[left_index], list_of_chars[right_index] = \
-            list_of_chars[right_index], list_of_chars[left_index]
+        list_of_chars[l], list_of_chars[r] = list_of_chars[r], list_of_chars[l]
         # Move towards middle
-        left_index += 1
-        right_index -= 1
+        l += 1
+        r -= 1
 
     return list_of_chars
 

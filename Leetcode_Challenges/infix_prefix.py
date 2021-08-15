@@ -5,7 +5,6 @@ output: -4
 String can have spaces and invalid characters
 """
 from icecream import ic as print
-from DataStructuresAlgorithms.stack import Stack
 import operator
 
 
