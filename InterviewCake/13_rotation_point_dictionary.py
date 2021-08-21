@@ -25,23 +25,20 @@ from icecream import ic as print
 def find_rotation_point(words):
     left = 0
     right = len(words) - 1
+    mid = (left + right) // 2
 
     while left <= right:
         mid = (left + right) // 2
-        print(left, right, mid)
+        # print(left, right, mid)
 
         if words[left] <= words[mid]:
             left = mid + 1
-            if words[mid] > words[mid+1]:
-                print(left, right)
+            if words[mid] > words[left]:
                 return mid+1
         else:
             right = mid - 1
-            if words[mid] < words[mid-1]:
-                print(left, right)
+            if words[mid] < words[right]:
                 return mid
-
-    print(left, right)
 
 
 words = [

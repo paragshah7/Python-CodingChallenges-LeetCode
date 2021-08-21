@@ -25,12 +25,12 @@ def highest_product(list_of_ints):
         if num > max:
             max = num
 
-        product_2 = list_of_ints[i] * prev_max
+        product_2 = num * prev_max
         if product_2 > max_2:
             max_2 = product_2
         # print(max_2, prev_max, list_of_ints[i])
 
-        product_3 = list_of_ints[i] * prev_max_2
+        product_3 = num * prev_max_2
         if product_3 > max_3:
             max_3 = product_3
         # print(max_3, prev_max_2, list_of_ints[i])
@@ -43,5 +43,5 @@ def highest_product(list_of_ints):
 
 
 # Basic logic is finding max and max_2 and storing in prev_max and prev_max_2
-list_of_ints = [19, 5, 2, 9, 1, 45, 3, 900]
+list_of_ints = [19, 5, 2, 9, 1, 45, 3, 100]
 print(highest_product(list_of_ints))

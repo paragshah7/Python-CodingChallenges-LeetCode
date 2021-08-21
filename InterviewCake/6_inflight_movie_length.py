@@ -3,7 +3,7 @@ https://www.interviewcake.com/question/python3/inflight-entertainment?course=fc1
 Write a function that takes an integer flight_length (in minutes) and a list of integers movie_lengths (in minutes) and
 returns a boolean indicating whether there are two numbers in movie_lengths whose sum equals flight_length.
 
-Variation of Two-sum
+Basically Two-sum
 """
 # What if we wanted to fill the flight length as nicely as possible with any number of movies (not just 2)?
 

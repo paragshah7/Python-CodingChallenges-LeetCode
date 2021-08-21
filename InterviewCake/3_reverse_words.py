@@ -8,10 +8,13 @@ reverse_words(message)
 # Prints: 'steal pound cake'
 print(''.join(message))
 
+https://www.interviewcake.com/question/python3/reverse-words?course=fc1&section=array-and-string-manipulation
+
 """
 
 def reverse_words(message: list):
 
+    # O(n)
     _reverse_chars(message, 0, len(message)-1)
     left = 0
 

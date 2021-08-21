@@ -16,7 +16,8 @@ def shuffle(the_list):
 
     last_index = len(the_list) - 1
     for i in range(0, last_index):
-        random_i = get_random(i, last_index)
+        random_i = get_random(i, last_index)  # pass i instead of 0 is crucial, this make sure its even probability
+        print(random_i)
 
         if random_i != i:
             the_list[i], the_list[random_i] = the_list[random_i], the_list[i]

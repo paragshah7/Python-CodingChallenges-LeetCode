@@ -12,6 +12,11 @@ your function would return:
 """
 
 def product_all_other(nums):
+    """
+    nums
+    nums_1 - multiply all prev at current index and store starting with 1
+    res - Rev, take last elem in nums_1 and multiply with last elem in nums, update counter by mul nums elem
+    """
 
     product = 1
     n = len(nums)

@@ -1,5 +1,9 @@
 """
 https://www.interviewcake.com/question/python3/permutation-palindrome?course=fc1&section=hashing-and-hash-tables
+"civic" should return True
+"ivicc" should return True
+"civil" should return False
+"livci" should return False
 """
 
 # def is_palindrome(text):

@@ -6,7 +6,7 @@ https://leetcode.com/problems/find-the-duplicate-number/solution/
 """
 
 # O(n) space
-def find_repeat_On_space(numbers):
+def find_repeat_extra_space(numbers):
     unique_numbers = set()
     for num in numbers:
         if num not in unique_numbers:
@@ -26,11 +26,16 @@ def find_repeat(numbers):
         mid = (left + right) // 2
         count = 0
 
+        # if duplicate num is less or greater than mid number
         for num in numbers:
             if num <= mid:
                 count += 1
+
+        # extra nums towards right, meaning duplicate num is at the right
         if count <= mid:
             left = mid + 1
+
+        # towards left
         else:
             right = mid
 

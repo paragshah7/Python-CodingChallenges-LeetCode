@@ -9,6 +9,11 @@ print(merge_lists(my_list, alices_list))
 from icecream import ic as print
 
 def merge_lists(my_list: list, alices_list: list) -> list:
+    """
+    Handle i = 1st, j = 2nd pointers
+    Handle for last elem
+    O(n)
+    """
     merged_list = []
     i = 0
     j = 0

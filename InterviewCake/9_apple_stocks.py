@@ -1,7 +1,8 @@
 """
 https://www.interviewcake.com/question/python3/stock-price?course=fc1&section=greedy
 
-Write an efficient function that takes stock_prices and returns the best profit I could have made from one purchase and one sale of one share of Apple stock yesterday.
+Write an efficient function that takes stock_prices and returns the best profit I could have made from one purchase
+and one sale of one share of Apple stock yesterday.
 
 For example:
 

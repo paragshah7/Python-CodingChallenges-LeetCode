@@ -3,7 +3,7 @@ Reverse list of chars in place
 https://www.interviewcake.com/question/python3/reverse-string-in-place?course=fc1&section=array-and-string-manipulation
 """
 
-# While loop solution
+# While loop solution - O(n)
 def reverse(list_of_chars):
 
     l = 0
