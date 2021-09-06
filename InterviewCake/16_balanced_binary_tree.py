@@ -14,7 +14,7 @@ def is_balanced(root):
 
         _is_balanced(root, 0, depth)
         print('Depth - {}'.format(depth))
-        if (len(depth) > 2) or len(depth) == 2 and abs(depth[0] - depth[1]) > 1:
+        if (len(depth) >= 2) or len(depth) == 2 and abs(depth[0] - depth[1]) > 1:
             print('Not superbalanced')
             return False
         else:

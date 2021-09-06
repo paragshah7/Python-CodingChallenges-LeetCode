@@ -48,6 +48,7 @@ class BST:
         self._print_tree(self.root)
 
     # Use static method so that you can pass node as well which is not passed in original method
+    # https://www.programiz.com/dsa/binary-tree
     def _print_tree(self, cur_node):
         """
         cur_node
@@ -89,18 +90,16 @@ class BST:
         print(tree)
 
     def height(self):
-        if self.root is not None:
-            return self._height(self.root, 0)
-        else:
-            return 0
+        return self._height(self.root)
 
-    def _height(self, cur_node, height):
+    def _height(self, cur_node):
         if cur_node is None:
-            return height
-        left_height = self._height(cur_node.left, height+1)
-        right_height = self._height(cur_node.right, height+1)
+            return 0
+        else:
+            left_height = self._height(cur_node.left)
+            right_height = self._height(cur_node.right)
 
-        return max(left_height, right_height)
+        return max(left_height, right_height) + 1
 
     def search(self, value):
         if self.root is None:
@@ -125,6 +124,6 @@ bst.insert(15)
 bst.insert(3)
 bst.insert(10)
 # bst.print_tree()
-# print(bst.height())
+print(bst.height())
 # print(bst.search(100))
-bst.print_tree_bfs()
+# bst.height()
